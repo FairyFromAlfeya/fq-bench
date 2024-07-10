@@ -7,14 +7,16 @@
     "format": "prettier --write \"{scripts,deploy}/**/*.ts\"",
     "lint": "eslint \"{scripts,deploy}/**/*.ts\" --fix",
 
-    "deploy": "locklift deploy --disable-build -n locklift"
+    "deploy": "locklift deploy --disable-build -n locklift --force"
   },
   "devDependencies": {
     "@broxus/locklift-deploy": "^1.1.1",
+    "@types/cli-progress": "^3.11.6",
     "@types/node": "^20.14.10",
     "@typescript-eslint/eslint-plugin": "^7.16.0",
     "@typescript-eslint/parser": "^7.16.0",
     "bignumber.js": "^9.1.2",
+    "cli-progress": "^3.12.0",
     "dotenv": "^16.4.5",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
