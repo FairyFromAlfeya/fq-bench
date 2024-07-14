@@ -495,17 +495,6 @@
 			]
 		},
 		{
-			"name": "batchPairDeploy",
-			"inputs": [
-				{"name":"_iter","type":"uint8"},
-				{"components":[{"name":"left_root","type":"address"},{"name":"right_root","type":"address"}],"name":"_infos","type":"tuple[]"},
-				{"name":"_offset","type":"uint32"},
-				{"name":"_remainingGasTo","type":"address"}
-			],
-			"outputs": [
-			]
-		},
-		{
 			"name": "deployStablePool",
 			"inputs": [
 				{"name":"roots","type":"address[]"},
@@ -588,17 +577,6 @@
 		{"key":1,"name":"_nonce","type":"uint32"}
 	],
 	"events": [
-		{
-			"name": "PairDeployed",
-			"inputs": [
-				{"name":"pair","type":"address"},
-				{"name":"leftRoot","type":"address"},
-				{"name":"rightRoot","type":"address"},
-				{"name":"iter","type":"uint8"}
-			],
-			"outputs": [
-			]
-		},
 		{
 			"name": "AccountCodeUpgraded",
 			"inputs": [

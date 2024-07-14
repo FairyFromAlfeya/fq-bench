@@ -5982,334 +5982,6 @@ PUSHPOW2 7
 SENDRAWMSG
 .loc ../contracts/DexRoot.tsol, 0
 
-.macro batchPairDeploy
-DROP
-GETGLOB 6
-THROWIFNOT 76
-GETGLOB 2
-ISNULL
-IFREF {
-	CALL $c4_to_c7$
-}
-.loc ../contracts/DexRoot.tsol, 1242
-OVER
-PUSHCONT {
-	LDU 8
-	LDU 32
-	LDDICT
-	ROTREV
-	PAIR
-	SWAP
-	LDU 32
-	LDREF
-	ENDS
-	CTOS
-}
-PUSHCONT {
-	LDU 8
-	LDU 32
-	LDDICT
-	ROTREV
-	PAIR
-	SWAP
-	LDU 32
-}
-IFELSE
-LDMSGADDR
-ENDS
-.loc ../contracts/DexRoot.tsol, 0
-CALLREF {
-	CALL $batchPairDeploy_a597e157_internal_macro$
-}
-IFREF {
-	CALL $upd_only_time_in_c4$
-}
-THROW 0
-
-.macro batchPairDeploy_a597e157_internal_macro
-.loc ../contracts/DexRoot.tsol, 89
-GETGLOB 23
-THROWIFNOT 114
-.loc ../contracts/DexRoot.tsol, 90
-PUSHINT 1000000000
-.loc ../contracts/DexRoot.tsol, 60
-GETPARAM 7
-FIRST
-DEPTH
-ADDCONST -2
-PICK
-SUB
-UFITS 128
-MAX
-PUSHINT 0
-RAWRESERVE
-.loc ../contracts/DexRoot.tsol, 1253
-PUSH S2
-FIRST
-.loc ../contracts/DexRoot.tsol, 1254
-PUSH S2
-ADDCONST 5
-UFITS 32
-OVER
-MIN
-.loc ../contracts/DexRoot.tsol, 1256
-ROLL 3
-PUSHCONT {
-	PUSH2 S0, S1
-	LESS
-}
-PUSHCONT {
-	.loc ../contracts/DexRoot.tsol, 1257
-	PUSH3 S5, S0, S4
-	SECOND
-	PUSHINT 32
-	DICTUGETREF
-	THROWIFNOT 50
-	CTOS
-	CALLREF {
-		LDMSGADDR
-		LDREF
-		ENDS
-		CTOS
-		LDMSGADDR
-		ENDS
-		PAIR
-	}
-	PUSH S5
-	CALLREF {
-		CALL $_pairDeployInternal_3d84c448_internal_macro$
-	}
-	.loc ../contracts/DexRoot.tsol, 1256
-	INC
-	.loc ../contracts/DexRoot.tsol, 0
-}
-WHILE
-DROP
-.loc ../contracts/DexRoot.tsol, 1260
-DUP
-ROT
-LESS
-PUSHCONT {
-	.loc ../contracts/DexRoot.tsol, 1261
-	DUP2
-	UFITS 32
-	PUSH2 S4, S5
-	MYADDR
-	FALSE
-	NEWC
-	STSLICECONST x6_
-	STI 1
-	STSLICECONST x1_
-	STSLICE
-	PUSHINT 1
-	STUR 111
-	ROLLREV 4
-	NEWC
-	STSLICECONST x21676a3b
-	STU 8
-	SWAP
-	UNPAIR
-	XCHG S2
-	STU 32
-	STDICT
-	STU 32
-	STSLICE
-	STBREFR
-}
-PUSHCONT {
-	.loc ../contracts/DexRoot.tsol, 1268
-	OVER
-	NEWC
-	STSLICECONST x42_
-	STSLICE
-	PUSHINT 111
-	STZEROES
-}
-IFELSE
-ENDC
-PUSHPOW2 7
-SENDRAWMSG
-.loc ../contracts/DexRoot.tsol, 0
-BLKDROP 4
-
-.globl	_pairDeployInternal_3d84c448_internal
-.type	_pairDeployInternal_3d84c448_internal, @function
-CALL $_pairDeployInternal_3d84c448_internal_macro$
-
-.macro _pairDeployInternal_3d84c448_internal_macro
-.loc ../contracts/DexRoot.tsol, 1277
-OVER
-FIRST
-PARSEMSGADDR
-INDEX 3
-PLDU 256
-PUSH S2
-SECOND
-PARSEMSGADDR
-INDEX 3
-PLDU 256
-NEQ
-THROWIFNOT 121
-.loc ../contracts/DexRoot.tsol, 1278
-OVER
-FIRST
-PARSEMSGADDR
-INDEX 3
-PLDU 256
-THROWIFNOT 121
-.loc ../contracts/DexRoot.tsol, 1279
-OVER
-SECOND
-PARSEMSGADDR
-INDEX 3
-PLDU 256
-THROWIFNOT 121
-.loc ../contracts/DexRoot.tsol, 1281
-OVER
-FIRST
-OVER
-CALLREF {
-	CALL $_deployVaultInternal_a38a82ef_internal_macro$
-}
-.loc ../contracts/DexRoot.tsol, 1282
-OVER
-SECOND
-OVER
-CALLREF {
-	CALL $_deployVaultInternal_a38a82ef_internal_macro$
-}
-.loc ../contracts/DexRoot.tsol, 1284
-PUSHINT 2
-PUSH S2
-SECOND
-PUSH S3
-FIRST
-PUSHINT 0
-NEWDICT
-PUSHINT 2
-PUSHCONT {
-	ROT
-	PUSH S2
-	INC
-	XCHG S3
-	ROT
-	PUSHINT 32
-	DICTUSET
-}
-REPEAT
-PAIR
-CALLREF {
-	CALL $_buildPairParams_623f79c1_internal_macro$
-}
-CALLREF {
-	CALL $_buildInitData_65db94e9_internal_macro$
-}
-.loc ../contracts/DexRoot.tsol, 1289
-SWAP
-GETGLOB 25
-PUSHINT 1
-GETGLOB 15
-PUSHINT 8
-DICTUGET
-ZEROSWAPIFNOT
-PUSHCONT {
-	PLDU 32
-}
-IF
-PUSHINT 1
-GETGLOB 14
-PUSHINT 8
-DICTUGETREF
-PUSHCONT {
-	PUSHREF {
-	}
-}
-IFNOT
-ROLL 4
-DUP
-HASHCU
-NEWC
-STSLICECONST x801_
-STU 256
-ENDC
-CTOS
-ROLLREV 5
-PUSH S5
-NEWC
-STSLICECONST x62_
-STSLICE
-PUSHINT 893652400709517059295344511008815740239216643
-STUR 151
-OVER
-CALLREF {
-	CTOS
-	LDI 1
-	SWAP
-	PUSHCONT {
-		LDI 5
-		NIP
-	}
-	IF
-	LDI 1
-	SWAP
-	PUSHCONT {
-		LDI 2
-		NIP
-	}
-	IF
-	LDOPTREF
-	LDOPTREF
-	LDDICT
-	ENDS
-	BLKDROP 3
-}
-STREF
-STSLICECONST 1
-ROLLREV 4
-NEWC
-STSLICECONST x15a038fb
-STREF
-STU 32
-STSLICE
-SWAP
-NEWC
-STSLICE
-STBREFR
-STBREFR
-ENDC
-PUSHINT 1
-SENDRAWMSG
-.loc ../contracts/DexRoot.tsol, 1300
-ROT
-PUSH S2
-SECOND
-ROLL 3
-FIRST
-ROLL 3
-PUSHREFSLICE {
-	.blob xc0000000000000000000000001
-}
-NEWC
-STSLICE
-ROLLREV 4
-NEWC
-STSLICECONST x0e3109b4
-STSLICE
-ROLLREV 3
-NEWC
-STSLICE
-ROTREV
-NEWC
-STSLICE
-STU 8
-STBREFR
-STBREFR
-STBREFR
-ENDC
-PUSHINT 0
-SENDRAWMSG
-.loc ../contracts/DexRoot.tsol, 0
-
 .macro deployStablePool
 DROP
 GETGLOB 6
@@ -6319,7 +5991,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DexRoot.tsol, 1303
+.loc ../contracts/DexRoot.tsol, 1235
 OVER
 PUSHCONT {
 	LDU 32
@@ -6352,7 +6024,7 @@ CALLREF {
 THROW 0
 
 .macro deployStablePool_50b987d0_internal_macro
-.loc ../contracts/DexRoot.tsol, 1303
+.loc ../contracts/DexRoot.tsol, 1235
 PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 60
 GETPARAM 7
@@ -6380,11 +6052,11 @@ SDEQ
 OR
 AND
 THROWIFNOT 100
-.loc ../contracts/DexRoot.tsol, 1312
+.loc ../contracts/DexRoot.tsol, 1244
 OVER
 FIRST
 UFITS 8
-.loc ../contracts/DexRoot.tsol, 1313
+.loc ../contracts/DexRoot.tsol, 1245
 DEPTH
 ADDCONST -2
 PICK
@@ -6397,7 +6069,7 @@ CALLREF {
 }
 GEQ
 THROWIFNOT 103
-.loc ../contracts/DexRoot.tsol, 1314
+.loc ../contracts/DexRoot.tsol, 1246
 PUSHINT 3
 GETGLOB 16
 PUSHINT 8
@@ -6405,16 +6077,16 @@ DICTUGET
 NULLSWAPIFNOT
 NIP
 THROWIFNOT 110
-.loc ../contracts/DexRoot.tsol, 1316
+.loc ../contracts/DexRoot.tsol, 1248
 NEWDICT
-.loc ../contracts/DexRoot.tsol, 1317
+.loc ../contracts/DexRoot.tsol, 1249
 PUSHINT 0
 PUSHCONT {
 	PUSH2 S0, S2
 	LESS
 }
 PUSHCONT {
-	.loc ../contracts/DexRoot.tsol, 1318
+	.loc ../contracts/DexRoot.tsol, 1250
 	PUSH2 S0, S4
 	SECOND
 	PUSHINT 32
@@ -6424,7 +6096,7 @@ PUSHCONT {
 	INDEX 3
 	PLDU 256
 	THROWIFNOT 121
-	.loc ../contracts/DexRoot.tsol, 1319
+	.loc ../contracts/DexRoot.tsol, 1251
 	PUSH2 S0, S4
 	SECOND
 	PUSHINT 32
@@ -6441,7 +6113,7 @@ PUSHCONT {
 	TRUE
 	NEQ
 	THROWIFNOT 121
-	.loc ../contracts/DexRoot.tsol, 1321
+	.loc ../contracts/DexRoot.tsol, 1253
 	DUP2
 	PUSH S6
 	SECOND
@@ -6455,13 +6127,13 @@ PUSHCONT {
 	PUSHINT 267
 	DICTSETB
 	POP S2
-	.loc ../contracts/DexRoot.tsol, 1317
+	.loc ../contracts/DexRoot.tsol, 1249
 	INC
 	.loc ../contracts/DexRoot.tsol, 0
 }
 WHILE
 BLKDROP 3
-.loc ../contracts/DexRoot.tsol, 1324
+.loc ../contracts/DexRoot.tsol, 1256
 OVER
 SECOND
 PUSHINT 0
@@ -6478,7 +6150,7 @@ PUSHCONT {
 	NOT
 }
 PUSHCONT {
-	.loc ../contracts/DexRoot.tsol, 1325
+	.loc ../contracts/DexRoot.tsol, 1257
 	PUSH2 S0, S3
 	CALLREF {
 		CALL $_deployVaultInternal_a38a82ef_internal_macro$
@@ -6490,7 +6162,7 @@ PUSHCONT {
 }
 WHILE
 BLKDROP 3
-.loc ../contracts/DexRoot.tsol, 1328
+.loc ../contracts/DexRoot.tsol, 1260
 GETGLOB 25
 PUSHINT 3
 GETGLOB 17
@@ -6578,7 +6250,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DexRoot.tsol, 1343
+.loc ../contracts/DexRoot.tsol, 1275
 OVER
 PUSHCONT {
 	LDU 32
@@ -6626,7 +6298,7 @@ IFREF {
 THROW 0
 
 .macro setPairFeeParams_02e916e3_internal_macro
-.loc ../contracts/DexRoot.tsol, 1343
+.loc ../contracts/DexRoot.tsol, 1275
 PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 60
 GETPARAM 7
@@ -6654,7 +6326,7 @@ SDEQ
 OR
 AND
 THROWIFNOT 100
-.loc ../contracts/DexRoot.tsol, 1354
+.loc ../contracts/DexRoot.tsol, 1286
 OVER
 FIRST
 NEQINT 0
@@ -6719,7 +6391,7 @@ PUSHCONT {
 }
 IF
 THROWIFNOT 131
-.loc ../contracts/DexRoot.tsol, 1362
+.loc ../contracts/DexRoot.tsol, 1294
 DEPTH
 ADDCONST -2
 PICK
@@ -6731,7 +6403,7 @@ CALLREF {
 }
 GEQ
 THROWIFNOT 103
-.loc ../contracts/DexRoot.tsol, 1364
+.loc ../contracts/DexRoot.tsol, 1296
 XCHG S2
 CALLREF {
 	CALL $_expectedPoolAddress_95044983_internal_macro$
@@ -6776,7 +6448,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DexRoot.tsol, 1369
+.loc ../contracts/DexRoot.tsol, 1301
 OVER
 PUSHCONT {
 	LDU 32
@@ -6813,7 +6485,7 @@ IFREF {
 THROW 0
 
 .macro setPairAmplificationCoefficient_5eae4706_internal_macro
-.loc ../contracts/DexRoot.tsol, 1369
+.loc ../contracts/DexRoot.tsol, 1301
 PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 60
 GETPARAM 7
@@ -6841,7 +6513,7 @@ SDEQ
 OR
 AND
 THROWIFNOT 100
-.loc ../contracts/DexRoot.tsol, 1380
+.loc ../contracts/DexRoot.tsol, 1312
 DEPTH
 ADDCONST -2
 PICK
@@ -6853,7 +6525,7 @@ CALLREF {
 }
 GEQ
 THROWIFNOT 103
-.loc ../contracts/DexRoot.tsol, 1382
+.loc ../contracts/DexRoot.tsol, 1314
 XCHG S2
 CALLREF {
 	CALL $_expectedPoolAddress_95044983_internal_macro$
@@ -6887,7 +6559,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DexRoot.tsol, 1387
+.loc ../contracts/DexRoot.tsol, 1319
 OVER
 PUSHCONT {
 	LDREF
@@ -6911,7 +6583,7 @@ IFREF {
 THROW 0
 
 .macro resetTargetGas_6e68a1ca_internal_macro
-.loc ../contracts/DexRoot.tsol, 1387
+.loc ../contracts/DexRoot.tsol, 1319
 PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 60
 GETPARAM 7
@@ -6935,7 +6607,7 @@ GETGLOB 24
 SDEQ
 AND
 THROWIFNOT 100
-.loc ../contracts/DexRoot.tsol, 1397
+.loc ../contracts/DexRoot.tsol, 1329
 SWAP
 NEWC
 STSLICECONST x62_
@@ -6961,7 +6633,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DexRoot.tsol, 1402
+.loc ../contracts/DexRoot.tsol, 1334
 OVER
 PUSHCONT {
 	LDU 32
@@ -6996,7 +6668,7 @@ CALLREF {
 THROW 0
 
 .macro onPoolCreated_12f9a1e3_internal_macro
-.loc ../contracts/DexRoot.tsol, 1402
+.loc ../contracts/DexRoot.tsol, 1334
 PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 60
 GETPARAM 7
@@ -7018,7 +6690,7 @@ CALLREF {
 }
 SDEQ
 THROWIFNOT 106
-.loc ../contracts/DexRoot.tsol, 1412
+.loc ../contracts/DexRoot.tsol, 1344
 XCHG S2
 PUSHSLICE xc000000000000000000000000056c8dff7
 NEWC
@@ -7032,7 +6704,7 @@ STU 8
 ENDC
 PUSHINT 0
 SENDRAWMSG
-.loc ../contracts/DexRoot.tsol, 1414
+.loc ../contracts/DexRoot.tsol, 1346
 NEWC
 STSLICECONST x42_
 STSLICE
@@ -7054,7 +6726,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DexRoot.tsol, 1421
+.loc ../contracts/DexRoot.tsol, 1353
 OVER
 PUSHCONT {
 	LDREF
@@ -7089,7 +6761,7 @@ IFREF {
 THROW 0
 
 .macro setOracleOptions_0ef70a57_internal_macro
-.loc ../contracts/DexRoot.tsol, 1421
+.loc ../contracts/DexRoot.tsol, 1353
 PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 60
 GETPARAM 7
@@ -7117,7 +6789,7 @@ SDEQ
 OR
 AND
 THROWIFNOT 100
-.loc ../contracts/DexRoot.tsol, 1433
+.loc ../contracts/DexRoot.tsol, 1365
 REVERSE 4, 0
 PUSHINT 0
 NEWDICT
@@ -7167,7 +6839,7 @@ ISNULL
 IFREF {
 	CALL $c4_to_c7$
 }
-.loc ../contracts/DexRoot.tsol, 1438
+.loc ../contracts/DexRoot.tsol, 1370
 OVER
 PUSHCONT {
 	LDREF
@@ -7196,7 +6868,7 @@ IFREF {
 THROW 0
 
 .macro removeLastNPoints_d441364b_internal_macro
-.loc ../contracts/DexRoot.tsol, 1438
+.loc ../contracts/DexRoot.tsol, 1370
 PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 60
 GETPARAM 7
@@ -7224,7 +6896,7 @@ SDEQ
 OR
 AND
 THROWIFNOT 100
-.loc ../contracts/DexRoot.tsol, 1450
+.loc ../contracts/DexRoot.tsol, 1382
 REVERSE 4, 0
 PUSHINT 0
 NEWDICT
@@ -8410,7 +8082,7 @@ PAIR
 
 .macro public_function_selector
 DUP
-PUSHINT 560425531
+PUSHINT 565050858
 LEQ
 IFJMPREF {
 	DUP
@@ -8501,7 +8173,7 @@ IFJMPREF {
 		}
 	}
 	DUP
-	PUSHINT 560425531
+	PUSHINT 565050858
 	LEQ
 	IFJMPREF {
 		DUP
@@ -8523,27 +8195,21 @@ IFJMPREF {
 			CALL $getPoolCode$
 		}
 		DUP
-		PUSHINT 560425531
-		EQUAL
-		IFJMPREF {
-			CALL $batchPairDeploy$
-		}
-	}
-}
-DUP
-PUSHINT 1155507718
-LEQ
-IFJMPREF {
-	DUP
-	PUSHINT 588538914
-	LEQ
-	IFJMPREF {
-		DUP
 		PUSHINT 565050858
 		EQUAL
 		IFJMPREF {
 			CALL $isActive$
 		}
+	}
+}
+DUP
+PUSHINT 1178185679
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 694778722
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 565993624
 		EQUAL
@@ -8562,17 +8228,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $requestUpgradeAccount$
 		}
-	}
-	DUP
-	PUSHINT 877074775
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 694778722
 		EQUAL
 		IFJMPREF {
 			CALL $getPendingOwner$
 		}
+	}
+	DUP
+	PUSHINT 950829274
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 720190441
 		EQUAL
@@ -8591,17 +8257,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $getExpectedPoolAddress$
 		}
-	}
-	DUP
-	PUSHINT 1025233701
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 950829274
 		EQUAL
 		IFJMPREF {
 			CALL $getManager$
 		}
+	}
+	DUP
+	PUSHINT 1035957352
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 992568900
 		EQUAL
@@ -8620,17 +8286,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $getVault$
 		}
-	}
-	DUP
-	PUSHINT 1155507718
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 1035957352
 		EQUAL
 		IFJMPREF {
 			CALL $upgradeTokenVaults$
 		}
+	}
+	DUP
+	PUSHINT 1178185679
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 1115432472
 		EQUAL
@@ -8649,22 +8315,22 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $onPoolCreated$
 		}
-	}
-}
-DUP
-PUSHINT 1688384686
-LEQ
-IFJMPREF {
-	DUP
-	PUSHINT 1320360074
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 1178185679
 		EQUAL
 		IFJMPREF {
 			CALL $getTokenFactory$
 		}
+	}
+}
+DUP
+PUSHINT 1692707773
+LEQ
+IFJMPREF {
+	DUP
+	PUSHINT 1336274574
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 1241152735
 		EQUAL
@@ -8683,17 +8349,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $setManager$
 		}
-	}
-	DUP
-	PUSHINT 1423789134
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 1336274574
 		EQUAL
 		IFJMPREF {
 			CALL $setTokenFactory$
 		}
+	}
+	DUP
+	PUSHINT 1427249531
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 1342453134
 		EQUAL
@@ -8712,17 +8378,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $deployTokenVault$
 		}
-	}
-	DUP
-	PUSHINT 1543215676
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 1427249531
 		EQUAL
 		IFJMPREF {
 			CALL $upgradeTokenVault$
 		}
+	}
+	DUP
+	PUSHINT 1632005121
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 1487002949
 		EQUAL
@@ -8741,17 +8407,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $installOrUpdateAccountCode$
 		}
-	}
-	DUP
-	PUSHINT 1688384686
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 1632005121
 		EQUAL
 		IFJMPREF {
 			CALL $setVaultOnce$
 		}
+	}
+	DUP
+	PUSHINT 1692707773
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 1648679680
 		EQUAL
@@ -8770,6 +8436,12 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $getTokenVaultVersion$
 		}
+		DUP
+		PUSHINT 1692707773
+		EQUAL
+		IFJMPREF {
+			CALL $installOrUpdatePoolCode$
+		}
 	}
 }
 DUP
@@ -8777,15 +8449,9 @@ PUSHINT 2144984146
 LEQ
 IFJMPREF {
 	DUP
-	PUSHINT 1765434761
+	PUSHINT 1782970727
 	LEQ
 	IFJMPREF {
-		DUP
-		PUSHINT 1692707773
-		EQUAL
-		IFJMPREF {
-			CALL $installOrUpdatePoolCode$
-		}
 		DUP
 		PUSHINT 1707282005
 		EQUAL
@@ -8804,17 +8470,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $getTokenVaultCode$
 		}
-	}
-	DUP
-	PUSHINT 1876367341
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 1782970727
 		EQUAL
 		IFJMPREF {
 			CALL $deployPair$
 		}
+	}
+	DUP
+	PUSHINT 1958957887
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 1792165495
 		EQUAL
@@ -8833,17 +8499,17 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $revokeManager$
 		}
-	}
-	DUP
-	PUSHINT 1984609085
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 1958957887
 		EQUAL
 		IFJMPREF {
 			CALL $removeLastNPoints$
 		}
+	}
+	DUP
+	PUSHINT 2104146426
+	LEQ
+	IFJMPREF {
 		DUP
 		PUSHINT 1971306538
 		EQUAL
@@ -8862,23 +8528,18 @@ IFJMPREF {
 		IFJMPREF {
 			CALL $onLiquidityTokenNotDeployed$
 		}
-	}
-	DUP
-	PUSHINT 2144984146
-	LEQ
-	IFJMPREF {
 		DUP
 		PUSHINT 2104146426
 		EQUAL
 		IFJMPREF {
 			CALL $getPoolVersion$
 		}
-		DUP
-		PUSHINT 2144984146
-		EQUAL
-		IFJMPREF {
-			CALL $installPlatformOnce$
-		}
+	}
+	DUP
+	PUSHINT 2144984146
+	EQUAL
+	IFJMPREF {
+		CALL $installPlatformOnce$
 	}
 }
 

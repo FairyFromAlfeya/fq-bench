@@ -34,13 +34,13 @@ export const deployEverWalletsBatch = async (
   const eventsProm = waitForNEvents(
     executor,
     'EverWalletDeployed' as const,
-    (e) => +e.data.iter === batchIndex,
+    (e) => +e.data.batchIndex === batchIndex,
     wallets.length,
   );
 
   await executor.methods
     .batchEverWalletDeploy({
-      _iter: batchIndex,
+      _batchIndex: batchIndex,
       _publicKey: `0x${publicKey}`,
       _infos: wallets.map((nonce) => ({
         nonce: nonce,
@@ -65,13 +65,13 @@ export const deployTokensBatch = async (
   const eventsProm = waitForNEvents(
     executor,
     'TokenRootDeployed' as const,
-    (item) => +item.data._iter === batchIndex,
+    (item) => +item.data.batchIndex === batchIndex,
     tokens.length,
   );
 
   await executor.methods
     .batchTokenRootDeploy({
-      _iter: batchIndex,
+      _batchIndex: batchIndex,
       _infos: tokens,
       _offset: 0,
       _remainingGasTo: owner,
@@ -111,19 +111,19 @@ export const deployPairsBatch = async (
   const eventsProm = waitForNEvents(
     executor,
     'PairDeployed' as const,
-    (item) => +item.data.iter === batchIndex,
+    (item) => +item.data.batchIndex === batchIndex,
     pairs.length,
   );
 
   await executor.methods
     .batchPairDeploy({
-      _iter: batchIndex,
+      _batchIndex: batchIndex,
       _dexRoot: root.address,
       _infos: pairs.map(([a, b]) => ({
-        left_root: locklift.deployments.getContract(
+        leftRoot: locklift.deployments.getContract(
           `${TOKEN_ROOT_DEPLOYMENT_TAG}${TOKEN_NAME_SUFFIX}${a}`,
         ).address,
-        right_root: locklift.deployments.getContract(
+        rightRoot: locklift.deployments.getContract(
           `${TOKEN_ROOT_DEPLOYMENT_TAG}${TOKEN_NAME_SUFFIX}${b}`,
         ).address,
       })),

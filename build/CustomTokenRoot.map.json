@@ -694,6 +694,52 @@
         "line": 1227
       }
     },
+    "139d1e66b56e49242a94a0338b6d76361f0b66e609ae9bfeb71dd0209f825872": {
+      "0": {
+        "filename": "<entry-selector>",
+        "line": 1
+      },
+      "8": {
+        "filename": "<entry-selector>",
+        "line": 2
+      },
+      "24": {
+        "filename": "<entry-selector>",
+        "line": 3
+      },
+      "32": {
+        "filename": "<entry-selector>",
+        "line": 4
+      },
+      "48": {
+        "filename": "<entry-selector>",
+        "line": 5
+      },
+      "56": {
+        "filename": "<entry-selector>",
+        "line": 6
+      },
+      "72": {
+        "filename": "<entry-selector>",
+        "line": 7
+      },
+      "88": {
+        "filename": "<entry-selector>",
+        "line": 8
+      },
+      "96": {
+        "filename": "<entry-selector>",
+        "line": 9
+      },
+      "112": {
+        "filename": "<entry-selector>",
+        "line": 10
+      },
+      "128": {
+        "filename": "<entry-selector>",
+        "line": 11
+      }
+    },
     "156d7def8b7afe3311fa8db53b70f0c2b0a660e7922b0959208593a2d80d54dd": {
       "0": {
         "filename": "../node_modules/tip3/contracts/abstract/TokenRootBase.tsol",
@@ -1072,28 +1118,6 @@
         "line": 2392
       }
     },
-    "1f99670cf34f443fdefc74b5e42ebb80b2ccc8b2f43def851e5399c0264145b3": {
-      "0": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3290
-      },
-      "16": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3294
-      },
-      "24": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3295
-      },
-      "40": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3298
-      },
-      "48": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3299
-      }
-    },
     "20717a5ba290ce8edbb23cd110d37e64634f84d019f299f46ea7af7b114f43f4": {
       "0": {
         "filename": "../node_modules/tip3/contracts/abstract/TokenRootBase.tsol",
@@ -1456,52 +1480,6 @@
         "line": 56
       }
     },
-    "27a033ce1c08a1dc2751dd208ff1eaa7bbedf505919d890d895bbfbdefcf07cd": {
-      "0": {
-        "filename": "<entry-selector>",
-        "line": 1
-      },
-      "8": {
-        "filename": "<entry-selector>",
-        "line": 2
-      },
-      "24": {
-        "filename": "<entry-selector>",
-        "line": 3
-      },
-      "32": {
-        "filename": "<entry-selector>",
-        "line": 4
-      },
-      "48": {
-        "filename": "<entry-selector>",
-        "line": 5
-      },
-      "56": {
-        "filename": "<entry-selector>",
-        "line": 6
-      },
-      "72": {
-        "filename": "<entry-selector>",
-        "line": 7
-      },
-      "88": {
-        "filename": "<entry-selector>",
-        "line": 8
-      },
-      "96": {
-        "filename": "<entry-selector>",
-        "line": 9
-      },
-      "112": {
-        "filename": "<entry-selector>",
-        "line": 10
-      },
-      "128": {
-        "filename": "<entry-selector>",
-        "line": 11
-      }
-    },
     "286de4b0f649976bd0e43e8306134520acfefd2882f0bd9657f617c46cc4b6c1": {
       "0": {
         "filename": "CustomTokenRoot.code",
@@ -1606,6 +1584,40 @@
       "304": {
         "filename": "CustomTokenRoot.code",
         "line": 3547
+      }
+    },
+    "2e6807fee506f042eca241ac4b0773bcc995b87b58cca99df566be77c6a8f8ad": {
+      "0": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3368
+      },
+      "8": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3369
+      },
+      "56": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3370
+      },
+      "64": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3371
+      },
+      "80": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3489
+      },
+      "88": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3490
+      },
+      "136": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3491
+      },
+      "144": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3492
       }
     },
     "3442ee148cc1b03887c41cfd855ecaaf439e010ef44f743c2c2570c141b44cb1": {
@@ -1788,40 +1800,6 @@
       "608": {
         "filename": "CustomTokenRoot.code",
         "line": 3183
-      }
-    },
-    "34903b0a5650b4c636092480df3f3a10344241586bb052a20de91ccac05c36c8": {
-      "0": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3368
-      },
-      "8": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3369
-      },
-      "56": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3370
-      },
-      "64": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3371
-      },
-      "80": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3489
-      },
-      "88": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3490
-      },
-      "136": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3491
-      },
-      "144": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3492
       }
     },
     "34991383855855a1c15fd211ec1ce896d05a16301b15e3b404ad05cedc0d8afb": {
@@ -3300,252 +3278,6 @@
       "112": {
         "filename": "../node_modules/tip3/contracts/abstract/TokenRootBase.tsol",
         "line": 55
-      }
-    },
-    "5e97aed4559135dff426c6adf00489ccf346bd76c2bd30bdf1d561e8ef8cb3a1": {
-      "0": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3305
-      },
-      "16": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3306
-      },
-      "24": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3307
-      },
-      "40": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3308
-      },
-      "56": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3309
-      },
-      "72": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3310
-      },
-      "80": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3313
-      },
-      "96": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3314
-      },
-      "104": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3315
-      },
-      "120": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3318
-      },
-      "136": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3319
-      },
-      "144": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3320
-      },
-      "160": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3321
-      },
-      "176": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3322
-      },
-      "192": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3323
-      },
-      "200": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3324
-      },
-      "216": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3325
-      },
-      "224": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3326
-      },
-      "240": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3327
-      },
-      "248": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3328
-      },
-      "256": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3329
-      },
-      "272": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3330
-      },
-      "280": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3331
-      },
-      "288": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3333
-      },
-      "296": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3334
-      },
-      "304": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3335
-      },
-      "320": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3337
-      },
-      "328": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3338
-      },
-      "336": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3339
-      },
-      "352": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3340
-      },
-      "368": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3341
-      },
-      "384": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3343
-      },
-      "392": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3344
-      },
-      "408": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3345
-      },
-      "416": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3346
-      },
-      "432": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3348
-      },
-      "440": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3349
-      },
-      "456": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3350
-      },
-      "464": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "480": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "488": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "496": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "512": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "520": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "536": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "560": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "568": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "608": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "616": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "624": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "640": {
-        "filename": "stdlib.sol",
-        "line": 63
-      },
-      "656": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3352
-      },
-      "672": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3353
-      },
-      "680": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3354
-      },
-      "696": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3355
-      },
-      "704": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3356
-      },
-      "720": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3357
-      },
-      "736": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3358
-      },
-      "744": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3359
-      },
-      "760": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3362
-      },
-      "768": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3363
       }
     },
     "5f66c6e95192079782c394dda8644f6e9b8d9d687464666202d7d4e2fdac4d1b": {
@@ -6054,6 +5786,154 @@
         "line": 729
       }
     },
+    "938a8c19b6c8501483467b6cfe34b2342e0cc28ac83019de8055632041670d3e": {
+      "0": {
+        "filename": "CustomTokenRoot.code",
+        "line": 166
+      },
+      "8": {
+        "filename": "CustomTokenRoot.code",
+        "line": 167
+      },
+      "24": {
+        "filename": "CustomTokenRoot.code",
+        "line": 168
+      },
+      "48": {
+        "filename": "CustomTokenRoot.code",
+        "line": 169
+      },
+      "64": {
+        "filename": "CustomTokenRoot.code",
+        "line": 170
+      },
+      "72": {
+        "filename": "CustomTokenRoot.code",
+        "line": 171
+      },
+      "88": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "96": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "104": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "120": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "136": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "144": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "160": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "168": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "176": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "184": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "192": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "200": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "216": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "232": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "240": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "256": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "264": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "272": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "288": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "304": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "320": {
+        "filename": "../contracts/CustomTokenRoot.tsol",
+        "line": 23
+      },
+      "328": {
+        "filename": "CustomTokenRoot.code",
+        "line": 199
+      },
+      "344": {
+        "filename": "CustomTokenRoot.code",
+        "line": 202
+      },
+      "352": {
+        "filename": "CustomTokenRoot.code",
+        "line": 203
+      },
+      "368": {
+        "filename": "CustomTokenRoot.code",
+        "line": 206
+      }
+    },
+    "9445239b6b76aaa6135589630dbaa6d86492185fecf8ea3e3d65e8e809952e34": {
+      "0": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3290
+      },
+      "16": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3294
+      },
+      "24": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3295
+      },
+      "40": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3298
+      },
+      "48": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3299
+      }
+    },
     "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7": {},
     "96a7bedc131c1d6acf4a41e728a1196e44242df88a87ab3e12342f5dfdf09b05": {
       "0": {
@@ -6341,6 +6221,24 @@
       "144": {
         "filename": "CustomTokenRoot.code",
         "line": 778
+      }
+    },
+    "9cd451692880cf8b924c608de5f45c043fcb14abe4b84402e3e4f2614e242d2d": {
+      "40": {
+        "filename": "CustomTokenRoot.code",
+        "line": 873
+      },
+      "48": {
+        "filename": "CustomTokenRoot.code",
+        "line": 875
+      },
+      "64": {
+        "filename": "CustomTokenRoot.code",
+        "line": 878
+      },
+      "80": {
+        "filename": "CustomTokenRoot.code",
+        "line": 879
       }
     },
     "a1b70295ba2bb7a7ff8dcf288edb5cbdfeae7cf725b46f7d86a4c3381fccae6c": {
@@ -7109,7 +7007,7 @@
         "line": 1892
       }
     },
-    "b35ee45852562e2824ee377a4046b1651d182f8f32e1d7cd67fd91ada3f7b2d7": {
+    "a6a98968acb116cade6b7a8064524c9a32f381779b728e5bcb131e01cbde2c45": {
       "0": {
         "filename": "CustomTokenRoot.code",
         "line": 3245
@@ -7509,132 +7407,6 @@
       "848": {
         "filename": "CustomTokenRoot.code",
         "line": 1165
-      }
-    },
-    "b6ddea922bfb0aaa4e4623233ba6b4b50bfa5516b449a428467877775c00853e": {
-      "0": {
-        "filename": "CustomTokenRoot.code",
-        "line": 166
-      },
-      "8": {
-        "filename": "CustomTokenRoot.code",
-        "line": 167
-      },
-      "24": {
-        "filename": "CustomTokenRoot.code",
-        "line": 168
-      },
-      "48": {
-        "filename": "CustomTokenRoot.code",
-        "line": 169
-      },
-      "64": {
-        "filename": "CustomTokenRoot.code",
-        "line": 170
-      },
-      "72": {
-        "filename": "CustomTokenRoot.code",
-        "line": 171
-      },
-      "88": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "96": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "104": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "120": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "136": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "144": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "160": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "168": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "176": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "184": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "192": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "200": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "216": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "232": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "240": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "256": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "264": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "272": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "288": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "304": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "320": {
-        "filename": "../contracts/CustomTokenRoot.tsol",
-        "line": 23
-      },
-      "328": {
-        "filename": "CustomTokenRoot.code",
-        "line": 199
-      },
-      "344": {
-        "filename": "CustomTokenRoot.code",
-        "line": 202
-      },
-      "352": {
-        "filename": "CustomTokenRoot.code",
-        "line": 203
-      },
-      "368": {
-        "filename": "CustomTokenRoot.code",
-        "line": 206
       }
     },
     "b892f0f771479564310074444d244dda10ce6fe381802c05fcb848acc7fc84da": {
@@ -8589,56 +8361,6 @@
         "line": 2604
       }
     },
-    "bfc3ae3dacc3f0e1e120760676fa9a9776b45cc0e33947f7514d2e80e49c831d": {
-      "0": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3493
-      },
-      "8": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3494
-      },
-      "56": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3495
-      },
-      "64": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3496
-      },
-      "80": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3522
-      },
-      "88": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3523
-      },
-      "136": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3524
-      },
-      "144": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3525
-      },
-      "160": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3551
-      },
-      "168": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3552
-      },
-      "216": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3553
-      },
-      "224": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3554
-      }
-    },
     "c0c8676be3d1624077c3a6b4281c959a19e957f3226515bd8206551734f93027": {
       "0": {
         "filename": "../node_modules/tip3/contracts/TokenRootUpgradeable.tsol",
@@ -8803,6 +8525,56 @@
       "528": {
         "filename": "../node_modules/tip3/contracts/TokenRootUpgradeable.tsol",
         "line": 200
+      }
+    },
+    "c3b59ce1da413fad6544a9132b44e17bcc8db74fb31d9af0763b4ff90860b496": {
+      "0": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3493
+      },
+      "8": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3494
+      },
+      "56": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3495
+      },
+      "64": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3496
+      },
+      "80": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3522
+      },
+      "88": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3523
+      },
+      "136": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3524
+      },
+      "144": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3525
+      },
+      "160": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3551
+      },
+      "168": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3552
+      },
+      "216": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3553
+      },
+      "224": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3554
       }
     },
     "c8342dabd668713f36cd9ce9ae5d1395e8546671577d615222972b231f2e0c77": {
@@ -10093,24 +9865,6 @@
         "line": 516
       }
     },
-    "e01dde42bc627e70e4dd7f3a0006a23290912ff5bfa751f99fed24f35c6c7f86": {
-      "4": {
-        "filename": "CustomTokenRoot.code",
-        "line": 873
-      },
-      "12": {
-        "filename": "CustomTokenRoot.code",
-        "line": 875
-      },
-      "28": {
-        "filename": "CustomTokenRoot.code",
-        "line": 878
-      },
-      "44": {
-        "filename": "CustomTokenRoot.code",
-        "line": 879
-      }
-    },
     "e1e543d0f2da4f94526fc4762703b7752e9e94c75da528153de662813f64d741": {
       "0": {
         "filename": "CustomTokenRoot.code",
@@ -10485,6 +10239,252 @@
         "line": 199
       }
     },
+    "ebaefa9d8090394f6801653e47984aa2601f064b5df606fa8299b759b47217b2": {
+      "0": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3305
+      },
+      "16": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3306
+      },
+      "24": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3307
+      },
+      "40": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3308
+      },
+      "56": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3309
+      },
+      "72": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3310
+      },
+      "80": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3313
+      },
+      "96": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3314
+      },
+      "104": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3315
+      },
+      "120": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3318
+      },
+      "136": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3319
+      },
+      "144": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3320
+      },
+      "160": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3321
+      },
+      "176": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3322
+      },
+      "192": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3323
+      },
+      "200": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3324
+      },
+      "216": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3325
+      },
+      "224": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3326
+      },
+      "240": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3327
+      },
+      "248": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3328
+      },
+      "256": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3329
+      },
+      "272": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3330
+      },
+      "280": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3331
+      },
+      "288": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3333
+      },
+      "296": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3334
+      },
+      "304": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3335
+      },
+      "320": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3337
+      },
+      "328": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3338
+      },
+      "336": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3339
+      },
+      "352": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3340
+      },
+      "368": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3341
+      },
+      "384": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3343
+      },
+      "392": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3344
+      },
+      "408": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3345
+      },
+      "416": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3346
+      },
+      "432": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3348
+      },
+      "440": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3349
+      },
+      "456": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3350
+      },
+      "464": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "480": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "488": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "496": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "512": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "520": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "536": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "560": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "568": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "608": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "616": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "624": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "640": {
+        "filename": "stdlib.sol",
+        "line": 63
+      },
+      "656": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3352
+      },
+      "672": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3353
+      },
+      "680": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3354
+      },
+      "696": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3355
+      },
+      "704": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3356
+      },
+      "720": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3357
+      },
+      "736": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3358
+      },
+      "744": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3359
+      },
+      "760": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3362
+      },
+      "768": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3363
+      }
+    },
     "efe995419c7a820fb076c0a60a279f13f50106e203742b1ad3d9a7752d3ed730": {
       "0": {
         "filename": "../node_modules/tip3/contracts/abstract/TokenRootTransferableOwnershipBase.tsol",
@@ -10801,72 +10801,6 @@
         "line": 90
       }
     },
-    "f7f0627f8e7b30edb33104049121410407d3e3991aa73b6ad197a004f3c60347": {
-      "0": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3497
-      },
-      "8": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3498
-      },
-      "56": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3499
-      },
-      "64": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3500
-      },
-      "80": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3503
-      },
-      "88": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3504
-      },
-      "136": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3505
-      },
-      "144": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3506
-      },
-      "160": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3509
-      },
-      "168": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3510
-      },
-      "216": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3511
-      },
-      "224": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3512
-      },
-      "240": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3515
-      },
-      "248": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3516
-      },
-      "296": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3517
-      },
-      "304": {
-        "filename": "CustomTokenRoot.code",
-        "line": 3518
-      }
-    },
     "f924d5ab77d4dd4c1423cb4588bdc9df86360db5dbe2c81b8599817d59620ccf": {
       "0": {
         "filename": "../node_modules/tip3/contracts/TokenRootUpgradeable.tsol",
@@ -10975,7 +10909,7 @@
         "line": 18
       }
     },
-    "fcc6456fb6f32b2c16d2e8650ade7526dd78e6d3121d315063d892ae75df83e3": {
+    "fd03c05feeabf99f86848a883a9ba356a9264b25507db4ae425cc9b1159e55c7": {
       "0": {
         "filename": "../contracts/CustomTokenRoot.tsol",
         "line": 24
@@ -11245,6 +11179,72 @@
       "112": {
         "filename": "../node_modules/tip3/contracts/abstract/TokenRootDisableableMintBase.tsol",
         "line": 22
+      }
+    },
+    "fe08d3a73a1ccfdd4d7bd1a598db3b727e848ba64e35dd08ca0549c61635c503": {
+      "0": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3497
+      },
+      "8": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3498
+      },
+      "56": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3499
+      },
+      "64": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3500
+      },
+      "80": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3503
+      },
+      "88": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3504
+      },
+      "136": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3505
+      },
+      "144": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3506
+      },
+      "160": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3509
+      },
+      "168": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3510
+      },
+      "216": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3511
+      },
+      "224": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3512
+      },
+      "240": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3515
+      },
+      "248": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3516
+      },
+      "296": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3517
+      },
+      "304": {
+        "filename": "CustomTokenRoot.code",
+        "line": 3518
       }
     }
   }

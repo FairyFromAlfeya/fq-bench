@@ -1,21 +1,21 @@
 const batchExecutorAbi = {
   ABIversion: 2,
   version: '2.2',
-  header: ['time'],
+  header: ['time', 'expire'],
   functions: [
     {
       name: 'constructor',
       inputs: [
-        { name: '_platformCode', type: 'cell' },
-        { name: '_rootCode', type: 'cell' },
-        { name: '_walletCode', type: 'cell' },
+        { name: '_tokenWalletPlatformCode', type: 'cell' },
+        { name: '_tokenRootCode', type: 'cell' },
+        { name: '_tokenWalletCode', type: 'cell' },
         { name: '_everWalletCode', type: 'cell' },
         { name: '_tokenFactoryCode', type: 'cell' },
         { name: '_dexRootCode', type: 'cell' },
         { name: '_dexPlatformCode', type: 'cell' },
         { name: '_dexPairCode', type: 'cell' },
         { name: '_dexAccountCode', type: 'cell' },
-        { name: '_dexLpPendingCode', type: 'cell' },
+        { name: '_dexLpTokenPendingCode', type: 'cell' },
         { name: '_dexTokenVaultCode', type: 'cell' },
         { name: '_remainingGasTo', type: 'address' },
       ],
@@ -29,7 +29,7 @@ const batchExecutorAbi = {
     {
       name: 'batchTokenRootDeploy',
       inputs: [
-        { name: '_iter', type: 'uint8' },
+        { name: '_batchIndex', type: 'uint16' },
         {
           components: [
             { name: 'name', type: 'string' },
@@ -47,7 +47,7 @@ const batchExecutorAbi = {
     {
       name: 'batchEverWalletDeploy',
       inputs: [
-        { name: '_iter', type: 'uint8' },
+        { name: '_batchIndex', type: 'uint16' },
         {
           components: [
             { name: 'amount', type: 'uint128' },
@@ -76,12 +76,12 @@ const batchExecutorAbi = {
     {
       name: 'batchPairDeploy',
       inputs: [
-        { name: '_iter', type: 'uint8' },
+        { name: '_batchIndex', type: 'uint16' },
         { name: '_dexRoot', type: 'address' },
         {
           components: [
-            { name: 'left_root', type: 'address' },
-            { name: 'right_root', type: 'address' },
+            { name: 'leftRoot', type: 'address' },
+            { name: 'rightRoot', type: 'address' },
           ],
           name: '_infos',
           type: 'tuple[]',
@@ -105,7 +105,7 @@ const batchExecutorAbi = {
     {
       name: 'TokenRootDeployed',
       inputs: [
-        { name: '_iter', type: 'uint8' },
+        { name: 'batchIndex', type: 'uint16' },
         { name: 'tokenRoot', type: 'address' },
         { name: 'symbol', type: 'string' },
       ],
@@ -114,10 +114,10 @@ const batchExecutorAbi = {
     {
       name: 'EverWalletDeployed',
       inputs: [
+        { name: 'batchIndex', type: 'uint16' },
         { name: 'wallet', type: 'address' },
         { name: 'publicKey', type: 'uint256' },
         { name: 'nonce', type: 'uint64' },
-        { name: 'iter', type: 'uint8' },
       ],
       outputs: [],
     },
@@ -132,10 +132,10 @@ const batchExecutorAbi = {
     {
       name: 'PairDeployed',
       inputs: [
+        { name: 'batchIndex', type: 'uint16' },
         { name: 'pair', type: 'address' },
         { name: 'leftRoot', type: 'address' },
         { name: 'rightRoot', type: 'address' },
-        { name: 'iter', type: 'uint8' },
       ],
       outputs: [],
     },
@@ -145,17 +145,17 @@ const batchExecutorAbi = {
     { name: '_timestamp', type: 'uint64' },
     { name: '_constructorFlag', type: 'bool' },
     { name: '_nonce', type: 'uint64' },
-    { name: 'nonce', type: 'uint256' },
-    { name: 'platformCode', type: 'cell' },
-    { name: 'rootCode', type: 'cell' },
-    { name: 'walletCode', type: 'cell' },
+    { name: 'tokenWalletPlatformCode', type: 'cell' },
+    { name: 'tokenRootCode', type: 'cell' },
+    { name: 'tokenWalletCode', type: 'cell' },
+    { name: 'tokenRootNonce', type: 'uint256' },
     { name: 'everWalletCode', type: 'cell' },
     { name: 'tokenFactoryCode', type: 'cell' },
     { name: 'dexRootCode', type: 'cell' },
     { name: 'dexPlatformCode', type: 'cell' },
     { name: 'dexPairCode', type: 'cell' },
     { name: 'dexAccountCode', type: 'cell' },
-    { name: 'dexLpPendingCode', type: 'cell' },
+    { name: 'dexLpTokenPendingCode', type: 'cell' },
     { name: 'dexTokenVaultCode', type: 'cell' },
   ],
 } as const;
@@ -385,916 +385,6 @@ const customTokenRootAbi = {
     { name: 'deployer_', type: 'address' },
     { name: 'platformCode_', type: 'cell' },
     { name: 'walletVersion_', type: 'uint32' },
-  ],
-} as const;
-const tokenWalletUpgradeableAbi = {
-  ABIversion: 2,
-  version: '2.2',
-  header: ['pubkey', 'time', 'expire'],
-  functions: [
-    { name: 'constructor', inputs: [], outputs: [] },
-    {
-      name: 'supportsInterface',
-      inputs: [
-        { name: 'answerId', type: 'uint32' },
-        { name: 'interfaceID', type: 'uint32' },
-      ],
-      outputs: [{ name: 'value0', type: 'bool' }],
-    },
-    {
-      name: 'platformCode',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'cell' }],
-    },
-    {
-      name: 'onDeployRetry',
-      id: '0x15A038FB',
-      inputs: [
-        { name: 'value0', type: 'cell' },
-        { name: 'value1', type: 'uint32' },
-        { name: 'sender', type: 'address' },
-        { name: 'remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'version',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'uint32' }],
-    },
-    {
-      name: 'upgrade',
-      inputs: [{ name: 'remainingGasTo', type: 'address' }],
-      outputs: [],
-    },
-    {
-      name: 'acceptUpgrade',
-      inputs: [
-        { name: 'newCode', type: 'cell' },
-        { name: 'newVersion', type: 'uint32' },
-        { name: 'remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'burnByRoot',
-      inputs: [
-        { name: 'amount', type: 'uint128' },
-        { name: 'remainingGasTo', type: 'address' },
-        { name: 'callbackTo', type: 'address' },
-        { name: 'payload', type: 'cell' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'destroy',
-      inputs: [{ name: 'remainingGasTo', type: 'address' }],
-      outputs: [],
-    },
-    {
-      name: 'burn',
-      inputs: [
-        { name: 'amount', type: 'uint128' },
-        { name: 'remainingGasTo', type: 'address' },
-        { name: 'callbackTo', type: 'address' },
-        { name: 'payload', type: 'cell' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'balance',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'uint128' }],
-    },
-    {
-      name: 'owner',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'root',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'walletCode',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'cell' }],
-    },
-    {
-      name: 'transfer',
-      inputs: [
-        { name: 'amount', type: 'uint128' },
-        { name: 'recipient', type: 'address' },
-        { name: 'deployWalletValue', type: 'uint128' },
-        { name: 'remainingGasTo', type: 'address' },
-        { name: 'notify', type: 'bool' },
-        { name: 'payload', type: 'cell' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'transferToWallet',
-      inputs: [
-        { name: 'amount', type: 'uint128' },
-        { name: 'recipientTokenWallet', type: 'address' },
-        { name: 'remainingGasTo', type: 'address' },
-        { name: 'notify', type: 'bool' },
-        { name: 'payload', type: 'cell' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'acceptTransfer',
-      id: '0x67A0B95F',
-      inputs: [
-        { name: 'amount', type: 'uint128' },
-        { name: 'sender', type: 'address' },
-        { name: 'remainingGasTo', type: 'address' },
-        { name: 'notify', type: 'bool' },
-        { name: 'payload', type: 'cell' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'acceptMint',
-      id: '0x4384F298',
-      inputs: [
-        { name: 'amount', type: 'uint128' },
-        { name: 'remainingGasTo', type: 'address' },
-        { name: 'notify', type: 'bool' },
-        { name: 'payload', type: 'cell' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'sendSurplusGas',
-      inputs: [{ name: 'to', type: 'address' }],
-      outputs: [],
-    },
-  ],
-  data: [
-    { key: 1, name: 'root_', type: 'address' },
-    { key: 2, name: 'owner_', type: 'address' },
-  ],
-  events: [],
-  fields: [
-    { name: '_pubkey', type: 'uint256' },
-    { name: '_timestamp', type: 'uint64' },
-    { name: '_constructorFlag', type: 'bool' },
-    { name: 'root_', type: 'address' },
-    { name: 'owner_', type: 'address' },
-    { name: 'balance_', type: 'uint128' },
-    { name: 'version_', type: 'uint32' },
-    { name: 'platformCode_', type: 'cell' },
-  ],
-} as const;
-const dexRootAbi = {
-  ABIversion: 2,
-  version: '2.2',
-  header: ['pubkey', 'time', 'expire'],
-  functions: [
-    {
-      name: 'constructor',
-      inputs: [
-        { name: 'initial_owner', type: 'address' },
-        { name: 'initial_vault', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'getAccountVersion',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'uint32' }],
-    },
-    {
-      name: 'getAccountCode',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'cell' }],
-    },
-    {
-      name: 'getPairVersion',
-      inputs: [
-        { name: 'answerId', type: 'uint32' },
-        { name: 'pool_type', type: 'uint8' },
-      ],
-      outputs: [{ name: 'value0', type: 'uint32' }],
-    },
-    {
-      name: 'getPoolVersion',
-      inputs: [
-        { name: 'answerId', type: 'uint32' },
-        { name: 'pool_type', type: 'uint8' },
-      ],
-      outputs: [{ name: 'value0', type: 'uint32' }],
-    },
-    {
-      name: 'getPairCode',
-      inputs: [
-        { name: 'answerId', type: 'uint32' },
-        { name: 'pool_type', type: 'uint8' },
-      ],
-      outputs: [{ name: 'value0', type: 'cell' }],
-    },
-    {
-      name: 'getPoolCode',
-      inputs: [
-        { name: 'answerId', type: 'uint32' },
-        { name: 'pool_type', type: 'uint8' },
-      ],
-      outputs: [{ name: 'value0', type: 'cell' }],
-    },
-    {
-      name: 'getVault',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'getTokenVaultCode',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'cell' }],
-    },
-    {
-      name: 'getTokenVaultVersion',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'uint32' }],
-    },
-    {
-      name: 'getLpTokenPendingCode',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'cell' }],
-    },
-    {
-      name: 'getLpTokenPendingVersion',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'uint32' }],
-    },
-    {
-      name: 'getTokenFactory',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'isActive',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'bool' }],
-    },
-    {
-      name: 'getOwner',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'dex_owner', type: 'address' }],
-    },
-    {
-      name: 'getPendingOwner',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'dex_pending_owner', type: 'address' }],
-    },
-    {
-      name: 'getExpectedAccountAddress',
-      inputs: [
-        { name: 'answerId', type: 'uint32' },
-        { name: 'account_owner', type: 'address' },
-      ],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'getExpectedPairAddress',
-      inputs: [
-        { name: 'answerId', type: 'uint32' },
-        { name: 'left_root', type: 'address' },
-        { name: 'right_root', type: 'address' },
-      ],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'getExpectedPoolAddress',
-      inputs: [
-        { name: 'answerId', type: 'uint32' },
-        { name: '_roots', type: 'address[]' },
-      ],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'getExpectedTokenVaultAddress',
-      inputs: [
-        { name: 'answerId', type: 'uint32' },
-        { name: '_tokenRoot', type: 'address' },
-      ],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'getManager',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'setVaultOnce',
-      inputs: [{ name: 'new_vault', type: 'address' }],
-      outputs: [],
-    },
-    {
-      name: 'setActive',
-      inputs: [{ name: 'new_active', type: 'bool' }],
-      outputs: [],
-    },
-    {
-      name: 'setManager',
-      inputs: [{ name: '_newManager', type: 'address' }],
-      outputs: [],
-    },
-    { name: 'revokeManager', inputs: [], outputs: [] },
-    {
-      name: 'transferOwner',
-      inputs: [{ name: 'new_owner', type: 'address' }],
-      outputs: [],
-    },
-    { name: 'acceptOwner', inputs: [], outputs: [] },
-    {
-      name: 'setTokenFactory',
-      inputs: [
-        { name: '_newTokenFactory', type: 'address' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'installPlatformOnce',
-      inputs: [{ name: 'code', type: 'cell' }],
-      outputs: [],
-    },
-    {
-      name: 'installOrUpdateAccountCode',
-      inputs: [{ name: 'code', type: 'cell' }],
-      outputs: [],
-    },
-    {
-      name: 'installOrUpdatePairCode',
-      inputs: [
-        { name: 'code', type: 'cell' },
-        { name: 'pool_type', type: 'uint8' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'installOrUpdatePoolCode',
-      inputs: [
-        { name: 'code', type: 'cell' },
-        { name: 'pool_type', type: 'uint8' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'installOrUpdateTokenVaultCode',
-      inputs: [
-        { name: '_newCode', type: 'cell' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'installOrUpdateLpTokenPendingCode',
-      inputs: [
-        { name: '_newCode', type: 'cell' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    { name: 'upgrade', inputs: [{ name: 'code', type: 'cell' }], outputs: [] },
-    {
-      name: 'resetGas',
-      inputs: [{ name: 'receiver', type: 'address' }],
-      outputs: [],
-    },
-    {
-      name: 'deployTokenVault',
-      inputs: [
-        { name: '_tokenRoot', type: 'address' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'onTokenVaultDeployed',
-      inputs: [
-        { name: '_version', type: 'uint32' },
-        { name: '_tokenRoot', type: 'address' },
-        { name: '_tokenWallet', type: 'address' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'deployLpToken',
-      inputs: [
-        { name: '_tokenRoots', type: 'address[]' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'onLiquidityTokenDeployed',
-      inputs: [
-        { name: '_lpPendingNonce', type: 'uint32' },
-        { name: '_pool', type: 'address' },
-        { name: '_roots', type: 'address[]' },
-        { name: '_lpRoot', type: 'address' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'onLiquidityTokenNotDeployed',
-      inputs: [
-        { name: '_lpPendingNonce', type: 'uint32' },
-        { name: '_pool', type: 'address' },
-        { name: '_roots', type: 'address[]' },
-        { name: '_lpRoot', type: 'address' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'upgradeTokenVault',
-      inputs: [
-        { name: '_tokenRoot', type: 'address' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'upgradeTokenVaults',
-      inputs: [
-        { name: '_tokenRoots', type: 'address[]' },
-        { name: '_offset', type: 'uint32' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'deployAccount',
-      inputs: [
-        { name: 'account_owner', type: 'address' },
-        { name: 'send_gas_to', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'requestUpgradeAccount',
-      inputs: [
-        { name: 'current_version', type: 'uint32' },
-        { name: 'send_gas_to', type: 'address' },
-        { name: 'account_owner', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'forceUpgradeAccount',
-      inputs: [
-        { name: 'account_owner', type: 'address' },
-        { name: 'send_gas_to', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'upgradeAccounts',
-      inputs: [
-        { name: '_accountsOwners', type: 'address[]' },
-        { name: '_offset', type: 'uint32' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'upgradePair',
-      inputs: [
-        { name: 'left_root', type: 'address' },
-        { name: 'right_root', type: 'address' },
-        { name: 'pool_type', type: 'uint8' },
-        { name: 'send_gas_to', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'upgradePool',
-      inputs: [
-        { name: 'roots', type: 'address[]' },
-        { name: 'pool_type', type: 'uint8' },
-        { name: 'send_gas_to', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'upgradePools',
-      inputs: [
-        {
-          components: [
-            { name: 'tokenRoots', type: 'address[]' },
-            { name: 'poolType', type: 'uint8' },
-          ],
-          name: '_params',
-          type: 'tuple[]',
-        },
-        { name: '_offset', type: 'uint32' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'setPoolActive',
-      inputs: [
-        {
-          components: [
-            { name: 'tokenRoots', type: 'address[]' },
-            { name: 'newActive', type: 'bool' },
-          ],
-          name: '_param',
-          type: 'tuple',
-        },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'setPoolsActive',
-      inputs: [
-        {
-          components: [
-            { name: 'tokenRoots', type: 'address[]' },
-            { name: 'newActive', type: 'bool' },
-          ],
-          name: '_params',
-          type: 'tuple[]',
-        },
-        { name: '_offset', type: 'uint32' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'deployPair',
-      inputs: [
-        { name: 'left_root', type: 'address' },
-        { name: 'right_root', type: 'address' },
-        { name: 'send_gas_to', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'batchPairDeploy',
-      inputs: [
-        { name: '_iter', type: 'uint8' },
-        {
-          components: [
-            { name: 'left_root', type: 'address' },
-            { name: 'right_root', type: 'address' },
-          ],
-          name: '_infos',
-          type: 'tuple[]',
-        },
-        { name: '_offset', type: 'uint32' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'deployStablePool',
-      inputs: [
-        { name: 'roots', type: 'address[]' },
-        { name: 'send_gas_to', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'setPairFeeParams',
-      inputs: [
-        { name: '_roots', type: 'address[]' },
-        {
-          components: [
-            { name: 'denominator', type: 'uint128' },
-            { name: 'pool_numerator', type: 'uint128' },
-            { name: 'beneficiary_numerator', type: 'uint128' },
-            { name: 'referrer_numerator', type: 'uint128' },
-            { name: 'beneficiary', type: 'address' },
-            { name: 'threshold', type: 'map(address,uint128)' },
-            { name: 'referrer_threshold', type: 'map(address,uint128)' },
-          ],
-          name: '_params',
-          type: 'tuple',
-        },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'setPairAmplificationCoefficient',
-      inputs: [
-        { name: '_roots', type: 'address[]' },
-        {
-          components: [
-            { name: 'value', type: 'uint128' },
-            { name: 'precision', type: 'uint128' },
-          ],
-          name: '_A',
-          type: 'tuple',
-        },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'resetTargetGas',
-      inputs: [
-        { name: 'target', type: 'address' },
-        { name: 'receiver', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'onPoolCreated',
-      inputs: [
-        { name: '_roots', type: 'address[]' },
-        { name: '_poolType', type: 'uint8' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'setOracleOptions',
-      inputs: [
-        { name: '_leftRoot', type: 'address' },
-        { name: '_rightRoot', type: 'address' },
-        {
-          components: [
-            { name: 'minInterval', type: 'uint8' },
-            { name: 'minRateDeltaNumerator', type: 'uint128' },
-            { name: 'minRateDeltaDenominator', type: 'uint128' },
-            { name: 'cardinality', type: 'uint16' },
-          ],
-          name: '_options',
-          type: 'tuple',
-        },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'removeLastNPoints',
-      inputs: [
-        { name: '_leftRoot', type: 'address' },
-        { name: '_rightRoot', type: 'address' },
-        { name: '_count', type: 'uint16' },
-        { name: '_remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'platform_code',
-      inputs: [],
-      outputs: [{ name: 'platform_code', type: 'cell' }],
-    },
-  ],
-  data: [{ key: 1, name: '_nonce', type: 'uint32' }],
-  events: [
-    {
-      name: 'PairDeployed',
-      inputs: [
-        { name: 'pair', type: 'address' },
-        { name: 'leftRoot', type: 'address' },
-        { name: 'rightRoot', type: 'address' },
-        { name: 'iter', type: 'uint8' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'AccountCodeUpgraded',
-      inputs: [{ name: 'version', type: 'uint32' }],
-      outputs: [],
-    },
-    {
-      name: 'PairCodeUpgraded',
-      inputs: [
-        { name: 'version', type: 'uint32' },
-        { name: 'poolType', type: 'uint8' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'PoolCodeUpgraded',
-      inputs: [
-        { name: 'version', type: 'uint32' },
-        { name: 'poolType', type: 'uint8' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'TokenVaultCodeUpgraded',
-      inputs: [
-        { name: 'version', type: 'uint32' },
-        { name: 'codeHash', type: 'uint256' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'LpTokenPendingCodeUpgraded',
-      inputs: [
-        { name: 'version', type: 'uint32' },
-        { name: 'codeHash', type: 'uint256' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'TokenFactoryUpdated',
-      inputs: [
-        { name: 'current', type: 'address' },
-        { name: 'previous', type: 'address' },
-      ],
-      outputs: [],
-    },
-    { name: 'RootCodeUpgraded', inputs: [], outputs: [] },
-    {
-      name: 'ActiveUpdated',
-      inputs: [{ name: 'newActive', type: 'bool' }],
-      outputs: [],
-    },
-    {
-      name: 'RequestedPoolUpgrade',
-      inputs: [{ name: 'roots', type: 'address[]' }],
-      outputs: [],
-    },
-    {
-      name: 'RequestedForceAccountUpgrade',
-      inputs: [{ name: 'accountOwner', type: 'address' }],
-      outputs: [],
-    },
-    {
-      name: 'RequestedOwnerTransfer',
-      inputs: [
-        { name: 'oldOwner', type: 'address' },
-        { name: 'newOwner', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'OwnerTransferAccepted',
-      inputs: [
-        { name: 'oldOwner', type: 'address' },
-        { name: 'newOwner', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'NewPoolCreated',
-      inputs: [
-        { name: 'roots', type: 'address[]' },
-        { name: 'poolType', type: 'uint8' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'NewTokenVaultCreated',
-      inputs: [
-        { name: 'vault', type: 'address' },
-        { name: 'tokenRoot', type: 'address' },
-        { name: 'tokenWallet', type: 'address' },
-        { name: 'version', type: 'uint32' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'NewLpTokenRootCreated',
-      inputs: [
-        { name: 'pool', type: 'address' },
-        { name: 'poolTokenRoots', type: 'address[]' },
-        { name: 'lpTokenRoot', type: 'address' },
-        { name: 'lpPendingNonce', type: 'uint32' },
-      ],
-      outputs: [],
-    },
-  ],
-  fields: [
-    { name: '_pubkey', type: 'uint256' },
-    { name: '_timestamp', type: 'uint64' },
-    { name: '_constructorFlag', type: 'bool' },
-    { name: 'platform_code', type: 'cell' },
-    { name: '_nonce', type: 'uint32' },
-    { name: '_accountCode', type: 'cell' },
-    { name: '_accountVersion', type: 'uint32' },
-    { name: '_pairCodes', type: 'map(uint8,cell)' },
-    { name: '_pairVersions', type: 'map(uint8,uint32)' },
-    { name: '_poolCodes', type: 'map(uint8,cell)' },
-    { name: '_poolVersions', type: 'map(uint8,uint32)' },
-    { name: '_vaultCode', type: 'cell' },
-    { name: '_vaultVersion', type: 'uint32' },
-    { name: '_lpTokenPendingCode', type: 'cell' },
-    { name: '_lpTokenPendingVersion', type: 'uint32' },
-    { name: '_tokenFactory', type: 'address' },
-    { name: '_active', type: 'bool' },
-    { name: '_owner', type: 'address' },
-    { name: '_vault', type: 'address' },
-    { name: '_pendingOwner', type: 'address' },
-    { name: '_manager', type: 'address' },
-  ],
-} as const;
-const tokenFactoryAbi = {
-  ABIversion: 2,
-  version: '2.2',
-  header: ['time'],
-  functions: [
-    {
-      name: 'constructor',
-      inputs: [{ name: '_owner', type: 'address' }],
-      outputs: [],
-    },
-    {
-      name: 'owner',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'pendingOwner',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'rootCode',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'cell' }],
-    },
-    {
-      name: 'walletCode',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'cell' }],
-    },
-    {
-      name: 'walletPlatformCode',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'cell' }],
-    },
-    {
-      name: 'createToken',
-      inputs: [
-        { name: 'callId', type: 'uint32' },
-        { name: 'name', type: 'string' },
-        { name: 'symbol', type: 'string' },
-        { name: 'decimals', type: 'uint8' },
-        { name: 'initialSupplyTo', type: 'address' },
-        { name: 'initialSupply', type: 'uint128' },
-        { name: 'deployWalletValue', type: 'uint128' },
-        { name: 'mintDisabled', type: 'bool' },
-        { name: 'burnByRootDisabled', type: 'bool' },
-        { name: 'burnPaused', type: 'bool' },
-        { name: 'remainingGasTo', type: 'address' },
-      ],
-      outputs: [],
-    },
-    {
-      name: 'transferOwner',
-      inputs: [
-        { name: 'answerId', type: 'uint32' },
-        { name: 'newOwner', type: 'address' },
-      ],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'acceptOwner',
-      inputs: [{ name: 'answerId', type: 'uint32' }],
-      outputs: [{ name: 'value0', type: 'address' }],
-    },
-    {
-      name: 'setRootCode',
-      inputs: [{ name: '_rootCode', type: 'cell' }],
-      outputs: [],
-    },
-    {
-      name: 'setWalletCode',
-      inputs: [{ name: '_walletCode', type: 'cell' }],
-      outputs: [],
-    },
-    {
-      name: 'setWalletPlatformCode',
-      inputs: [{ name: '_walletPlatformCode', type: 'cell' }],
-      outputs: [],
-    },
-    { name: 'upgrade', inputs: [{ name: 'code', type: 'cell' }], outputs: [] },
-  ],
-  data: [{ key: 1, name: 'randomNonce_', type: 'uint32' }],
-  events: [
-    {
-      name: 'TokenCreated',
-      inputs: [{ name: 'tokenRoot', type: 'address' }],
-      outputs: [],
-    },
-  ],
-  fields: [
-    { name: '_pubkey', type: 'uint256' },
-    { name: '_timestamp', type: 'uint64' },
-    { name: '_constructorFlag', type: 'bool' },
-    { name: 'randomNonce_', type: 'uint32' },
-    { name: 'owner_', type: 'address' },
-    { name: 'pendingOwner_', type: 'address' },
-    { name: 'rootCode_', type: 'cell' },
-    { name: 'walletCode_', type: 'cell' },
-    { name: 'walletPlatformCode_', type: 'cell' },
   ],
 } as const;
 const dexPairAbi = {
@@ -2067,20 +1157,903 @@ const dexPairAbi = {
     { name: '_typeToReserves', type: 'map(uint8,uint128[])' },
   ],
 } as const;
+const dexRootAbi = {
+  ABIversion: 2,
+  version: '2.2',
+  header: ['pubkey', 'time', 'expire'],
+  functions: [
+    {
+      name: 'constructor',
+      inputs: [
+        { name: 'initial_owner', type: 'address' },
+        { name: 'initial_vault', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'getAccountVersion',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'uint32' }],
+    },
+    {
+      name: 'getAccountCode',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'cell' }],
+    },
+    {
+      name: 'getPairVersion',
+      inputs: [
+        { name: 'answerId', type: 'uint32' },
+        { name: 'pool_type', type: 'uint8' },
+      ],
+      outputs: [{ name: 'value0', type: 'uint32' }],
+    },
+    {
+      name: 'getPoolVersion',
+      inputs: [
+        { name: 'answerId', type: 'uint32' },
+        { name: 'pool_type', type: 'uint8' },
+      ],
+      outputs: [{ name: 'value0', type: 'uint32' }],
+    },
+    {
+      name: 'getPairCode',
+      inputs: [
+        { name: 'answerId', type: 'uint32' },
+        { name: 'pool_type', type: 'uint8' },
+      ],
+      outputs: [{ name: 'value0', type: 'cell' }],
+    },
+    {
+      name: 'getPoolCode',
+      inputs: [
+        { name: 'answerId', type: 'uint32' },
+        { name: 'pool_type', type: 'uint8' },
+      ],
+      outputs: [{ name: 'value0', type: 'cell' }],
+    },
+    {
+      name: 'getVault',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'getTokenVaultCode',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'cell' }],
+    },
+    {
+      name: 'getTokenVaultVersion',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'uint32' }],
+    },
+    {
+      name: 'getLpTokenPendingCode',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'cell' }],
+    },
+    {
+      name: 'getLpTokenPendingVersion',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'uint32' }],
+    },
+    {
+      name: 'getTokenFactory',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'isActive',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'bool' }],
+    },
+    {
+      name: 'getOwner',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'dex_owner', type: 'address' }],
+    },
+    {
+      name: 'getPendingOwner',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'dex_pending_owner', type: 'address' }],
+    },
+    {
+      name: 'getExpectedAccountAddress',
+      inputs: [
+        { name: 'answerId', type: 'uint32' },
+        { name: 'account_owner', type: 'address' },
+      ],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'getExpectedPairAddress',
+      inputs: [
+        { name: 'answerId', type: 'uint32' },
+        { name: 'left_root', type: 'address' },
+        { name: 'right_root', type: 'address' },
+      ],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'getExpectedPoolAddress',
+      inputs: [
+        { name: 'answerId', type: 'uint32' },
+        { name: '_roots', type: 'address[]' },
+      ],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'getExpectedTokenVaultAddress',
+      inputs: [
+        { name: 'answerId', type: 'uint32' },
+        { name: '_tokenRoot', type: 'address' },
+      ],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'getManager',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'setVaultOnce',
+      inputs: [{ name: 'new_vault', type: 'address' }],
+      outputs: [],
+    },
+    {
+      name: 'setActive',
+      inputs: [{ name: 'new_active', type: 'bool' }],
+      outputs: [],
+    },
+    {
+      name: 'setManager',
+      inputs: [{ name: '_newManager', type: 'address' }],
+      outputs: [],
+    },
+    { name: 'revokeManager', inputs: [], outputs: [] },
+    {
+      name: 'transferOwner',
+      inputs: [{ name: 'new_owner', type: 'address' }],
+      outputs: [],
+    },
+    { name: 'acceptOwner', inputs: [], outputs: [] },
+    {
+      name: 'setTokenFactory',
+      inputs: [
+        { name: '_newTokenFactory', type: 'address' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'installPlatformOnce',
+      inputs: [{ name: 'code', type: 'cell' }],
+      outputs: [],
+    },
+    {
+      name: 'installOrUpdateAccountCode',
+      inputs: [{ name: 'code', type: 'cell' }],
+      outputs: [],
+    },
+    {
+      name: 'installOrUpdatePairCode',
+      inputs: [
+        { name: 'code', type: 'cell' },
+        { name: 'pool_type', type: 'uint8' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'installOrUpdatePoolCode',
+      inputs: [
+        { name: 'code', type: 'cell' },
+        { name: 'pool_type', type: 'uint8' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'installOrUpdateTokenVaultCode',
+      inputs: [
+        { name: '_newCode', type: 'cell' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'installOrUpdateLpTokenPendingCode',
+      inputs: [
+        { name: '_newCode', type: 'cell' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    { name: 'upgrade', inputs: [{ name: 'code', type: 'cell' }], outputs: [] },
+    {
+      name: 'resetGas',
+      inputs: [{ name: 'receiver', type: 'address' }],
+      outputs: [],
+    },
+    {
+      name: 'deployTokenVault',
+      inputs: [
+        { name: '_tokenRoot', type: 'address' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'onTokenVaultDeployed',
+      inputs: [
+        { name: '_version', type: 'uint32' },
+        { name: '_tokenRoot', type: 'address' },
+        { name: '_tokenWallet', type: 'address' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'deployLpToken',
+      inputs: [
+        { name: '_tokenRoots', type: 'address[]' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'onLiquidityTokenDeployed',
+      inputs: [
+        { name: '_lpPendingNonce', type: 'uint32' },
+        { name: '_pool', type: 'address' },
+        { name: '_roots', type: 'address[]' },
+        { name: '_lpRoot', type: 'address' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'onLiquidityTokenNotDeployed',
+      inputs: [
+        { name: '_lpPendingNonce', type: 'uint32' },
+        { name: '_pool', type: 'address' },
+        { name: '_roots', type: 'address[]' },
+        { name: '_lpRoot', type: 'address' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'upgradeTokenVault',
+      inputs: [
+        { name: '_tokenRoot', type: 'address' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'upgradeTokenVaults',
+      inputs: [
+        { name: '_tokenRoots', type: 'address[]' },
+        { name: '_offset', type: 'uint32' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'deployAccount',
+      inputs: [
+        { name: 'account_owner', type: 'address' },
+        { name: 'send_gas_to', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'requestUpgradeAccount',
+      inputs: [
+        { name: 'current_version', type: 'uint32' },
+        { name: 'send_gas_to', type: 'address' },
+        { name: 'account_owner', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'forceUpgradeAccount',
+      inputs: [
+        { name: 'account_owner', type: 'address' },
+        { name: 'send_gas_to', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'upgradeAccounts',
+      inputs: [
+        { name: '_accountsOwners', type: 'address[]' },
+        { name: '_offset', type: 'uint32' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'upgradePair',
+      inputs: [
+        { name: 'left_root', type: 'address' },
+        { name: 'right_root', type: 'address' },
+        { name: 'pool_type', type: 'uint8' },
+        { name: 'send_gas_to', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'upgradePool',
+      inputs: [
+        { name: 'roots', type: 'address[]' },
+        { name: 'pool_type', type: 'uint8' },
+        { name: 'send_gas_to', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'upgradePools',
+      inputs: [
+        {
+          components: [
+            { name: 'tokenRoots', type: 'address[]' },
+            { name: 'poolType', type: 'uint8' },
+          ],
+          name: '_params',
+          type: 'tuple[]',
+        },
+        { name: '_offset', type: 'uint32' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'setPoolActive',
+      inputs: [
+        {
+          components: [
+            { name: 'tokenRoots', type: 'address[]' },
+            { name: 'newActive', type: 'bool' },
+          ],
+          name: '_param',
+          type: 'tuple',
+        },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'setPoolsActive',
+      inputs: [
+        {
+          components: [
+            { name: 'tokenRoots', type: 'address[]' },
+            { name: 'newActive', type: 'bool' },
+          ],
+          name: '_params',
+          type: 'tuple[]',
+        },
+        { name: '_offset', type: 'uint32' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'deployPair',
+      inputs: [
+        { name: 'left_root', type: 'address' },
+        { name: 'right_root', type: 'address' },
+        { name: 'send_gas_to', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'deployStablePool',
+      inputs: [
+        { name: 'roots', type: 'address[]' },
+        { name: 'send_gas_to', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'setPairFeeParams',
+      inputs: [
+        { name: '_roots', type: 'address[]' },
+        {
+          components: [
+            { name: 'denominator', type: 'uint128' },
+            { name: 'pool_numerator', type: 'uint128' },
+            { name: 'beneficiary_numerator', type: 'uint128' },
+            { name: 'referrer_numerator', type: 'uint128' },
+            { name: 'beneficiary', type: 'address' },
+            { name: 'threshold', type: 'map(address,uint128)' },
+            { name: 'referrer_threshold', type: 'map(address,uint128)' },
+          ],
+          name: '_params',
+          type: 'tuple',
+        },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'setPairAmplificationCoefficient',
+      inputs: [
+        { name: '_roots', type: 'address[]' },
+        {
+          components: [
+            { name: 'value', type: 'uint128' },
+            { name: 'precision', type: 'uint128' },
+          ],
+          name: '_A',
+          type: 'tuple',
+        },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'resetTargetGas',
+      inputs: [
+        { name: 'target', type: 'address' },
+        { name: 'receiver', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'onPoolCreated',
+      inputs: [
+        { name: '_roots', type: 'address[]' },
+        { name: '_poolType', type: 'uint8' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'setOracleOptions',
+      inputs: [
+        { name: '_leftRoot', type: 'address' },
+        { name: '_rightRoot', type: 'address' },
+        {
+          components: [
+            { name: 'minInterval', type: 'uint8' },
+            { name: 'minRateDeltaNumerator', type: 'uint128' },
+            { name: 'minRateDeltaDenominator', type: 'uint128' },
+            { name: 'cardinality', type: 'uint16' },
+          ],
+          name: '_options',
+          type: 'tuple',
+        },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'removeLastNPoints',
+      inputs: [
+        { name: '_leftRoot', type: 'address' },
+        { name: '_rightRoot', type: 'address' },
+        { name: '_count', type: 'uint16' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'platform_code',
+      inputs: [],
+      outputs: [{ name: 'platform_code', type: 'cell' }],
+    },
+  ],
+  data: [{ key: 1, name: '_nonce', type: 'uint32' }],
+  events: [
+    {
+      name: 'AccountCodeUpgraded',
+      inputs: [{ name: 'version', type: 'uint32' }],
+      outputs: [],
+    },
+    {
+      name: 'PairCodeUpgraded',
+      inputs: [
+        { name: 'version', type: 'uint32' },
+        { name: 'poolType', type: 'uint8' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'PoolCodeUpgraded',
+      inputs: [
+        { name: 'version', type: 'uint32' },
+        { name: 'poolType', type: 'uint8' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'TokenVaultCodeUpgraded',
+      inputs: [
+        { name: 'version', type: 'uint32' },
+        { name: 'codeHash', type: 'uint256' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'LpTokenPendingCodeUpgraded',
+      inputs: [
+        { name: 'version', type: 'uint32' },
+        { name: 'codeHash', type: 'uint256' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'TokenFactoryUpdated',
+      inputs: [
+        { name: 'current', type: 'address' },
+        { name: 'previous', type: 'address' },
+      ],
+      outputs: [],
+    },
+    { name: 'RootCodeUpgraded', inputs: [], outputs: [] },
+    {
+      name: 'ActiveUpdated',
+      inputs: [{ name: 'newActive', type: 'bool' }],
+      outputs: [],
+    },
+    {
+      name: 'RequestedPoolUpgrade',
+      inputs: [{ name: 'roots', type: 'address[]' }],
+      outputs: [],
+    },
+    {
+      name: 'RequestedForceAccountUpgrade',
+      inputs: [{ name: 'accountOwner', type: 'address' }],
+      outputs: [],
+    },
+    {
+      name: 'RequestedOwnerTransfer',
+      inputs: [
+        { name: 'oldOwner', type: 'address' },
+        { name: 'newOwner', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'OwnerTransferAccepted',
+      inputs: [
+        { name: 'oldOwner', type: 'address' },
+        { name: 'newOwner', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'NewPoolCreated',
+      inputs: [
+        { name: 'roots', type: 'address[]' },
+        { name: 'poolType', type: 'uint8' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'NewTokenVaultCreated',
+      inputs: [
+        { name: 'vault', type: 'address' },
+        { name: 'tokenRoot', type: 'address' },
+        { name: 'tokenWallet', type: 'address' },
+        { name: 'version', type: 'uint32' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'NewLpTokenRootCreated',
+      inputs: [
+        { name: 'pool', type: 'address' },
+        { name: 'poolTokenRoots', type: 'address[]' },
+        { name: 'lpTokenRoot', type: 'address' },
+        { name: 'lpPendingNonce', type: 'uint32' },
+      ],
+      outputs: [],
+    },
+  ],
+  fields: [
+    { name: '_pubkey', type: 'uint256' },
+    { name: '_timestamp', type: 'uint64' },
+    { name: '_constructorFlag', type: 'bool' },
+    { name: 'platform_code', type: 'cell' },
+    { name: '_nonce', type: 'uint32' },
+    { name: '_accountCode', type: 'cell' },
+    { name: '_accountVersion', type: 'uint32' },
+    { name: '_pairCodes', type: 'map(uint8,cell)' },
+    { name: '_pairVersions', type: 'map(uint8,uint32)' },
+    { name: '_poolCodes', type: 'map(uint8,cell)' },
+    { name: '_poolVersions', type: 'map(uint8,uint32)' },
+    { name: '_vaultCode', type: 'cell' },
+    { name: '_vaultVersion', type: 'uint32' },
+    { name: '_lpTokenPendingCode', type: 'cell' },
+    { name: '_lpTokenPendingVersion', type: 'uint32' },
+    { name: '_tokenFactory', type: 'address' },
+    { name: '_active', type: 'bool' },
+    { name: '_owner', type: 'address' },
+    { name: '_vault', type: 'address' },
+    { name: '_pendingOwner', type: 'address' },
+    { name: '_manager', type: 'address' },
+  ],
+} as const;
+const tokenFactoryAbi = {
+  ABIversion: 2,
+  version: '2.2',
+  header: ['time'],
+  functions: [
+    {
+      name: 'constructor',
+      inputs: [{ name: '_owner', type: 'address' }],
+      outputs: [],
+    },
+    {
+      name: 'owner',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'pendingOwner',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'rootCode',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'cell' }],
+    },
+    {
+      name: 'walletCode',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'cell' }],
+    },
+    {
+      name: 'walletPlatformCode',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'cell' }],
+    },
+    {
+      name: 'createToken',
+      inputs: [
+        { name: 'callId', type: 'uint32' },
+        { name: 'name', type: 'string' },
+        { name: 'symbol', type: 'string' },
+        { name: 'decimals', type: 'uint8' },
+        { name: 'initialSupplyTo', type: 'address' },
+        { name: 'initialSupply', type: 'uint128' },
+        { name: 'deployWalletValue', type: 'uint128' },
+        { name: 'mintDisabled', type: 'bool' },
+        { name: 'burnByRootDisabled', type: 'bool' },
+        { name: 'burnPaused', type: 'bool' },
+        { name: 'remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'transferOwner',
+      inputs: [
+        { name: 'answerId', type: 'uint32' },
+        { name: 'newOwner', type: 'address' },
+      ],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'acceptOwner',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'setRootCode',
+      inputs: [{ name: '_rootCode', type: 'cell' }],
+      outputs: [],
+    },
+    {
+      name: 'setWalletCode',
+      inputs: [{ name: '_walletCode', type: 'cell' }],
+      outputs: [],
+    },
+    {
+      name: 'setWalletPlatformCode',
+      inputs: [{ name: '_walletPlatformCode', type: 'cell' }],
+      outputs: [],
+    },
+    { name: 'upgrade', inputs: [{ name: 'code', type: 'cell' }], outputs: [] },
+  ],
+  data: [{ key: 1, name: 'randomNonce_', type: 'uint32' }],
+  events: [
+    {
+      name: 'TokenCreated',
+      inputs: [{ name: 'tokenRoot', type: 'address' }],
+      outputs: [],
+    },
+  ],
+  fields: [
+    { name: '_pubkey', type: 'uint256' },
+    { name: '_timestamp', type: 'uint64' },
+    { name: '_constructorFlag', type: 'bool' },
+    { name: 'randomNonce_', type: 'uint32' },
+    { name: 'owner_', type: 'address' },
+    { name: 'pendingOwner_', type: 'address' },
+    { name: 'rootCode_', type: 'cell' },
+    { name: 'walletCode_', type: 'cell' },
+    { name: 'walletPlatformCode_', type: 'cell' },
+  ],
+} as const;
+const tokenWalletUpgradeableAbi = {
+  ABIversion: 2,
+  version: '2.2',
+  header: ['pubkey', 'time', 'expire'],
+  functions: [
+    { name: 'constructor', inputs: [], outputs: [] },
+    {
+      name: 'supportsInterface',
+      inputs: [
+        { name: 'answerId', type: 'uint32' },
+        { name: 'interfaceID', type: 'uint32' },
+      ],
+      outputs: [{ name: 'value0', type: 'bool' }],
+    },
+    {
+      name: 'platformCode',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'cell' }],
+    },
+    {
+      name: 'onDeployRetry',
+      id: '0x15A038FB',
+      inputs: [
+        { name: 'value0', type: 'cell' },
+        { name: 'value1', type: 'uint32' },
+        { name: 'sender', type: 'address' },
+        { name: 'remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'version',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'uint32' }],
+    },
+    {
+      name: 'upgrade',
+      inputs: [{ name: 'remainingGasTo', type: 'address' }],
+      outputs: [],
+    },
+    {
+      name: 'acceptUpgrade',
+      inputs: [
+        { name: 'newCode', type: 'cell' },
+        { name: 'newVersion', type: 'uint32' },
+        { name: 'remainingGasTo', type: 'address' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'burnByRoot',
+      inputs: [
+        { name: 'amount', type: 'uint128' },
+        { name: 'remainingGasTo', type: 'address' },
+        { name: 'callbackTo', type: 'address' },
+        { name: 'payload', type: 'cell' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'destroy',
+      inputs: [{ name: 'remainingGasTo', type: 'address' }],
+      outputs: [],
+    },
+    {
+      name: 'burn',
+      inputs: [
+        { name: 'amount', type: 'uint128' },
+        { name: 'remainingGasTo', type: 'address' },
+        { name: 'callbackTo', type: 'address' },
+        { name: 'payload', type: 'cell' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'balance',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'uint128' }],
+    },
+    {
+      name: 'owner',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'root',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'address' }],
+    },
+    {
+      name: 'walletCode',
+      inputs: [{ name: 'answerId', type: 'uint32' }],
+      outputs: [{ name: 'value0', type: 'cell' }],
+    },
+    {
+      name: 'transfer',
+      inputs: [
+        { name: 'amount', type: 'uint128' },
+        { name: 'recipient', type: 'address' },
+        { name: 'deployWalletValue', type: 'uint128' },
+        { name: 'remainingGasTo', type: 'address' },
+        { name: 'notify', type: 'bool' },
+        { name: 'payload', type: 'cell' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'transferToWallet',
+      inputs: [
+        { name: 'amount', type: 'uint128' },
+        { name: 'recipientTokenWallet', type: 'address' },
+        { name: 'remainingGasTo', type: 'address' },
+        { name: 'notify', type: 'bool' },
+        { name: 'payload', type: 'cell' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'acceptTransfer',
+      id: '0x67A0B95F',
+      inputs: [
+        { name: 'amount', type: 'uint128' },
+        { name: 'sender', type: 'address' },
+        { name: 'remainingGasTo', type: 'address' },
+        { name: 'notify', type: 'bool' },
+        { name: 'payload', type: 'cell' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'acceptMint',
+      id: '0x4384F298',
+      inputs: [
+        { name: 'amount', type: 'uint128' },
+        { name: 'remainingGasTo', type: 'address' },
+        { name: 'notify', type: 'bool' },
+        { name: 'payload', type: 'cell' },
+      ],
+      outputs: [],
+    },
+    {
+      name: 'sendSurplusGas',
+      inputs: [{ name: 'to', type: 'address' }],
+      outputs: [],
+    },
+  ],
+  data: [
+    { key: 1, name: 'root_', type: 'address' },
+    { key: 2, name: 'owner_', type: 'address' },
+  ],
+  events: [],
+  fields: [
+    { name: '_pubkey', type: 'uint256' },
+    { name: '_timestamp', type: 'uint64' },
+    { name: '_constructorFlag', type: 'bool' },
+    { name: 'root_', type: 'address' },
+    { name: 'owner_', type: 'address' },
+    { name: 'balance_', type: 'uint128' },
+    { name: 'version_', type: 'uint32' },
+    { name: 'platformCode_', type: 'cell' },
+  ],
+} as const;
 
 export const factorySource = {
   BatchExecutor: batchExecutorAbi,
   CustomTokenRoot: customTokenRootAbi,
-  TokenWalletUpgradeable: tokenWalletUpgradeableAbi,
+  DexPair: dexPairAbi,
   DexRoot: dexRootAbi,
   TokenFactory: tokenFactoryAbi,
-  DexPair: dexPairAbi,
+  TokenWalletUpgradeable: tokenWalletUpgradeableAbi,
 } as const;
 
 export type FactorySource = typeof factorySource;
 export type BatchExecutorAbi = typeof batchExecutorAbi;
 export type CustomTokenRootAbi = typeof customTokenRootAbi;
-export type TokenWalletUpgradeableAbi = typeof tokenWalletUpgradeableAbi;
+export type DexPairAbi = typeof dexPairAbi;
 export type DexRootAbi = typeof dexRootAbi;
 export type TokenFactoryAbi = typeof tokenFactoryAbi;
-export type DexPairAbi = typeof dexPairAbi;
+export type TokenWalletUpgradeableAbi = typeof tokenWalletUpgradeableAbi;
