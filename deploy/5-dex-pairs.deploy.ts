@@ -56,7 +56,7 @@ export default async (): Promise<void> => {
     range(helperWalletsCount).pipe(toArray()),
   );
   const value =
-    PAIR_DEPLOY_VALUE * PAIRS_DEPLOY_BATCH_SIZE +
+    PAIR_DEPLOY_VALUE * Math.min(PAIRS_DEPLOY_BATCH_SIZE, TEST_TOKENS_COUNT) +
     PAIRS_DEPLOY_BATCH_VALUE +
     HELPER_WALLET_EXTRA_VALUE;
 

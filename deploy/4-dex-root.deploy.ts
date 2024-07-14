@@ -2,6 +2,7 @@ import { toNano } from 'locklift';
 
 import {
   BATCH_EXECUTOR_DEPLOYMENT_TAG,
+  DEX_DEPLOY_VALUE,
   DEX_ROOT_DEPLOYMENT_TAG,
   OWNER_EVER_WALLET_DEPLOYMENT_TAG,
   TOKEN_FACTORY_DEPLOYMENT_TAG,
@@ -19,7 +20,7 @@ export default async (): Promise<void> => {
   const { traceTree } = await locklift.tracing.trace(
     executor.methods
       .deployDex({ _remainingGasTo: owner })
-      .send({ from: owner, amount: toNano(12), bounce: true }),
+      .send({ from: owner, amount: toNano(DEX_DEPLOY_VALUE), bounce: true }),
   );
 
   const event = traceTree!.findEventsForContract({

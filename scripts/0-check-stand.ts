@@ -21,12 +21,12 @@ import {
 } from '../build/factorySource';
 
 import {
-  AMOUNT,
+  EVER_WALLET_AMOUNT,
   DEX_ROOT_DEPLOYMENT_TAG,
   EVER_WALLETS_CHECK_PROGRESS_BAR_FORMAT,
   EVER_WALLETS_COUNT,
   EVER_WALLETS_DEPLOY_BATCH_SIZE,
-  MINT_AMOUNT,
+  TOKEN_MINT_AMOUNT,
   PAIR_DEPLOYMENT_TAG,
   PAIRS_CHECK_PROGRESS_BAR_FORMAT,
   TEST_TOKENS_COUNT,
@@ -91,9 +91,9 @@ const main = async (): Promise<void> => {
                 );
               }
 
-              if (new BigNumber(state.state!.balance).lt(AMOUNT)) {
+              if (new BigNumber(state.state!.balance).lt(EVER_WALLET_AMOUNT)) {
                 return console.warn(
-                  `${wallet.name} ${state.address} balance is lower than ${AMOUNT}`,
+                  `${wallet.name} ${state.address} balance is lower than ${EVER_WALLET_AMOUNT}`,
                 );
               }
             }),
@@ -171,9 +171,9 @@ const main = async (): Promise<void> => {
                   .then((res) => res.value0),
               ),
               tap((balance) => {
-                if (new BigNumber(balance).lt(MINT_AMOUNT)) {
+                if (new BigNumber(balance).lt(TOKEN_MINT_AMOUNT)) {
                   return console.warn(
-                    `${wallet.name} ${token.name} balance is lower than ${MINT_AMOUNT}`,
+                    `${wallet.name} ${token.name} balance is lower than ${TOKEN_MINT_AMOUNT}`,
                   );
                 }
               }),
@@ -219,14 +219,14 @@ const main = async (): Promise<void> => {
 
             if (
               new BigNumber(fields.fields!._typeToReserves[0][1][0]).lt(
-                MINT_AMOUNT,
+                TOKEN_MINT_AMOUNT,
               ) ||
               new BigNumber(fields.fields!._typeToReserves[0][1][1]).lt(
-                MINT_AMOUNT,
+                TOKEN_MINT_AMOUNT,
               )
             ) {
               return console.error(
-                `Pair ${pair.address} reserves is lower than ${MINT_AMOUNT}`,
+                `Pair ${pair.address} reserves is lower than ${TOKEN_MINT_AMOUNT}`,
               );
             }
           }),
@@ -263,9 +263,9 @@ const main = async (): Promise<void> => {
               .then((res) => res.value0),
           ),
           tap((balance) => {
-            if (new BigNumber(balance).lt(MINT_AMOUNT)) {
+            if (new BigNumber(balance).lt(TOKEN_MINT_AMOUNT)) {
               return console.warn(
-                `DEX vault ${token.name} wallet balance is lower than ${MINT_AMOUNT}`,
+                `DEX vault ${token.name} wallet balance is lower than ${TOKEN_MINT_AMOUNT}`,
               );
             }
           }),

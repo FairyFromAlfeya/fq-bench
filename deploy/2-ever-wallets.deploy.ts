@@ -14,7 +14,7 @@ import {
 import { BatchExecutorAbi } from '../build/factorySource';
 
 import {
-  AMOUNT,
+  EVER_WALLET_AMOUNT,
   BATCH_EXECUTOR_DEPLOYMENT_TAG,
   DEPLOY_EVER_WALLETS_BATCH_RETRY_DELAY,
   DEPLOY_EVER_WALLETS_BATCH_TIMEOUT,
@@ -53,7 +53,8 @@ export default async (): Promise<void> => {
     range(helperWalletsCount).pipe(toArray()),
   );
   const value =
-    +AMOUNT * Math.min(EVER_WALLETS_DEPLOY_BATCH_SIZE, EVER_WALLETS_COUNT) +
+    +EVER_WALLET_AMOUNT *
+      Math.min(EVER_WALLETS_DEPLOY_BATCH_SIZE, EVER_WALLETS_COUNT) +
     EVER_WALLETS_DEPLOY_BATCH_VALUE +
     HELPER_WALLET_EXTRA_VALUE;
 
@@ -88,7 +89,7 @@ export default async (): Promise<void> => {
               deployEverWalletsBatch(
                 index,
                 batch,
-                +AMOUNT,
+                +EVER_WALLET_AMOUNT,
                 publicKey,
                 executor,
                 locklift.deployments.getAccount(

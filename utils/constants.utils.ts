@@ -73,18 +73,22 @@ export const TOKEN_WALLET_DEPLOY_BATCH_CONCURRENCY = 1;
 
 // AMOUNTS
 
-export const DEX_ROOT_DEPLOY_VALUE = 3;
-export const TOKEN_FACTORY_DEPLOY_VALUE = 2;
-export const TOKEN_WALLET_DEPLOY_VALUE = 1.5;
-export const MINT_AMOUNT = 10 ** 12;
-export const PAIR_DEPLOY_VALUE = 50;
-export const AMOUNT = '10000';
-export const TOKEN_DEPLOY_VALUE = 1.5;
+export const EVER_WALLET_AMOUNT = 10 ** 4;
+export const TOKEN_MINT_AMOUNT = 10 ** 12;
+
+export const DEX_DEPLOY_VALUE = 12;
 export const BATCH_EXECUTOR_DEPLOY_VALUE = 2;
+export const TOKEN_WALLET_DEPLOY_VALUE = 0.5;
+export const TOKEN_DEPLOY_VALUE = 1.5;
+export const PAIR_DEPLOY_VALUE = 15;
+
+export const TOKEN_WALLETS_DEPLOY_BATCH_VALUE = 150;
 export const EVER_WALLETS_DEPLOY_BATCH_VALUE = 50;
 export const TOKENS_DEPLOY_BATCH_VALUE = 50;
 export const PAIRS_DEPLOY_BATCH_VALUE = 50;
+
 export const HELPER_WALLET_EXTRA_VALUE = 5;
+export const OWNER_WALLET_EXTRA_VALUE = 5;
 
 // SIGNERS
 

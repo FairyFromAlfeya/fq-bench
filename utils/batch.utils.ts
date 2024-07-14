@@ -10,12 +10,13 @@ import {
 } from './locklift.utils';
 import {
   EVER_WALLETS_DEPLOY_BATCH_VALUE,
-  MINT_AMOUNT,
+  TOKEN_MINT_AMOUNT,
   PAIR_DEPLOY_VALUE,
   PAIRS_DEPLOY_BATCH_VALUE,
   TOKEN_DEPLOY_VALUE,
   TOKEN_NAME_SUFFIX,
   TOKEN_ROOT_DEPLOYMENT_TAG,
+  TOKEN_WALLETS_DEPLOY_BATCH_VALUE,
   TOKEN_WALLET_DEPLOY_VALUE,
   TOKENS_DEPLOY_BATCH_VALUE,
 } from './constants.utils';
@@ -147,7 +148,9 @@ export const deployTokenWalletBatch = async (
   recipients: Address[],
   owner: Address,
 ): Promise<BatchMintEvent> => {
-  const value = TOKEN_WALLET_DEPLOY_VALUE * recipients.length + 1000;
+  const value =
+    TOKEN_WALLET_DEPLOY_VALUE * recipients.length +
+    TOKEN_WALLETS_DEPLOY_BATCH_VALUE;
 
   const eventsProm = waitForNEvents(
     executor,
@@ -159,12 +162,12 @@ export const deployTokenWalletBatch = async (
   await executor.methods
     .batchMint({
       _tokenRoot: token,
-      _amount: MINT_AMOUNT,
+      _amount: TOKEN_MINT_AMOUNT,
       _offset: 0,
       _recipients: recipients,
       _remainingGasTo: owner,
     })
-    .send({ from: owner, amount: toNano(value), bounce: false });
+    .send({ from: owner, amount: toNano(value), bounce: true });
 
   return eventsProm.then((r) => r[0]);
 };
