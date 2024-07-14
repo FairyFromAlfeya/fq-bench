@@ -6,6 +6,10 @@ import {
   ObservableInput,
   Observable,
   ObservedValueOf,
+  concat,
+  range,
+  of,
+  pairwise,
 } from 'rxjs';
 
 export const retryIfTimeout = <R extends ObservableInput<unknown>>(
@@ -23,3 +27,6 @@ export const retryIfTimeout = <R extends ObservableInput<unknown>>(
     }),
   );
 };
+
+export const getChainedPairs = (count: number): Observable<[number, number]> =>
+  concat(range(count), of(0)).pipe(pairwise());

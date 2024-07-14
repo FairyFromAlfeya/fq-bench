@@ -43,6 +43,24 @@ const config: LockliftConfig = {
         amount: 20,
       },
     },
+    broxus_testnet: {
+      connection: {
+        id: 2,
+        type: 'jrpc',
+        group: 'dev',
+        data: {
+          endpoint: process.env.BROXUS_NETWORK_ENDPOINT!,
+        },
+      },
+      giver: {
+        address: process.env.BROXUS_GIVER_ADDRESS!,
+        key: process.env.BROXUS_GIVER_KEY!,
+      },
+      keys: {
+        phrase: process.env.BROXUS_PHRASE!,
+        amount: 20,
+      },
+    },
   },
   mocha: {},
 };

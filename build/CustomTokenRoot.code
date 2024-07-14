@@ -220,7 +220,7 @@ PUSHREF {
 }
 .loc ../contracts/CustomTokenRoot.tsol, 30
 PUSH S3
-ADDCONST 20
+ADDCONST 10
 UFITS 32
 PUSH S2
 MIN

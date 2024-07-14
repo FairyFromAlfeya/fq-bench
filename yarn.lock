@@ -27,15 +27,15 @@
     typescript "^4.4.5"
 
 "@broxus/locklift-network@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@broxus/locklift-network/-/locklift-network-1.0.5.tgz#2dd192d8a3f63b88d8275b9b373d8b8e206f5636"
-  integrity sha512-+x5wrIGg4mn7OX3R/MbMRPRq5k2c/N7h43S7qKXaTzhIuXuXztr+VUeyTa0bJN4z4nUxpjk9Y847ZEr9eRw6Pg==
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@broxus/locklift-network/-/locklift-network-1.0.6.tgz#192c30e700ee98974e775d820498818cb863dc27"
+  integrity sha512-c10ZXqCOXkWFNXjHMtc7bmnFPGwgIZbMJuIxXFTw5IBJF1pa1m8PfGlBcmk0MGmAZHUM/TORWgq14gTaCgphJQ==
   dependencies:
-    everscale-inpage-provider "^0.3.61"
-    everscale-standalone-client "^2.1.21"
+    everscale-inpage-provider "^0.3.66"
+    everscale-standalone-client "^2.1.26"
     heap-js "2.3.0"
     lodash "^4.17.21"
-    nekoton-wasm "npm:nekoton-wasm-locklift@^1.20.2"
+    nekoton-wasm "npm:nekoton-wasm-locklift@^1.21.1"
     typescript "^4.7.4"
 
 "@eslint-community/eslint-utils@^4.2.0", "@eslint-community/eslint-utils@^4.4.0":
@@ -823,12 +823,12 @@ everscale-crypto@^0.1.1:
   resolved "https://registry.yarnpkg.com/everscale-crypto/-/everscale-crypto-0.1.1.tgz#7e354f122b2673036d40cd6aebf44630b0392f34"
   integrity sha512-DoocTqkz1cayTu4UDdP7dUEcDMfCqchNNKhIgsXQAqhlwRExsNQ1Omo2C/JiuQ3rMzr3XxvqrCwLeLTiOrbXYQ==
 
-everscale-inpage-provider@^0.3.61, everscale-inpage-provider@^0.3.64:
+everscale-inpage-provider@^0.3.64, everscale-inpage-provider@^0.3.66:
   version "0.3.66"
   resolved "https://registry.yarnpkg.com/everscale-inpage-provider/-/everscale-inpage-provider-0.3.66.tgz#79c6f31009b8a362c1276eb9e171789c06bff383"
   integrity sha512-DoKnW6+hwqMY5mWlQ1SCmDtXriv0Q1PUdgLIbNIBkzYAC1LYt+18Kt93JksLDiCdeK/9ZRV5BpwXdhWEntQ+gA==
 
-everscale-standalone-client@^2.1.21, everscale-standalone-client@^2.1.24:
+everscale-standalone-client@^2.1.24, everscale-standalone-client@^2.1.26:
   version "2.1.26"
   resolved "https://registry.yarnpkg.com/everscale-standalone-client/-/everscale-standalone-client-2.1.26.tgz#f0090d4908ca45844062c189e8bf63a7f6aaf2f5"
   integrity sha512-vT6qBLukOwVBuPCsBuyuJSSbH1CZo82XAVe0f+Rhi+QxqfgGDTXX9Q36P03pEgQmp3KDg80DfdPLPSoJaGlaMA==
@@ -1502,10 +1502,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-nekoton-wasm@^1.3.2, "nekoton-wasm@npm:nekoton-wasm-locklift-beta@1.20.5", "nekoton-wasm@npm:nekoton-wasm-locklift@^1.20.2":
-  version "1.20.5"
-  resolved "https://registry.yarnpkg.com/nekoton-wasm-locklift-beta/-/nekoton-wasm-locklift-beta-1.20.5.tgz#dfd47ef37a204583edfb973ec8df8e5d799900cb"
-  integrity sha512-mxhhcR+tVyP9YhU4ID6QAMWj2zHZpA1t6y18M1huoKqZS/TqmD9dnpdi2S4Dvx3L6GYYDfqHgj42iprJC8IXLw==
+nekoton-wasm@^1.3.2, "nekoton-wasm@npm:nekoton-wasm-locklift-beta@1.21.1", "nekoton-wasm@npm:nekoton-wasm-locklift@^1.20.2", "nekoton-wasm@npm:nekoton-wasm-locklift@^1.21.1":
+  version "1.21.1"
+  resolved "https://registry.yarnpkg.com/nekoton-wasm-locklift-beta/-/nekoton-wasm-locklift-beta-1.21.1.tgz#574306368ef6dddd0aa8cbd00d73462492db5f35"
+  integrity sha512-rHYFNGbDlmhamYPh75fXBfIEIbvYVvQjSoK0HW80HQzet9zjgdfXvW9QXhamfP5JdVoOIwWTCw3BJOQG332VjA==
 
 no-case@^2.2.0:
   version "2.3.2"

@@ -1,109 +1,47 @@
 import { Presets, SingleBar } from 'cli-progress';
-import { Address, Contract, toNano } from 'locklift';
 import {
   bufferCount,
-  concat,
   concatMap,
   finalize,
   from,
   lastValueFrom,
   mergeMap,
-  of,
-  pairwise,
   range,
-  reduce,
   tap,
+  toArray,
 } from 'rxjs';
 
-import { DexRootAbi } from '../build/factorySource';
+import { BatchExecutorAbi, DexRootAbi } from '../build/factorySource';
 
 import {
+  BATCH_EXECUTOR_DEPLOYMENT_TAG,
+  DEPLOY_PAIRS_BATCH_RETRY_DELAY,
+  DEPLOY_PAIRS_BATCH_TIMEOUT,
+  DEX_ROOT_DEPLOYMENT_TAG,
+  HELPER_WALLET_EXTRA_VALUE,
+  OWNER_EVER_WALLET_DEPLOYMENT_TAG,
   PAIR_DEPLOY_VALUE,
   PAIRS_DEPLOY_BATCH_SIZE,
+  PAIRS_DEPLOY_BATCH_VALUE,
   PAIRS_DEPLOY_PROGRESS_BAR_FORMAT,
   TEST_TOKENS_COUNT,
+  USER_EVER_WALLET_DEPLOYMENT_TAG,
+  USER_SIGNER_ID,
 } from '../utils/constants.utils';
-import { retryIfTimeout } from '../utils/operators.utils';
-import { PairDeployedEvent } from '../utils/locklift.utils';
-
-export const deployPairsBatch = async (
-  batchIndex: number,
-  pairs: [number, number][],
-  root: Contract<DexRootAbi>,
-  owner: Address,
-): Promise<PairDeployedEvent[]> => {
-  const value = PAIR_DEPLOY_VALUE * pairs.length + 40;
-
-  const tokenAddressToName = await lastValueFrom(
-    from(pairs).pipe(
-      concatMap((pair) => from(pair)),
-      reduce(
-        (acc, val) => {
-          const address = locklift.deployments.getContract(
-            `TokenRoot-TEST-${val}`,
-          ).address;
-          acc[address.toString()] = `TEST-${val}`;
-          return acc;
-        },
-        {} as Record<string, string>,
-      ),
-    ),
-  );
-
-  const subscriber = new locklift.provider.Subscriber();
-
-  const eventsProm = root
-    .events(subscriber)
-    .filter((e) => e.event === 'PairDeployed' && +e.data.iter === batchIndex)
-    .take(pairs.length)
-    .map((event) => {
-      const e = event as PairDeployedEvent;
-
-      return {
-        ...event,
-        leftRootName: tokenAddressToName[e.data.leftRoot.toString()],
-        rightRootName: tokenAddressToName[e.data.rightRoot.toString()],
-      };
-    })
-    .fold<PairDeployedEvent[]>([], (acc, item) => {
-      acc.push(item as PairDeployedEvent);
-      return acc;
-    })
-    .finally(() => subscriber.unsubscribe());
-
-  await root.methods
-    .batchPairDeploy({
-      _iter: batchIndex,
-      _infos: pairs.map(([a, b]) => ({
-        left_root: locklift.deployments.getContract(`TokenRoot-TEST-${a}`)
-          .address,
-        right_root: locklift.deployments.getContract(`TokenRoot-TEST-${b}`)
-          .address,
-      })),
-      _offset: 0,
-      _remainingGasTo: owner,
-    })
-    .sendDelayed({ from: owner, amount: toNano(value), bounce: true });
-
-  return eventsProm;
-};
-
-const savePair = async (event: PairDeployedEvent): Promise<boolean> => {
-  await locklift.deployments.saveContract({
-    contractName: 'DexPair',
-    address: event.data.pair,
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    deploymentName: `Pair-${event.leftRootName}-${event.rightRootName}`,
-  });
-
-  return true;
-};
+import { getChainedPairs, retryIfTimeout } from '../utils/operators.utils';
+import { savePair } from '../utils/locklift.utils';
+import { deployEverWalletsBatch, deployPairsBatch } from '../utils/batch.utils';
 
 export default async (): Promise<void> => {
-  const owner =
-    locklift.deployments.getAccount('OwnerEverWallet').account.address;
-  const root = locklift.deployments.getContract<DexRootAbi>('DexRoot');
+  const owner = locklift.deployments.getAccount(
+    OWNER_EVER_WALLET_DEPLOYMENT_TAG,
+  ).account.address;
+  const root = locklift.deployments.getContract<DexRootAbi>(
+    DEX_ROOT_DEPLOYMENT_TAG,
+  );
+  const executor = locklift.deployments.getContract<BatchExecutorAbi>(
+    BATCH_EXECUTOR_DEPLOYMENT_TAG,
+  );
 
   const progress = new SingleBar(
     { format: PAIRS_DEPLOY_PROGRESS_BAR_FORMAT },
@@ -111,16 +49,47 @@ export default async (): Promise<void> => {
   );
   progress.start(TEST_TOKENS_COUNT, 0);
 
-  const pairs = concat(range(TEST_TOKENS_COUNT), of(0)).pipe(pairwise());
+  const helperWalletsCount = Math.ceil(
+    TEST_TOKENS_COUNT / PAIRS_DEPLOY_BATCH_SIZE,
+  );
+  const helperWallets = await lastValueFrom(
+    range(helperWalletsCount).pipe(toArray()),
+  );
+  const value =
+    PAIR_DEPLOY_VALUE * PAIRS_DEPLOY_BATCH_SIZE +
+    PAIRS_DEPLOY_BATCH_VALUE +
+    HELPER_WALLET_EXTRA_VALUE;
+
+  const publicKey = await locklift.keystore
+    .getSigner(USER_SIGNER_ID)
+    .then((s) => s!.publicKey);
+
+  await deployEverWalletsBatch(
+    99,
+    helperWallets,
+    value,
+    publicKey,
+    executor,
+    owner,
+  );
 
   await lastValueFrom(
-    pairs.pipe(
+    getChainedPairs(TEST_TOKENS_COUNT).pipe(
       bufferCount(PAIRS_DEPLOY_BATCH_SIZE),
-      concatMap((batch, index) =>
+      mergeMap((batch, index) =>
         retryIfTimeout(
-          () => deployPairsBatch(index, batch, root, owner),
-          60_000,
-          1_500,
+          () =>
+            deployPairsBatch(
+              index,
+              batch,
+              executor,
+              root,
+              locklift.deployments.getAccount(
+                `${USER_EVER_WALLET_DEPLOYMENT_TAG}${index}`,
+              ).account.address,
+            ),
+          DEPLOY_PAIRS_BATCH_TIMEOUT,
+          DEPLOY_PAIRS_BATCH_RETRY_DELAY,
         ),
       ),
       concatMap((batch) => from(batch)),
@@ -132,4 +101,4 @@ export default async (): Promise<void> => {
 };
 
 export const tag = 'dex-pairs';
-export const dependencies = ['dex-root'];
+export const dependencies = ['dex-root', 'ever-wallets'];

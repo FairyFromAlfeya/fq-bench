@@ -1,4 +1,3 @@
-import { toNano, Contract, Address } from 'locklift';
 import { SingleBar, Presets } from 'cli-progress';
 import {
   bufferCount,
@@ -15,78 +14,26 @@ import {
 import { BatchExecutorAbi } from '../build/factorySource';
 
 import {
+  BATCH_EXECUTOR_DEPLOYMENT_TAG,
+  DEPLOY_TOKENS_BATCH_RETRY_DELAY,
+  DEPLOY_TOKENS_BATCH_TIMEOUT,
+  OWNER_EVER_WALLET_DEPLOYMENT_TAG,
   TEST_TOKENS_COUNT,
-  TOKEN_DEPLOY_VALUE,
+  TOKEN_NAME_SUFFIX,
   TOKENS_DEPLOY_BATCH_SIZE,
   TOKENS_DEPLOY_PROGRESS_BAR_FORMAT,
 } from '../utils/constants.utils';
-import { Token, TokenRootDeployedEvent } from '../utils/locklift.utils';
+import { saveTokenRoot, Token } from '../utils/locklift.utils';
 import { retryIfTimeout } from '../utils/operators.utils';
-
-const deployTokensBatch = async (
-  batchIndex: number,
-  tokens: Token[],
-  executor: Contract<BatchExecutorAbi>,
-  owner: Address,
-): Promise<TokenRootDeployedEvent[]> => {
-  const value = TOKEN_DEPLOY_VALUE * tokens.length + 40;
-
-  const subscriber = new locklift.provider.Subscriber();
-
-  const eventsProm = executor
-    .events(subscriber)
-    .filter(
-      (e) => e.event === 'TokenRootDeployed' && +e.data._iter === batchIndex,
-    )
-    .take(tokens.length)
-    .fold<TokenRootDeployedEvent[]>([], (acc, item) => {
-      acc.push(item as TokenRootDeployedEvent);
-      return acc;
-    })
-    .finally(() => subscriber.unsubscribe());
-
-  await executor.methods
-    .batchTokenRootDeploy({
-      _iter: batchIndex,
-      _infos: tokens,
-      _offset: 0,
-      _remainingGasTo: owner,
-    })
-    .send({ from: owner, amount: toNano(value), bounce: true });
-
-  return eventsProm;
-};
-
-const saveTokenRoot = async (
-  event: TokenRootDeployedEvent,
-  owner: Address,
-): Promise<boolean> => {
-  await locklift.deployments.saveContract({
-    contractName: 'CustomTokenRoot',
-    address: event.data.tokenRoot,
-    deploymentName: `TokenRoot-${event.data.symbol}`,
-  });
-
-  const wallet = await locklift.factory
-    .getDeployedContract('CustomTokenRoot', event.data.tokenRoot)
-    .methods.walletOf({ answerId: 0, walletOwner: owner })
-    .call()
-    .then((res) => res.value0);
-
-  await locklift.deployments.saveContract({
-    contractName: 'TokenWalletUpgradeable',
-    address: wallet,
-    deploymentName: `OwnerTokenWallet-${event.data.symbol}`,
-  });
-
-  return true;
-};
+import { deployTokensBatch } from '../utils/batch.utils';
 
 export default async (): Promise<void> => {
-  const owner =
-    locklift.deployments.getAccount('OwnerEverWallet').account.address;
-  const executor =
-    locklift.deployments.getContract<BatchExecutorAbi>('BatchExecutor');
+  const owner = locklift.deployments.getAccount(
+    OWNER_EVER_WALLET_DEPLOYMENT_TAG,
+  ).account.address;
+  const executor = locklift.deployments.getContract<BatchExecutorAbi>(
+    BATCH_EXECUTOR_DEPLOYMENT_TAG,
+  );
 
   const progress = new SingleBar(
     { format: TOKENS_DEPLOY_PROGRESS_BAR_FORMAT },
@@ -97,8 +44,8 @@ export default async (): Promise<void> => {
   const tokens = range(TEST_TOKENS_COUNT).pipe(
     map<number, Token>((index) => ({
       name: 'TEST',
-      symbol: `TEST-${index}`,
-      decimals: 9,
+      symbol: `${TOKEN_NAME_SUFFIX}${index}`,
+      decimals: 7,
     })),
   );
 
@@ -108,8 +55,8 @@ export default async (): Promise<void> => {
       concatMap((batch, index) =>
         retryIfTimeout(
           () => deployTokensBatch(index, batch, executor, owner),
-          60_000,
-          1_500,
+          DEPLOY_TOKENS_BATCH_TIMEOUT,
+          DEPLOY_TOKENS_BATCH_RETRY_DELAY,
         ),
       ),
       concatMap((batch) => from(batch)),

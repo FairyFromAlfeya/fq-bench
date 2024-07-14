@@ -1,4 +1,3 @@
-import { toNano, Contract, Address, WalletTypes } from 'locklift';
 import { SingleBar, Presets } from 'cli-progress';
 import {
   bufferCount,
@@ -9,76 +8,37 @@ import {
   lastValueFrom,
   from,
   mergeMap,
+  toArray,
 } from 'rxjs';
 
 import { BatchExecutorAbi } from '../build/factorySource';
 
 import {
   AMOUNT,
+  BATCH_EXECUTOR_DEPLOYMENT_TAG,
+  DEPLOY_EVER_WALLETS_BATCH_RETRY_DELAY,
+  DEPLOY_EVER_WALLETS_BATCH_TIMEOUT,
+  EVER_WALLET_DEPLOY_BATCH_CONCURRENCY,
   EVER_WALLETS_COUNT,
   EVER_WALLETS_DEPLOY_BATCH_SIZE,
+  EVER_WALLETS_DEPLOY_BATCH_VALUE,
   EVER_WALLETS_DEPLOY_PROGRESS_BAR_FORMAT,
+  HELPER_WALLET_EXTRA_VALUE,
+  OWNER_EVER_WALLET_DEPLOYMENT_TAG,
+  USER_EVER_WALLET_DEPLOYMENT_TAG,
+  USER_SIGNER_ID,
 } from '../utils/constants.utils';
-import { EverWalletDeployedEvent } from '../utils/locklift.utils';
+import { saveEverWallet } from '../utils/locklift.utils';
 import { retryIfTimeout } from '../utils/operators.utils';
-
-const deployEverWalletsBatch = async (
-  batchIndex: number,
-  wallets: number[],
-  publicKey: string,
-  executor: Contract<BatchExecutorAbi>,
-  owner: Address,
-): Promise<EverWalletDeployedEvent[]> => {
-  const value = +AMOUNT * wallets.length + 40;
-
-  const subscriber = new locklift.provider.Subscriber();
-
-  const eventsProm = executor
-    .events(subscriber)
-    .filter(
-      (e) => e.event === 'EverWalletDeployed' && +e.data.iter === batchIndex,
-    )
-    .take(wallets.length)
-    .fold<EverWalletDeployedEvent[]>([], (acc, item) => {
-      acc.push(item as EverWalletDeployedEvent);
-      return acc;
-    })
-    .finally(() => subscriber.unsubscribe());
-
-  await executor.methods
-    .batchEverWalletDeploy({
-      _iter: batchIndex,
-      _publicKey: `0x${publicKey}`,
-      _infos: wallets.map((nonce) => ({
-        nonce: nonce,
-        amount: toNano(AMOUNT),
-      })),
-      _offset: 0,
-      _remainingGasTo: owner,
-    })
-    .send({ from: owner, amount: toNano(value), bounce: true });
-
-  return eventsProm;
-};
-
-const saveEverWallet = async (
-  event: EverWalletDeployedEvent,
-): Promise<boolean> => {
-  await locklift.deployments.saveAccount({
-    deploymentName: `EverWallet-${event.data.nonce}`,
-    address: event.data.wallet.toString(),
-    signerId: '1',
-    accountSettings: { type: WalletTypes.EverWallet },
-  });
-
-  return true;
-};
+import { deployEverWalletsBatch } from '../utils/batch.utils';
 
 export default async (): Promise<void> => {
-  const owner =
-    locklift.deployments.getAccount('OwnerEverWallet').account.address;
-  const executor =
-    locklift.deployments.getContract<BatchExecutorAbi>('BatchExecutor');
+  const owner = locklift.deployments.getAccount(
+    OWNER_EVER_WALLET_DEPLOYMENT_TAG,
+  ).account.address;
+  const executor = locklift.deployments.getContract<BatchExecutorAbi>(
+    BATCH_EXECUTOR_DEPLOYMENT_TAG,
+  );
 
   const progress = new SingleBar(
     { format: EVER_WALLETS_DEPLOY_PROGRESS_BAR_FORMAT },
@@ -86,22 +46,59 @@ export default async (): Promise<void> => {
   );
   progress.start(EVER_WALLETS_COUNT, 0);
 
-  const wallets = range(EVER_WALLETS_COUNT);
+  const helperWalletsCount = Math.ceil(
+    EVER_WALLETS_COUNT / EVER_WALLETS_DEPLOY_BATCH_SIZE,
+  );
+  const helperWallets = await lastValueFrom(
+    range(helperWalletsCount).pipe(toArray()),
+  );
+  const value =
+    +AMOUNT * Math.min(EVER_WALLETS_DEPLOY_BATCH_SIZE, EVER_WALLETS_COUNT) +
+    EVER_WALLETS_DEPLOY_BATCH_VALUE +
+    HELPER_WALLET_EXTRA_VALUE;
 
   const publicKey = await locklift.keystore
-    .getSigner('1')
+    .getSigner(USER_SIGNER_ID)
     .then((s) => s!.publicKey);
+
+  await deployEverWalletsBatch(
+    99,
+    helperWallets,
+    value,
+    publicKey,
+    executor,
+    owner,
+  ).then((events) => {
+    progress.increment(events.length);
+    return Promise.all(events.map((event) => saveEverWallet(event)));
+  });
+
+  const wallets = range(
+    helperWalletsCount,
+    EVER_WALLETS_COUNT - helperWalletsCount,
+  );
 
   await lastValueFrom(
     wallets.pipe(
       bufferCount(EVER_WALLETS_DEPLOY_BATCH_SIZE),
-      concatMap((batch, index) =>
-        retryIfTimeout(
-          () =>
-            deployEverWalletsBatch(index, batch, publicKey, executor, owner),
-          60_000,
-          1_500,
-        ),
+      mergeMap(
+        (batch, index) =>
+          retryIfTimeout(
+            () =>
+              deployEverWalletsBatch(
+                index,
+                batch,
+                +AMOUNT,
+                publicKey,
+                executor,
+                locklift.deployments.getAccount(
+                  `${USER_EVER_WALLET_DEPLOYMENT_TAG}${index}`,
+                ).account.address,
+              ),
+            DEPLOY_EVER_WALLETS_BATCH_TIMEOUT,
+            DEPLOY_EVER_WALLETS_BATCH_RETRY_DELAY,
+          ),
+        EVER_WALLET_DEPLOY_BATCH_CONCURRENCY,
       ),
       concatMap((batch) => from(batch)),
       mergeMap((event) => saveEverWallet(event)),

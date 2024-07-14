@@ -6,13 +6,24 @@ const batchExecutorAbi = {
     {
       name: 'constructor',
       inputs: [
-        { name: '_owners', type: 'address[]' },
         { name: '_platformCode', type: 'cell' },
         { name: '_rootCode', type: 'cell' },
         { name: '_walletCode', type: 'cell' },
         { name: '_everWalletCode', type: 'cell' },
+        { name: '_tokenFactoryCode', type: 'cell' },
+        { name: '_dexRootCode', type: 'cell' },
+        { name: '_dexPlatformCode', type: 'cell' },
+        { name: '_dexPairCode', type: 'cell' },
+        { name: '_dexAccountCode', type: 'cell' },
+        { name: '_dexLpPendingCode', type: 'cell' },
+        { name: '_dexTokenVaultCode', type: 'cell' },
         { name: '_remainingGasTo', type: 'address' },
       ],
+      outputs: [],
+    },
+    {
+      name: 'deployDex',
+      inputs: [{ name: '_remainingGasTo', type: 'address' }],
       outputs: [],
     },
     {
@@ -63,13 +74,34 @@ const batchExecutorAbi = {
       outputs: [],
     },
     {
-      name: 'addOwners',
-      inputs: [{ name: '_owners', type: 'address[]' }],
+      name: 'batchPairDeploy',
+      inputs: [
+        { name: '_iter', type: 'uint8' },
+        { name: '_dexRoot', type: 'address' },
+        {
+          components: [
+            { name: 'left_root', type: 'address' },
+            { name: 'right_root', type: 'address' },
+          ],
+          name: '_infos',
+          type: 'tuple[]',
+        },
+        { name: '_offset', type: 'uint32' },
+        { name: '_remainingGasTo', type: 'address' },
+      ],
       outputs: [],
     },
   ],
   data: [{ key: 1, name: '_nonce', type: 'uint64' }],
   events: [
+    {
+      name: 'DexDeployed',
+      inputs: [
+        { name: 'tokenFactory', type: 'address' },
+        { name: 'dexRoot', type: 'address' },
+      ],
+      outputs: [],
+    },
     {
       name: 'TokenRootDeployed',
       inputs: [
@@ -97,18 +129,34 @@ const batchExecutorAbi = {
       ],
       outputs: [],
     },
+    {
+      name: 'PairDeployed',
+      inputs: [
+        { name: 'pair', type: 'address' },
+        { name: 'leftRoot', type: 'address' },
+        { name: 'rightRoot', type: 'address' },
+        { name: 'iter', type: 'uint8' },
+      ],
+      outputs: [],
+    },
   ],
   fields: [
     { name: '_pubkey', type: 'uint256' },
     { name: '_timestamp', type: 'uint64' },
     { name: '_constructorFlag', type: 'bool' },
     { name: '_nonce', type: 'uint64' },
-    { name: 'owners', type: 'address[]' },
     { name: 'nonce', type: 'uint256' },
     { name: 'platformCode', type: 'cell' },
     { name: 'rootCode', type: 'cell' },
     { name: 'walletCode', type: 'cell' },
     { name: 'everWalletCode', type: 'cell' },
+    { name: 'tokenFactoryCode', type: 'cell' },
+    { name: 'dexRootCode', type: 'cell' },
+    { name: 'dexPlatformCode', type: 'cell' },
+    { name: 'dexPairCode', type: 'cell' },
+    { name: 'dexAccountCode', type: 'cell' },
+    { name: 'dexLpPendingCode', type: 'cell' },
+    { name: 'dexTokenVaultCode', type: 'cell' },
   ],
 } as const;
 const customTokenRootAbi = {

@@ -7,7 +7,8 @@
     "format": "prettier --write \"{scripts,deploy}/**/*.ts\"",
     "lint": "eslint \"{scripts,deploy}/**/*.ts\" --fix",
 
-    "deploy": "locklift deploy --disable-build -n locklift --force"
+    "deploy": "locklift deploy --disable-build -n locklift --force",
+    "check": "locklift run --script scripts/0-check-stand.ts --disable-build -n locklift"
   },
   "devDependencies": {
     "@broxus/locklift-deploy": "^1.1.1",
@@ -27,6 +28,6 @@
     "typescript": "^5.5.3"
   },
   "resolutions": {
-    "nekoton-wasm": "npm:nekoton-wasm-locklift-beta@1.20.5"
+    "nekoton-wasm": "npm:nekoton-wasm-locklift-beta@1.21.1"
   }
 }
