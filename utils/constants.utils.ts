@@ -1,5 +1,6 @@
 // COUNTS
-export const EVER_WALLETS_COUNT = +(process.env.EVER_WALLETS_COUNT || 1000);
+
+export const EVER_WALLETS_COUNT = +(process.env.EVER_WALLETS_COUNT || 10000);
 export const TEST_TOKENS_COUNT = +(process.env.TEST_TOKENS_COUNT || 50);
 
 // PROGRESS BAR FORMATS
@@ -18,8 +19,11 @@ export const TOKEN_WALLETS_CHECK_PROGRESS_BAR_FORMAT =
   'Checking token wallets: {bar} {percentage}% | Duration: {duration}s | {value}/{total}';
 export const PAIRS_CHECK_PROGRESS_BAR_FORMAT =
   'Checking pairs: {bar} {percentage}% | Duration: {duration}s | {value}/{total}';
+export const TOKEN_VAULTS_CHECK_PROGRESS_BAR_FORMAT =
+  'Checking token vaults: {bar} {percentage}% | Duration: {duration}s | {value}/{total}';
 
 // CODES
+
 export const EverWalletCode =
   'te6ccgEBBgEA/AABFP8A9KQT9LzyyAsBAgEgBQIC5vJx1wEBwADyeoMI1xjtRNCDB9cB1ws/yPgozxYjzxbJ+QADcdcBAcMAmoMH1wFRE7ry4GTegEDXAYAg1wGAINcBVBZ1+RDyqPgju/J5Zr74I4EHCKCBA+ioUiC8sfJ0AiCCEEzuZGy64w8ByMv/yz/J7VQEAwA+ghAWnj4Ruo4R+AACkyDXSpd41wHUAvsA6NGTMvI84gCYMALXTND6QIMG1wFx1wF41wHXTPgAcIAQBKoCFLHIywVQBc8WUAP6AstpItAhzzEh10mghAm5mDNwAcsAWM8WlzBxAcsAEsziyQH7AAAE0jA=';
 export const TokenWalletPlatformCode =
@@ -44,6 +48,7 @@ export const PAIR_DEPLOYMENT_TAG = 'DexPair-';
 export const TOKEN_ROOT_DEPLOYMENT_TAG = 'TokenRootUpgradeable';
 export const TOKEN_NAME_SUFFIX = 'TEST-';
 export const OWNER_TOKEN_WALLET_DEPLOYMENT_TAG = 'OwnerTokenWallet';
+export const HELPERS_DEPLOY_BATCH_INDEX = 65535;
 
 // TIMEOUTS
 
@@ -69,7 +74,8 @@ export const TOKEN_WALLETS_DEPLOY_BATCH_SIZE = 1000;
 // CONCURRENCY
 
 export const EVER_WALLET_DEPLOY_BATCH_CONCURRENCY = 100;
-export const TOKEN_WALLET_DEPLOY_BATCH_CONCURRENCY = 1;
+export const PAIRS_DEPLOY_BATCH_CONCURRENCY = 50;
+export const TOKEN_WALLET_DEPLOY_BATCH_CONCURRENCY = 50;
 
 // AMOUNTS
 

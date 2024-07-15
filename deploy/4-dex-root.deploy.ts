@@ -1,5 +1,7 @@
 import { toNano } from 'locklift';
 
+import { BatchExecutorAbi } from '../build/factorySource';
+
 import {
   BATCH_EXECUTOR_DEPLOYMENT_TAG,
   DEX_DEPLOY_VALUE,
@@ -7,7 +9,7 @@ import {
   OWNER_EVER_WALLET_DEPLOYMENT_TAG,
   TOKEN_FACTORY_DEPLOYMENT_TAG,
 } from '../utils/constants.utils';
-import { BatchExecutorAbi } from '../build/factorySource';
+import { waitForNEvents } from '../utils/locklift.utils';
 
 export default async (): Promise<void> => {
   const owner = locklift.deployments.getAccount(
@@ -17,29 +19,35 @@ export default async (): Promise<void> => {
     BATCH_EXECUTOR_DEPLOYMENT_TAG,
   );
 
-  const { traceTree } = await locklift.tracing.trace(
-    executor.methods
-      .deployDex({ _remainingGasTo: owner })
-      .send({ from: owner, amount: toNano(DEX_DEPLOY_VALUE), bounce: true }),
+  const eventProm = waitForNEvents(
+    executor,
+    'DexDeployed' as const,
+    (item) => !!item.data,
+    1,
   );
 
-  const event = traceTree!.findEventsForContract({
-    contract: executor,
-    name: 'DexDeployed' as const,
-  })[0];
+  await executor.methods
+    .deployDex({ _remainingGasTo: owner })
+    .send({ from: owner, amount: toNano(DEX_DEPLOY_VALUE), bounce: true });
+
+  const event = (await eventProm)[0];
 
   await locklift.deployments.saveContract({
     contractName: 'TokenFactory',
-    address: event.tokenFactory,
+    address: event.data.tokenFactory,
     deploymentName: TOKEN_FACTORY_DEPLOYMENT_TAG,
   });
 
+  console.log(`Token factory deployed: ${event.data.tokenFactory}`);
+
   await locklift.deployments.saveContract({
     contractName: 'DexRoot',
-    address: event.dexRoot,
+    address: event.data.dexRoot,
     deploymentName: DEX_ROOT_DEPLOYMENT_TAG,
   });
+
+  console.log(`DEX root deployed: ${event.data.dexRoot}`);
 };
 
 export const tag = 'dex-root';
-export const dependencies = ['owner-ever-wallet'];
+export const dependencies = ['batch-executor'];

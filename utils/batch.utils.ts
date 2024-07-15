@@ -1,9 +1,14 @@
 import { Address, Contract, toNano } from 'locklift';
+import { concatMap, from, lastValueFrom, range, reduce, toArray } from 'rxjs';
+import { AccountWithSigner } from '@broxus/locklift-deploy/dist/types';
+
 import { BatchExecutorAbi, DexRootAbi } from '../build/factorySource';
+
 import {
   BatchMintEvent,
   EverWalletDeployedEvent,
   PairDeployedEvent,
+  saveEverWallet,
   Token,
   TokenRootDeployedEvent,
   waitForNEvents,
@@ -19,8 +24,29 @@ import {
   TOKEN_WALLETS_DEPLOY_BATCH_VALUE,
   TOKEN_WALLET_DEPLOY_VALUE,
   TOKENS_DEPLOY_BATCH_VALUE,
+  HELPERS_DEPLOY_BATCH_INDEX,
 } from './constants.utils';
-import { concatMap, from, lastValueFrom, reduce } from 'rxjs';
+
+export const deployHelpers = async (
+  helpersCount: number,
+  helperValue: number,
+  executor: Contract<BatchExecutorAbi>,
+  publicKey: string,
+  owner: Address,
+): Promise<AccountWithSigner[]> => {
+  const helperWallets = await lastValueFrom(
+    range(helpersCount).pipe(toArray()),
+  );
+
+  return deployEverWalletsBatch(
+    HELPERS_DEPLOY_BATCH_INDEX,
+    helperWallets,
+    helperValue,
+    publicKey,
+    executor,
+    owner,
+  ).then((events) => Promise.all(events.map((event) => saveEverWallet(event))));
+};
 
 export const deployEverWalletsBatch = async (
   batchIndex: number,
@@ -98,10 +124,15 @@ export const deployPairsBatch = async (
       concatMap((pair) => from(pair)),
       reduce(
         (acc, val) => {
-          const address = locklift.deployments.getContract(
-            `${TOKEN_ROOT_DEPLOYMENT_TAG}${TOKEN_NAME_SUFFIX}${val}`,
-          ).address;
-          acc[address.toString()] = `${TOKEN_NAME_SUFFIX}${val}`;
+          const deploymentName = `${TOKEN_ROOT_DEPLOYMENT_TAG}${TOKEN_NAME_SUFFIX}${val}`;
+          const address = locklift.deployments
+            .getContract(deploymentName)
+            .address.toString();
+          const tokenName = `${TOKEN_NAME_SUFFIX}${val}`;
+
+          acc[tokenName] = address;
+          acc[address] = tokenName;
+
           return acc;
         },
         {} as Record<string, string>,
@@ -121,12 +152,8 @@ export const deployPairsBatch = async (
       _batchIndex: batchIndex,
       _dexRoot: root.address,
       _infos: pairs.map(([a, b]) => ({
-        leftRoot: locklift.deployments.getContract(
-          `${TOKEN_ROOT_DEPLOYMENT_TAG}${TOKEN_NAME_SUFFIX}${a}`,
-        ).address,
-        rightRoot: locklift.deployments.getContract(
-          `${TOKEN_ROOT_DEPLOYMENT_TAG}${TOKEN_NAME_SUFFIX}${b}`,
-        ).address,
+        leftRoot: new Address(tokenAddressToName[`${TOKEN_NAME_SUFFIX}${a}`]),
+        rightRoot: new Address(tokenAddressToName[`${TOKEN_NAME_SUFFIX}${b}`]),
       })),
       _offset: 0,
       _remainingGasTo: owner,

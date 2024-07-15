@@ -93,21 +93,19 @@ export const getState = (address: Address) =>
 
 export const getTokenWallet = (
   token: { contract: Contract<CustomTokenRootAbi>; state?: FullContractState },
-  wallet: Address,
+  walletOwner: Address,
 ) =>
   token.contract.methods
-    .walletOf({ answerId: 0, walletOwner: wallet })
+    .walletOf({ answerId: 0, walletOwner: walletOwner })
     .call({ cachedState: token.state })
     .then(async (res) => {
       const contract = locklift.factory.getDeployedContract(
         'TokenWalletUpgradeable',
         res.value0,
       );
+      const state = await contract.getFullState().then((res) => res.state);
 
-      return {
-        contract,
-        state: await contract.getFullState().then((res) => res.state),
-      };
+      return { contract, state };
     });
 
 type EventsNames<T> = DecodedEventWithTransaction<T, AbiEventName<T>>['event'];
@@ -132,16 +130,16 @@ export const waitForNEvents = async <T, N extends EventsNames<T>>(
     .finally(() => subscriber.unsubscribe());
 };
 
-export type EverWalletDeployedEvent = DecodedEventWithTransaction<
-  BatchExecutorAbi,
-  'EverWalletDeployed'
->;
-
 export type Token = {
   name: string;
   symbol: string;
   decimals: number;
 };
+
+export type EverWalletDeployedEvent = DecodedEventWithTransaction<
+  BatchExecutorAbi,
+  'EverWalletDeployed'
+>;
 
 export type TokenRootDeployedEvent = DecodedEventWithTransaction<
   BatchExecutorAbi,

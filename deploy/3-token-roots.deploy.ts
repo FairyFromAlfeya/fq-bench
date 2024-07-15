@@ -23,7 +23,7 @@ import {
   TOKENS_DEPLOY_BATCH_SIZE,
   TOKENS_DEPLOY_PROGRESS_BAR_FORMAT,
 } from '../utils/constants.utils';
-import { saveTokenRoot, Token } from '../utils/locklift.utils';
+import { saveTokenRoot } from '../utils/locklift.utils';
 import { retryIfTimeout } from '../utils/operators.utils';
 import { deployTokensBatch } from '../utils/batch.utils';
 
@@ -35,14 +35,18 @@ export default async (): Promise<void> => {
     BATCH_EXECUTOR_DEPLOYMENT_TAG,
   );
 
+  // Progress
+
   const progress = new SingleBar(
     { format: TOKENS_DEPLOY_PROGRESS_BAR_FORMAT },
     Presets.shades_classic,
   );
   progress.start(TEST_TOKENS_COUNT, 0);
 
+  // Tokens deploy
+
   const tokens = range(TEST_TOKENS_COUNT).pipe(
-    map<number, Token>((index) => ({
+    map((index) => ({
       name: 'TEST',
       symbol: `${TOKEN_NAME_SUFFIX}${index}`,
       decimals: 7,
@@ -64,6 +68,7 @@ export default async (): Promise<void> => {
       tap(() => progress.increment()),
       finalize(() => progress.stop()),
     ),
+    { defaultValue: null },
   );
 };
 

@@ -3,13 +3,11 @@ import {
   bufferCount,
   concatMap,
   finalize,
-  from,
   lastValueFrom,
   map,
   mergeMap,
   range,
   tap,
-  toArray,
 } from 'rxjs';
 
 import {
@@ -38,10 +36,7 @@ import {
   USER_SIGNER_ID,
 } from '../utils/constants.utils';
 import { retryIfTimeout } from '../utils/operators.utils';
-import {
-  deployEverWalletsBatch,
-  deployTokenWalletBatch,
-} from '../utils/batch.utils';
+import { deployHelpers, deployTokenWalletBatch } from '../utils/batch.utils';
 import { getTokenVault } from '../utils/locklift.utils';
 
 export default async (): Promise<void> => {
@@ -55,6 +50,11 @@ export default async (): Promise<void> => {
     DEX_ROOT_DEPLOYMENT_TAG,
   );
   const rootState = await root.getFullState().then((s) => s.state!);
+  const publicKey = await locklift.keystore
+    .getSigner(USER_SIGNER_ID)
+    .then((s) => s!.publicKey);
+
+  // Progress
 
   const progress = new SingleBar(
     { format: TOKEN_WALLETS_DEPLOY_PROGRESS_BAR_FORMAT },
@@ -62,39 +62,27 @@ export default async (): Promise<void> => {
   );
   progress.start(TEST_TOKENS_COUNT * (EVER_WALLETS_COUNT + 1), 0);
 
-  const helperWallets = await lastValueFrom(
-    range(TEST_TOKENS_COUNT).pipe(toArray()),
+  // Helpers
+
+  const batchesCount = Math.ceil(
+    EVER_WALLETS_COUNT / TOKEN_WALLETS_DEPLOY_BATCH_SIZE,
   );
-  const value =
-    TOKEN_WALLET_DEPLOY_VALUE *
+  const helperValue =
+    (TOKEN_WALLET_DEPLOY_VALUE *
       (Math.min(TOKEN_WALLETS_DEPLOY_BATCH_SIZE, EVER_WALLETS_COUNT) + 1) +
-    TOKEN_WALLETS_DEPLOY_BATCH_VALUE +
-    HELPER_WALLET_EXTRA_VALUE;
+      TOKEN_WALLETS_DEPLOY_BATCH_VALUE +
+      HELPER_WALLET_EXTRA_VALUE) *
+    batchesCount;
 
-  const publicKey = await locklift.keystore
-    .getSigner(USER_SIGNER_ID)
-    .then((s) => s!.publicKey);
-
-  await deployEverWalletsBatch(
-    99,
-    helperWallets,
-    value,
-    publicKey,
+  const helpers = await deployHelpers(
+    TEST_TOKENS_COUNT,
+    helperValue,
     executor,
+    publicKey,
     owner,
   );
 
-  const wallets = await lastValueFrom(
-    range(EVER_WALLETS_COUNT).pipe(
-      map(
-        (i) =>
-          locklift.deployments.getAccount(
-            `${USER_EVER_WALLET_DEPLOYMENT_TAG}${i}`,
-          ).account.address,
-      ),
-      toArray(),
-    ),
-  );
+  // Mint
 
   const tokens = range(TEST_TOKENS_COUNT).pipe(
     map((index) =>
@@ -104,11 +92,20 @@ export default async (): Promise<void> => {
     ),
   );
 
+  const wallets = range(EVER_WALLETS_COUNT).pipe(
+    map(
+      (i) =>
+        locklift.deployments.getAccount(
+          `${USER_EVER_WALLET_DEPLOYMENT_TAG}${i}`,
+        ).account.address,
+    ),
+  );
+
   await lastValueFrom(
     tokens.pipe(
       mergeMap(
         (token, index) =>
-          from(wallets).pipe(
+          wallets.pipe(
             bufferCount(TOKEN_WALLETS_DEPLOY_BATCH_SIZE),
             concatMap((batch) =>
               retryIfTimeout(
@@ -118,9 +115,7 @@ export default async (): Promise<void> => {
                       executor,
                       token.address,
                       [...batch, vault],
-                      locklift.deployments.getAccount(
-                        `${USER_EVER_WALLET_DEPLOYMENT_TAG}${index}`,
-                      ).account.address,
+                      helpers[index].account.address,
                     ),
                   ),
                 DEPLOY_TOKEN_WALLETS_BATCH_TIMEOUT,
@@ -133,6 +128,7 @@ export default async (): Promise<void> => {
       tap((event) => progress.increment(+event.data.recipientsCount)),
       finalize(() => progress.stop()),
     ),
+    { defaultValue: null },
   );
 };
 
