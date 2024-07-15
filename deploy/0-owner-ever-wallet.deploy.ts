@@ -68,7 +68,8 @@ export default async (): Promise<void> => {
       (Math.min(TOKEN_WALLETS_DEPLOY_BATCH_SIZE, EVER_WALLETS_COUNT) + 1) +
       TOKEN_WALLETS_DEPLOY_BATCH_VALUE +
       HELPER_WALLET_EXTRA_VALUE) *
-    tokenWalletsDeployBatchesCount;
+    tokenWalletsDeployBatchesCount *
+    2;
   const tokenWalletsDeployValue =
     EVER_WALLETS_DEPLOY_BATCH_VALUE +
     tokenWalletsDeployHelperValue * tokenWalletsDeployHelpersCount;
