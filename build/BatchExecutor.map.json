@@ -1040,180 +1040,6 @@
         "line": 1584
       }
     },
-    "1fc3e37f6316159acefd92cd4f708b803b60577e826a42be004a0524b307ea7b": {
-      "0": {
-        "filename": "BatchExecutor.code",
-        "line": 1635
-      },
-      "16": {
-        "filename": "BatchExecutor.code",
-        "line": 1636
-      },
-      "24": {
-        "filename": "BatchExecutor.code",
-        "line": 1637
-      },
-      "40": {
-        "filename": "BatchExecutor.code",
-        "line": 1638
-      },
-      "56": {
-        "filename": "BatchExecutor.code",
-        "line": 1639
-      },
-      "72": {
-        "filename": "BatchExecutor.code",
-        "line": 1640
-      },
-      "80": {
-        "filename": "BatchExecutor.code",
-        "line": 1641
-      },
-      "96": {
-        "filename": "BatchExecutor.code",
-        "line": 1644
-      },
-      "112": {
-        "filename": "BatchExecutor.code",
-        "line": 1645
-      },
-      "120": {
-        "filename": "BatchExecutor.code",
-        "line": 1646
-      },
-      "128": {
-        "filename": "BatchExecutor.code",
-        "line": 1647
-      },
-      "144": {
-        "filename": "BatchExecutor.code",
-        "line": 1648
-      },
-      "160": {
-        "filename": "BatchExecutor.code",
-        "line": 1649
-      },
-      "168": {
-        "filename": "BatchExecutor.code",
-        "line": 1650
-      },
-      "184": {
-        "filename": "BatchExecutor.code",
-        "line": 1651
-      },
-      "192": {
-        "filename": "BatchExecutor.code",
-        "line": 1652
-      },
-      "208": {
-        "filename": "BatchExecutor.code",
-        "line": 1653
-      },
-      "224": {
-        "filename": "BatchExecutor.code",
-        "line": 1654
-      },
-      "240": {
-        "filename": "BatchExecutor.code",
-        "line": 1656
-      },
-      "248": {
-        "filename": "BatchExecutor.code",
-        "line": 1657
-      },
-      "264": {
-        "filename": "BatchExecutor.code",
-        "line": 1658
-      },
-      "272": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "288": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "296": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "304": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "320": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "328": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "344": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "368": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "376": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "416": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "424": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "432": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "448": {
-        "filename": "stdlib.sol",
-        "line": 63
-      },
-      "464": {
-        "filename": "BatchExecutor.code",
-        "line": 1660
-      },
-      "480": {
-        "filename": "BatchExecutor.code",
-        "line": 1661
-      },
-      "488": {
-        "filename": "BatchExecutor.code",
-        "line": 1662
-      },
-      "504": {
-        "filename": "BatchExecutor.code",
-        "line": 1663
-      },
-      "512": {
-        "filename": "BatchExecutor.code",
-        "line": 1664
-      },
-      "528": {
-        "filename": "BatchExecutor.code",
-        "line": 1665
-      },
-      "544": {
-        "filename": "BatchExecutor.code",
-        "line": 1666
-      },
-      "552": {
-        "filename": "BatchExecutor.code",
-        "line": 1667
-      },
-      "568": {
-        "filename": "BatchExecutor.code",
-        "line": 1670
-      }
-    },
     "2e4bc29b39821e7f46de861b89637249bd6a84aeb58da03ff455a186225a2683": {
       "0": {
         "filename": "../contracts/BatchExecutor.tsol",
@@ -1438,6 +1264,126 @@
         "line": 107
       }
     },
+    "37c5d469577e896167926a9b67dbddc20c014f8ebbc77393b3ac3826e0aac83f": {
+      "0": {
+        "filename": "BatchExecutor.code",
+        "line": 1603
+      },
+      "16": {
+        "filename": "BatchExecutor.code",
+        "line": 1604
+      },
+      "24": {
+        "filename": "BatchExecutor.code",
+        "line": 1605
+      },
+      "40": {
+        "filename": "BatchExecutor.code",
+        "line": 1606
+      },
+      "56": {
+        "filename": "BatchExecutor.code",
+        "line": 1607
+      },
+      "72": {
+        "filename": "BatchExecutor.code",
+        "line": 1608
+      },
+      "80": {
+        "filename": "BatchExecutor.code",
+        "line": 1609
+      },
+      "88": {
+        "filename": "BatchExecutor.code",
+        "line": 1610
+      },
+      "112": {
+        "filename": "BatchExecutor.code",
+        "line": 1611
+      },
+      "136": {
+        "filename": "BatchExecutor.code",
+        "line": 1612
+      },
+      "144": {
+        "filename": "BatchExecutor.code",
+        "line": 1613
+      },
+      "152": {
+        "filename": "BatchExecutor.code",
+        "line": 1614
+      },
+      "168": {
+        "filename": "BatchExecutor.code",
+        "line": 1615
+      },
+      "184": {
+        "filename": "BatchExecutor.code",
+        "line": 1619
+      },
+      "192": {
+        "filename": "BatchExecutor.code",
+        "line": 1620
+      },
+      "216": {
+        "filename": "BatchExecutor.code",
+        "line": 1621
+      },
+      "232": {
+        "filename": "BatchExecutor.code",
+        "line": 1622
+      },
+      "240": {
+        "filename": "BatchExecutor.code",
+        "line": 1623
+      },
+      "256": {
+        "filename": "BatchExecutor.code",
+        "line": 1627
+      },
+      "264": {
+        "filename": "BatchExecutor.code",
+        "line": 1628
+      },
+      "280": {
+        "filename": "BatchExecutor.code",
+        "line": 1631
+      }
+    },
+    "3b4b741b94c6aa6620eb34186f47d03cc8c92c2998a7ab6598de16f0caca58f0": {
+      "0": {
+        "filename": "BatchExecutor.code",
+        "line": 1673
+      },
+      "8": {
+        "filename": "BatchExecutor.code",
+        "line": 1674
+      },
+      "56": {
+        "filename": "BatchExecutor.code",
+        "line": 1675
+      },
+      "64": {
+        "filename": "BatchExecutor.code",
+        "line": 1676
+      },
+      "80": {
+        "filename": "BatchExecutor.code",
+        "line": 1702
+      },
+      "88": {
+        "filename": "BatchExecutor.code",
+        "line": 1703
+      },
+      "136": {
+        "filename": "BatchExecutor.code",
+        "line": 1704
+      },
+      "144": {
+        "filename": "BatchExecutor.code",
+        "line": 1705
+      }
+    },
     "44a417fa52910b423454f0f703ffbf12579a5051c233d8ff472cf19b491f614a": {
       "0": {
         "filename": "BatchExecutor.code",
@@ -1538,6 +1484,76 @@
       "288": {
         "filename": "BatchExecutor.code",
         "line": 1031
+      }
+    },
+    "45826e40b406612ed10597ac7a1c2e7f244108e47b2407c6a76348df18783acb": {
+      "0": {
+        "filename": "BatchExecutor.code",
+        "line": 91
+      },
+      "8": {
+        "filename": "BatchExecutor.code",
+        "line": 92
+      },
+      "24": {
+        "filename": "BatchExecutor.code",
+        "line": 93
+      },
+      "48": {
+        "filename": "BatchExecutor.code",
+        "line": 94
+      },
+      "64": {
+        "filename": "BatchExecutor.code",
+        "line": 95
+      },
+      "72": {
+        "filename": "BatchExecutor.code",
+        "line": 96
+      },
+      "88": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 78
+      },
+      "96": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 78
+      },
+      "104": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 78
+      },
+      "112": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 78
+      },
+      "120": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 78
+      },
+      "128": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 78
+      },
+      "136": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 78
+      },
+      "152": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 78
+      },
+      "160": {
+        "filename": "BatchExecutor.code",
+        "line": 110
+      },
+      "176": {
+        "filename": "BatchExecutor.code",
+        "line": 113
+      },
+      "192": {
+        "filename": "BatchExecutor.code",
+        "line": 116
       }
     },
     "638bb60ca3887ed795c2828479c6ed77f8bcada64841586d2f26a279c9196c82": {
@@ -1676,264 +1692,6 @@
       "432": {
         "filename": "BatchExecutor.code",
         "line": 813
-      }
-    },
-    "63959d99f1243ad34d650ac3d610e5148a6d3228bd74b0a97cbda1f336cbc52b": {
-      "0": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 34
-      },
-      "48": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 34
-      },
-      "56": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 34
-      },
-      "72": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 79
-      },
-      "88": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 80
-      },
-      "104": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "112": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "120": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "128": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "144": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "152": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "160": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "176": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "192": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "200": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "208": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "224": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "232": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "240": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "256": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "272": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "280": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "296": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "304": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "320": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "328": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "352": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "368": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "384": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "400": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "408": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "416": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "432": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "440": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "472": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "488": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "496": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "504": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "512": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "520": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "528": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "552": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "560": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "720": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "744": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "752": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "768": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "776": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "792": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "800": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "808": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "856": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "864": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "872": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "880": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "888": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 82
-      },
-      "904": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 90
-      },
-      "920": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 90
-      },
-      "928": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 90
-      },
-      "936": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 90
-      },
-      "944": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 90
-      },
-      "968": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 90
-      },
-      "984": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 90
-      },
-      "1008": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 90
       }
     },
     "68e97da0bf41bccec0a5c0119ce8396e422b4a5d39f25eb8a3bb7598bfc37fd1": {
@@ -2748,72 +2506,6 @@
         "line": 94
       }
     },
-    "8f47fa0945cbfe9d018ceb6e1fede9678368f9947f961f5676b6461c4d7f0d9b": {
-      "0": {
-        "filename": "BatchExecutor.code",
-        "line": 1677
-      },
-      "8": {
-        "filename": "BatchExecutor.code",
-        "line": 1678
-      },
-      "56": {
-        "filename": "BatchExecutor.code",
-        "line": 1679
-      },
-      "64": {
-        "filename": "BatchExecutor.code",
-        "line": 1680
-      },
-      "80": {
-        "filename": "BatchExecutor.code",
-        "line": 1683
-      },
-      "88": {
-        "filename": "BatchExecutor.code",
-        "line": 1684
-      },
-      "136": {
-        "filename": "BatchExecutor.code",
-        "line": 1685
-      },
-      "144": {
-        "filename": "BatchExecutor.code",
-        "line": 1686
-      },
-      "160": {
-        "filename": "BatchExecutor.code",
-        "line": 1689
-      },
-      "168": {
-        "filename": "BatchExecutor.code",
-        "line": 1690
-      },
-      "216": {
-        "filename": "BatchExecutor.code",
-        "line": 1691
-      },
-      "224": {
-        "filename": "BatchExecutor.code",
-        "line": 1692
-      },
-      "240": {
-        "filename": "BatchExecutor.code",
-        "line": 1695
-      },
-      "248": {
-        "filename": "BatchExecutor.code",
-        "line": 1696
-      },
-      "296": {
-        "filename": "BatchExecutor.code",
-        "line": 1697
-      },
-      "304": {
-        "filename": "BatchExecutor.code",
-        "line": 1698
-      }
-    },
     "90902a7a46e125597c1b3f3e5672b2dde826917cbcd62a19621e504371a87417": {
       "0": {
         "filename": "../contracts/BatchExecutor.tsol",
@@ -3501,6 +3193,72 @@
         "line": 1535
       }
     },
+    "a8da2f50e4a75d0cdcb5db783c4f2ab6f7bb5f72b76d7e2ffbcaa4586f34ddb5": {
+      "0": {
+        "filename": "BatchExecutor.code",
+        "line": 1677
+      },
+      "8": {
+        "filename": "BatchExecutor.code",
+        "line": 1678
+      },
+      "56": {
+        "filename": "BatchExecutor.code",
+        "line": 1679
+      },
+      "64": {
+        "filename": "BatchExecutor.code",
+        "line": 1680
+      },
+      "80": {
+        "filename": "BatchExecutor.code",
+        "line": 1683
+      },
+      "88": {
+        "filename": "BatchExecutor.code",
+        "line": 1684
+      },
+      "136": {
+        "filename": "BatchExecutor.code",
+        "line": 1685
+      },
+      "144": {
+        "filename": "BatchExecutor.code",
+        "line": 1686
+      },
+      "160": {
+        "filename": "BatchExecutor.code",
+        "line": 1689
+      },
+      "168": {
+        "filename": "BatchExecutor.code",
+        "line": 1690
+      },
+      "216": {
+        "filename": "BatchExecutor.code",
+        "line": 1691
+      },
+      "224": {
+        "filename": "BatchExecutor.code",
+        "line": 1692
+      },
+      "240": {
+        "filename": "BatchExecutor.code",
+        "line": 1695
+      },
+      "248": {
+        "filename": "BatchExecutor.code",
+        "line": 1696
+      },
+      "296": {
+        "filename": "BatchExecutor.code",
+        "line": 1697
+      },
+      "304": {
+        "filename": "BatchExecutor.code",
+        "line": 1698
+      }
+    },
     "ac49785e26cd12d578d65f85bba73375f31a80527fe384670c5d405e235342f7": {
       "0": {
         "filename": "../contracts/BatchExecutor.tsol",
@@ -3977,6 +3735,264 @@
         "line": 619
       }
     },
+    "b5200eea8d0fc6d2abd610950c5bcf407c4f9dabaa2a2f3862c2a66696e04c7e": {
+      "0": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 34
+      },
+      "48": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 34
+      },
+      "56": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 34
+      },
+      "72": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 79
+      },
+      "88": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 80
+      },
+      "96": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "104": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "112": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "120": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "136": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "144": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "152": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "168": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "184": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "192": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "200": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "216": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "224": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "232": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "248": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "264": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "272": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "288": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "296": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "312": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "320": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "344": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "360": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "376": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "392": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "400": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "408": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "424": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "432": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "464": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "480": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "488": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "496": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "504": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "512": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "520": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "544": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "552": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "712": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "736": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "744": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "760": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "768": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "784": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "792": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "800": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "848": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "856": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "864": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "872": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "880": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 82
+      },
+      "896": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 90
+      },
+      "912": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 90
+      },
+      "920": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 90
+      },
+      "928": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 90
+      },
+      "936": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 90
+      },
+      "960": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 90
+      },
+      "976": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 90
+      },
+      "1000": {
+        "filename": "../contracts/BatchExecutor.tsol",
+        "line": 90
+      }
+    },
     "b67d670653c1641c8730d9bf0e5116e4a3702dd9ce2aed677ef1091ced6a3394": {
       "0": {
         "filename": "../contracts/BatchExecutor.tsol",
@@ -4305,7 +4321,7 @@
         "line": 210
       }
     },
-    "be960cb9f670256252081f51aa8cde250ee6a704f2074b4d0b22a05529110ffc": {
+    "c26649c3c2b2ed335f4ce9d378678a07c2eee66b4cc67372ffd39ae53e7c4dce": {
       "0": {
         "filename": "<entry-selector>",
         "line": 1
@@ -4893,40 +4909,6 @@
         "line": 88
       }
     },
-    "cba6a500aab3159a41001b5331677a53f063fffc6d1a5dd1ac491dbd121489a7": {
-      "0": {
-        "filename": "BatchExecutor.code",
-        "line": 1673
-      },
-      "8": {
-        "filename": "BatchExecutor.code",
-        "line": 1674
-      },
-      "56": {
-        "filename": "BatchExecutor.code",
-        "line": 1675
-      },
-      "64": {
-        "filename": "BatchExecutor.code",
-        "line": 1676
-      },
-      "80": {
-        "filename": "BatchExecutor.code",
-        "line": 1702
-      },
-      "88": {
-        "filename": "BatchExecutor.code",
-        "line": 1703
-      },
-      "136": {
-        "filename": "BatchExecutor.code",
-        "line": 1704
-      },
-      "144": {
-        "filename": "BatchExecutor.code",
-        "line": 1705
-      }
-    },
     "cfc23709c10c90d017c99178b87f853481f517b72b527e7f22e509697352ca2c": {
       "0": {
         "filename": "../contracts/BatchExecutor.tsol",
@@ -4963,162 +4945,6 @@
       "136": {
         "filename": "../contracts/BatchExecutor.tsol",
         "line": 137
-      }
-    },
-    "d1e40a8bf146a469c82510112e0bac5164b029b9542e4717456f02cc2cefb65e": {
-      "0": {
-        "filename": "BatchExecutor.code",
-        "line": 91
-      },
-      "8": {
-        "filename": "BatchExecutor.code",
-        "line": 92
-      },
-      "24": {
-        "filename": "BatchExecutor.code",
-        "line": 93
-      },
-      "48": {
-        "filename": "BatchExecutor.code",
-        "line": 94
-      },
-      "64": {
-        "filename": "BatchExecutor.code",
-        "line": 95
-      },
-      "72": {
-        "filename": "BatchExecutor.code",
-        "line": 96
-      },
-      "88": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 78
-      },
-      "96": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 78
-      },
-      "104": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 78
-      },
-      "112": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 78
-      },
-      "120": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 78
-      },
-      "128": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 78
-      },
-      "136": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 78
-      },
-      "152": {
-        "filename": "../contracts/BatchExecutor.tsol",
-        "line": 78
-      },
-      "160": {
-        "filename": "BatchExecutor.code",
-        "line": 110
-      },
-      "176": {
-        "filename": "BatchExecutor.code",
-        "line": 113
-      },
-      "192": {
-        "filename": "BatchExecutor.code",
-        "line": 116
-      }
-    },
-    "de5c272f9c36e522301407485afbf1817853f5c5ab17fc7b9f14749b890a49ce": {
-      "0": {
-        "filename": "BatchExecutor.code",
-        "line": 1603
-      },
-      "16": {
-        "filename": "BatchExecutor.code",
-        "line": 1604
-      },
-      "24": {
-        "filename": "BatchExecutor.code",
-        "line": 1605
-      },
-      "40": {
-        "filename": "BatchExecutor.code",
-        "line": 1606
-      },
-      "56": {
-        "filename": "BatchExecutor.code",
-        "line": 1607
-      },
-      "72": {
-        "filename": "BatchExecutor.code",
-        "line": 1608
-      },
-      "80": {
-        "filename": "BatchExecutor.code",
-        "line": 1609
-      },
-      "88": {
-        "filename": "BatchExecutor.code",
-        "line": 1610
-      },
-      "112": {
-        "filename": "BatchExecutor.code",
-        "line": 1611
-      },
-      "136": {
-        "filename": "BatchExecutor.code",
-        "line": 1612
-      },
-      "144": {
-        "filename": "BatchExecutor.code",
-        "line": 1613
-      },
-      "152": {
-        "filename": "BatchExecutor.code",
-        "line": 1614
-      },
-      "168": {
-        "filename": "BatchExecutor.code",
-        "line": 1615
-      },
-      "184": {
-        "filename": "BatchExecutor.code",
-        "line": 1619
-      },
-      "192": {
-        "filename": "BatchExecutor.code",
-        "line": 1620
-      },
-      "216": {
-        "filename": "BatchExecutor.code",
-        "line": 1621
-      },
-      "232": {
-        "filename": "BatchExecutor.code",
-        "line": 1622
-      },
-      "240": {
-        "filename": "BatchExecutor.code",
-        "line": 1623
-      },
-      "256": {
-        "filename": "BatchExecutor.code",
-        "line": 1627
-      },
-      "264": {
-        "filename": "BatchExecutor.code",
-        "line": 1628
-      },
-      "280": {
-        "filename": "BatchExecutor.code",
-        "line": 1631
       }
     },
     "df58dab41ede88c73474552aed29aa8fc1519329f4d5246aa756f8392790c338": {
@@ -5705,6 +5531,180 @@
       "144": {
         "filename": "BatchExecutor.code",
         "line": 1715
+      }
+    },
+    "fea58b7b913e1ec515444499605ebc9f6087f4f96dc2f76087505e0e39f3691d": {
+      "0": {
+        "filename": "BatchExecutor.code",
+        "line": 1635
+      },
+      "16": {
+        "filename": "BatchExecutor.code",
+        "line": 1636
+      },
+      "24": {
+        "filename": "BatchExecutor.code",
+        "line": 1637
+      },
+      "40": {
+        "filename": "BatchExecutor.code",
+        "line": 1638
+      },
+      "56": {
+        "filename": "BatchExecutor.code",
+        "line": 1639
+      },
+      "72": {
+        "filename": "BatchExecutor.code",
+        "line": 1640
+      },
+      "80": {
+        "filename": "BatchExecutor.code",
+        "line": 1641
+      },
+      "96": {
+        "filename": "BatchExecutor.code",
+        "line": 1644
+      },
+      "112": {
+        "filename": "BatchExecutor.code",
+        "line": 1645
+      },
+      "120": {
+        "filename": "BatchExecutor.code",
+        "line": 1646
+      },
+      "128": {
+        "filename": "BatchExecutor.code",
+        "line": 1647
+      },
+      "144": {
+        "filename": "BatchExecutor.code",
+        "line": 1648
+      },
+      "160": {
+        "filename": "BatchExecutor.code",
+        "line": 1649
+      },
+      "168": {
+        "filename": "BatchExecutor.code",
+        "line": 1650
+      },
+      "184": {
+        "filename": "BatchExecutor.code",
+        "line": 1651
+      },
+      "192": {
+        "filename": "BatchExecutor.code",
+        "line": 1652
+      },
+      "208": {
+        "filename": "BatchExecutor.code",
+        "line": 1653
+      },
+      "224": {
+        "filename": "BatchExecutor.code",
+        "line": 1654
+      },
+      "240": {
+        "filename": "BatchExecutor.code",
+        "line": 1656
+      },
+      "248": {
+        "filename": "BatchExecutor.code",
+        "line": 1657
+      },
+      "264": {
+        "filename": "BatchExecutor.code",
+        "line": 1658
+      },
+      "272": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "288": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "296": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "304": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "320": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "328": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "344": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "368": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "376": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "416": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "424": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "432": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "448": {
+        "filename": "stdlib.sol",
+        "line": 63
+      },
+      "464": {
+        "filename": "BatchExecutor.code",
+        "line": 1660
+      },
+      "480": {
+        "filename": "BatchExecutor.code",
+        "line": 1661
+      },
+      "488": {
+        "filename": "BatchExecutor.code",
+        "line": 1662
+      },
+      "504": {
+        "filename": "BatchExecutor.code",
+        "line": 1663
+      },
+      "512": {
+        "filename": "BatchExecutor.code",
+        "line": 1664
+      },
+      "528": {
+        "filename": "BatchExecutor.code",
+        "line": 1665
+      },
+      "544": {
+        "filename": "BatchExecutor.code",
+        "line": 1666
+      },
+      "552": {
+        "filename": "BatchExecutor.code",
+        "line": 1667
+      },
+      "568": {
+        "filename": "BatchExecutor.code",
+        "line": 1670
       }
     }
   }

@@ -1,4 +1,4 @@
-import { toNano, getRandomNonce } from 'locklift';
+import { toNano } from 'locklift';
 
 import {
   BATCH_EXECUTOR_DEPLOY_VALUE,
@@ -31,7 +31,7 @@ export default async (): Promise<void> => {
     deployConfig: {
       contract: 'BatchExecutor',
       publicKey: owner.signer.publicKey,
-      initParams: { _nonce: getRandomNonce() },
+      initParams: { _nonce: 0 },
       constructorParams: {
         _tokenWalletPlatformCode: TokenWalletPlatformCode,
         _tokenRootCode: TokenRootCode,

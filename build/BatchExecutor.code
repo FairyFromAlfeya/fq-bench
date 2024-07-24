@@ -123,7 +123,7 @@ RAWRESERVE
 .loc ../contracts/BatchExecutor.tsol, 79
 MYADDR
 .loc ../contracts/BatchExecutor.tsol, 80
-NOW
+PUSHINT 0
 .loc ../contracts/BatchExecutor.tsol, 82
 OVER
 PUSHINT 0
