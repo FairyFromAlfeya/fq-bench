@@ -6,16 +6,104 @@
 		{
 			"name": "constructor",
 			"inputs": [
+				{"name":"_remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setTokenWalletPlatformCode",
+			"inputs": [
 				{"name":"_tokenWalletPlatformCode","type":"cell"},
+				{"name":"_remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setTokenRootCode",
+			"inputs": [
 				{"name":"_tokenRootCode","type":"cell"},
+				{"name":"_remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setTokenWalletCode",
+			"inputs": [
 				{"name":"_tokenWalletCode","type":"cell"},
+				{"name":"_remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setEverWalletCode",
+			"inputs": [
 				{"name":"_everWalletCode","type":"cell"},
+				{"name":"_remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setTokenFactoryCode",
+			"inputs": [
 				{"name":"_tokenFactoryCode","type":"cell"},
+				{"name":"_remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setDexRootCode",
+			"inputs": [
 				{"name":"_dexRootCode","type":"cell"},
+				{"name":"_remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setDexPlatformCode",
+			"inputs": [
 				{"name":"_dexPlatformCode","type":"cell"},
+				{"name":"_remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setDexPairCode",
+			"inputs": [
 				{"name":"_dexPairCode","type":"cell"},
+				{"name":"_remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setDexAccountCode",
+			"inputs": [
 				{"name":"_dexAccountCode","type":"cell"},
+				{"name":"_remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setDexLpTokenPendingCode",
+			"inputs": [
 				{"name":"_dexLpTokenPendingCode","type":"cell"},
+				{"name":"_remainingGasTo","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setDexTokenVaultCode",
+			"inputs": [
 				{"name":"_dexTokenVaultCode","type":"cell"},
 				{"name":"_remainingGasTo","type":"address"}
 			],

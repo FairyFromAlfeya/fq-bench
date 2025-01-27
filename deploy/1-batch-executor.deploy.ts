@@ -27,30 +27,116 @@ export default async (): Promise<void> => {
   ).code;
   const DexPairCode = locklift.factory.getContractArtifacts('DexPair').code;
 
-  await locklift.deployments.deploy({
+  const { contract } = await locklift.deployments.deploy({
     deployConfig: {
       contract: 'BatchExecutor',
       publicKey: owner.signer.publicKey,
       initParams: { _nonce: getRandomNonce() },
-      constructorParams: {
-        _tokenWalletPlatformCode: TokenWalletPlatformCode,
-        _tokenRootCode: TokenRootCode,
-        _tokenWalletCode: TokenWalletCode,
-        _everWalletCode: EverWalletCode,
-        _tokenFactoryCode: TokenFactoryCode,
-        _dexRootCode: DexRootCode,
-        _dexPlatformCode: DexPlatformCode,
-        _dexPairCode: DexPairCode,
-        _dexAccountCode: DexAccountCode,
-        _dexLpTokenPendingCode: LpTokenPendingCode,
-        _dexTokenVaultCode: DexTokenVaultCode,
-        _remainingGasTo: owner.account.address,
-      },
+      constructorParams: { _remainingGasTo: owner.account.address },
       value: toNano(BATCH_EXECUTOR_DEPLOY_VALUE),
     },
     deploymentName: BATCH_EXECUTOR_DEPLOYMENT_TAG,
     enableLogs: true,
   });
+
+  await locklift.transactions.waitFinalized(
+    contract.methods
+      .setTokenFactoryCode({
+        _tokenFactoryCode: TokenFactoryCode,
+        _remainingGasTo: owner.account.address,
+      })
+      .send({ from: owner.account.address, amount: toNano(1), bounce: true }),
+  );
+
+  await locklift.transactions.waitFinalized(
+    contract.methods
+      .setDexPairCode({
+        _dexPairCode: DexPairCode,
+        _remainingGasTo: owner.account.address,
+      })
+      .send({ from: owner.account.address, amount: toNano(1), bounce: true }),
+  );
+
+  await locklift.transactions.waitFinalized(
+    contract.methods
+      .setDexRootCode({
+        _dexRootCode: DexRootCode,
+        _remainingGasTo: owner.account.address,
+      })
+      .send({ from: owner.account.address, amount: toNano(1), bounce: true }),
+  );
+
+  await locklift.transactions.waitFinalized(
+    contract.methods
+      .setTokenWalletCode({
+        _tokenWalletCode: TokenWalletCode,
+        _remainingGasTo: owner.account.address,
+      })
+      .send({ from: owner.account.address, amount: toNano(1), bounce: true }),
+  );
+
+  await locklift.transactions.waitFinalized(
+    contract.methods
+      .setTokenRootCode({
+        _tokenRootCode: TokenRootCode,
+        _remainingGasTo: owner.account.address,
+      })
+      .send({ from: owner.account.address, amount: toNano(1), bounce: true }),
+  );
+
+  await locklift.transactions.waitFinalized(
+    contract.methods
+      .setDexAccountCode({
+        _dexAccountCode: DexAccountCode,
+        _remainingGasTo: owner.account.address,
+      })
+      .send({ from: owner.account.address, amount: toNano(1), bounce: true }),
+  );
+
+  await locklift.transactions.waitFinalized(
+    contract.methods
+      .setDexPlatformCode({
+        _dexPlatformCode: DexPlatformCode,
+        _remainingGasTo: owner.account.address,
+      })
+      .send({ from: owner.account.address, amount: toNano(1), bounce: true }),
+  );
+
+  await locklift.transactions.waitFinalized(
+    contract.methods
+      .setDexTokenVaultCode({
+        _dexTokenVaultCode: DexTokenVaultCode,
+        _remainingGasTo: owner.account.address,
+      })
+      .send({ from: owner.account.address, amount: toNano(1), bounce: true }),
+  );
+
+  await locklift.transactions.waitFinalized(
+    contract.methods
+      .setEverWalletCode({
+        _everWalletCode: EverWalletCode,
+        _remainingGasTo: owner.account.address,
+      })
+      .send({ from: owner.account.address, amount: toNano(1), bounce: true }),
+  );
+
+  await locklift.transactions.waitFinalized(
+    contract.methods
+      .setDexLpTokenPendingCode({
+        _dexLpTokenPendingCode: LpTokenPendingCode,
+        _remainingGasTo: owner.account.address,
+      })
+      .send({ from: owner.account.address, amount: toNano(1), bounce: true }),
+  );
+
+  await locklift.transactions.waitFinalized(
+    contract.methods
+      .setTokenWalletPlatformCode({
+        _tokenWalletPlatformCode: TokenWalletPlatformCode,
+        _remainingGasTo: owner.account.address,
+      })
+      .send({ from: owner.account.address, amount: toNano(1), bounce: true }),
+  );
 };
 
 export const tag = 'batch-executor';
