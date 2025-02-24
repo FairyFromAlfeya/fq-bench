@@ -23,7 +23,7 @@ CTOS
 LDMSGADDR
 ENDS
 .loc ../contracts/DexRoot.tsol, 102
-PUSHINT 6000000000
+PUSHINT 1000000000
 PUSHINT 0
 RAWRESERVE
 .loc ../contracts/DexRoot.tsol, 103
@@ -2043,7 +2043,7 @@ THROW 0
 
 .macro setVaultOnce_45313084_internal_macro
 .loc ../contracts/DexRoot.tsol, 303
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -2112,7 +2112,7 @@ THROW 0
 
 .macro setActive_acec338a_internal_macro
 .loc ../contracts/DexRoot.tsol, 320
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -2243,7 +2243,7 @@ THROW 0
 
 .macro setManager_d0ebdbe7_internal_macro
 .loc ../contracts/DexRoot.tsol, 349
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -2305,7 +2305,7 @@ THROW 0
 
 .macro revokeManager_df2678ff_internal_macro
 .loc ../contracts/DexRoot.tsol, 364
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -2378,7 +2378,7 @@ THROW 0
 
 .macro transferOwner_4fb2e45d_internal_macro
 .loc ../contracts/DexRoot.tsol, 379
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -2448,7 +2448,7 @@ THROW 0
 
 .macro acceptOwner_ebbc4965_internal_macro
 .loc ../contracts/DexRoot.tsol, 390
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -2540,7 +2540,7 @@ THROW 0
 
 .macro setTokenFactory_836d9889_internal_macro
 .loc ../contracts/DexRoot.tsol, 407
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -2639,7 +2639,7 @@ THROW 0
 
 .macro setWeverVaultTokenRoot_184590c4_internal_macro
 .loc ../contracts/DexRoot.tsol, 431
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -2727,7 +2727,7 @@ THROW 0
 
 .macro installPlatformOnce_d58bd352_internal_macro
 .loc ../contracts/DexRoot.tsol, 458
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -2793,7 +2793,7 @@ THROW 0
 
 .macro installOrUpdateAccountCode_59e89e27_internal_macro
 .loc ../contracts/DexRoot.tsol, 475
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -2873,7 +2873,7 @@ THROW 0
 
 .macro installOrUpdatePairCode_122afc8b_internal_macro
 .loc ../contracts/DexRoot.tsol, 492
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -2980,7 +2980,7 @@ THROW 0
 
 .macro installOrUpdatePoolCode_f336eb06_internal_macro
 .loc ../contracts/DexRoot.tsol, 512
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -3097,7 +3097,7 @@ THROW 0
 
 .macro installOrUpdateTokenVaultCode_e4457a30_internal_macro
 .loc ../contracts/DexRoot.tsol, 532
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -3197,7 +3197,7 @@ THROW 0
 
 .macro installOrUpdateLpTokenPendingCode_287dd447_internal_macro
 .loc ../contracts/DexRoot.tsol, 558
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -3286,7 +3286,7 @@ THROW 0
 
 .macro upgrade_7916ae0d_internal_macro
 .loc ../contracts/DexRoot.tsol, 587
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -3560,7 +3560,7 @@ SDEQ
 AND
 THROWIFNOT 100
 .loc ../contracts/DexRoot.tsol, 671
-PUSHINT 6000000000
+PUSHINT 1000000000
 PUSHINT 0
 RAWRESERVE
 .loc ../contracts/DexRoot.tsol, 673
@@ -3611,7 +3611,7 @@ THROW 0
 
 .macro deployTokenVault_b695c0f6_internal_macro
 .loc ../contracts/DexRoot.tsol, 683
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -3711,7 +3711,7 @@ THROW 0
 
 .macro onTokenVaultDeployed_dd35f745_internal_macro
 .loc ../contracts/DexRoot.tsol, 707
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -3895,7 +3895,7 @@ THROW 0
 
 .macro deployLpToken_2abd865b_internal_macro
 .loc ../contracts/DexRoot.tsol, 753
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -4040,7 +4040,7 @@ THROW 0
 
 .macro onLiquidityTokenDeployed_589d3af6_internal_macro
 .loc ../contracts/DexRoot.tsol, 779
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -4168,7 +4168,7 @@ THROW 0
 
 .macro onLiquidityTokenNotDeployed_b5c8275d_internal_macro
 .loc ../contracts/DexRoot.tsol, 813
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -4252,7 +4252,7 @@ THROW 0
 
 .macro upgradeTokenVault_caf8ff30_internal_macro
 .loc ../contracts/DexRoot.tsol, 838
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -4340,7 +4340,7 @@ THROW 0
 
 .macro upgradeTokenVaults_490f19c6_internal_macro
 .loc ../contracts/DexRoot.tsol, 856
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -4527,7 +4527,7 @@ THROW 0
 
 .macro deployAccount_5f2807ac_internal_macro
 .loc ../contracts/DexRoot.tsol, 907
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -4662,7 +4662,7 @@ THROW 0
 
 .macro requestUpgradeAccount_b08891f1_internal_macro
 .loc ../contracts/DexRoot.tsol, 934
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -4758,7 +4758,7 @@ THROW 0
 
 .macro forceUpgradeAccount_de7a146c_internal_macro
 .loc ../contracts/DexRoot.tsol, 956
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -4859,7 +4859,7 @@ THROW 0
 
 .macro upgradeAccounts_a457ad8d_internal_macro
 .loc ../contracts/DexRoot.tsol, 980
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -5053,7 +5053,7 @@ THROW 0
 
 .macro upgradePair_50886d12_internal_macro
 .loc ../contracts/DexRoot.tsol, 1032
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -5172,7 +5172,7 @@ THROW 0
 
 .macro upgradePool_3ce1f0be_internal_macro
 .loc ../contracts/DexRoot.tsol, 1061
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -5331,7 +5331,7 @@ THROW 0
 
 .macro upgradePools_95c04b71_internal_macro
 .loc ../contracts/DexRoot.tsol, 1089
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -5741,7 +5741,7 @@ THROW 0
 
 .macro setPoolActive_d92db8e5_internal_macro
 .loc ../contracts/DexRoot.tsol, 1172
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -5828,7 +5828,7 @@ THROW 0
 
 .macro setPoolsActive_3464835f_internal_macro
 .loc ../contracts/DexRoot.tsol, 1191
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -6026,7 +6026,7 @@ THROW 0
 
 .macro deployPair_09c0bb93_internal_macro
 .loc ../contracts/DexRoot.tsol, 1238
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -6224,7 +6224,7 @@ THROW 0
 
 .macro deployStablePool_50b987d0_internal_macro
 .loc ../contracts/DexRoot.tsol, 1271
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -6498,7 +6498,7 @@ THROW 0
 
 .macro setPairFeeParams_02e916e3_internal_macro
 .loc ../contracts/DexRoot.tsol, 1311
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -6685,7 +6685,7 @@ THROW 0
 
 .macro setPairAmplificationCoefficient_5eae4706_internal_macro
 .loc ../contracts/DexRoot.tsol, 1337
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -6783,7 +6783,7 @@ THROW 0
 
 .macro resetTargetGas_6e68a1ca_internal_macro
 .loc ../contracts/DexRoot.tsol, 1355
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -6868,7 +6868,7 @@ THROW 0
 
 .macro onPoolCreated_12f9a1e3_internal_macro
 .loc ../contracts/DexRoot.tsol, 1370
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -6961,7 +6961,7 @@ THROW 0
 
 .macro setOracleOptions_0ef70a57_internal_macro
 .loc ../contracts/DexRoot.tsol, 1389
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -7068,7 +7068,7 @@ THROW 0
 
 .macro removeLastNPoints_d441364b_internal_macro
 .loc ../contracts/DexRoot.tsol, 1406
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -7164,7 +7164,7 @@ THROW 0
 
 .macro setWeverInDexTokenVault_44a20dc6_internal_macro
 .loc ../contracts/DexRoot.tsol, 1423
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -7256,7 +7256,7 @@ THROW 0
 
 .macro setWeverInDexPool_a8cdbe8d_internal_macro
 .loc ../contracts/DexRoot.tsol, 1443
-PUSHINT 6000000000
+PUSHINT 1000000000
 .loc ../contracts/DexRoot.tsol, 63
 GETPARAM 7
 FIRST
@@ -8051,315 +8051,6 @@ PUSHCONT {
 IF
 THROW 0
 
-.globl	GasValues_with_obj_getDeployPoolGas_d012d87c
-.type	GasValues_with_obj_getDeployPoolGas_d012d87c, @function
-CALL $GasValues_with_obj_getDeployPoolGas_d012d87c_macro$
-
-.macro GasValues_with_obj_getDeployPoolGas_d012d87c_macro
-.loc ../contracts/libraries/GasValues.tsol, 150
-CALLREF {
-	CALL $GasValues_no_obj_getDeployWalletMsgGas_6ce71755_macro$
-}
-.loc ../contracts/libraries/GasValues.tsol, 151
-OVER
-CALLREF {
-	CALL $GasValues_no_obj_getDeployLpTokenGas_ad791e1f_macro$
-}
-.loc ../contracts/libraries/GasValues.tsol, 152
-CALLREF {
-	CALL $GasValues_no_obj_getTokenDataGas_304799e7_macro$
-}
-.loc ../contracts/libraries/GasValues.tsol, 153
-CALLREF {
-	CALL $GasValues_no_obj_getDeployTokenVaultGas_474c1893_macro$
-}
-.loc ../contracts/libraries/GasValues.tsol, 155
-PUSHINT 6000000000
-PUSH S3
-FIRST
-ADD
-UFITS 128
-PUSH2 S5, S2
-FIRST
-MUL
-UFITS 128
-ADD
-UFITS 128
-PUSH S5
-INC
-UFITS 8
-PUSH S2
-FIRST
-MUL
-UFITS 128
-ADD
-UFITS 128
-PUSH S5
-INC
-UFITS 8
-PUSH S5
-FIRST
-MUL
-UFITS 128
-ADD
-UFITS 128
-PUSHINT 150000
-ROLL 4
-SECOND
-ADD
-UFITS 128
-PUSHINT 2
-PUSH S6
-MUL
-UFITS 8
-ROLL 4
-SECOND
-MUL
-UFITS 128
-ADD
-UFITS 128
-PUSH S4
-INC
-UFITS 8
-ROLL 3
-SECOND
-MUL
-UFITS 128
-ADD
-UFITS 128
-PUSH S3
-INC
-UFITS 8
-ROLL 3
-SECOND
-MUL
-UFITS 128
-ADD
-UFITS 128
-PAIR
-.loc ../contracts/libraries/GasValues.tsol, 0
-
-.globl	GasValues_no_obj_getDeployPoolGas_d012d87c
-.type	GasValues_no_obj_getDeployPoolGas_d012d87c, @function
-CALL $GasValues_no_obj_getDeployPoolGas_d012d87c_macro$
-
-.macro GasValues_no_obj_getDeployPoolGas_d012d87c_macro
-.loc ../contracts/libraries/GasValues.tsol, 150
-CALLREF {
-	CALL $GasValues_no_obj_getDeployWalletMsgGas_6ce71755_macro$
-}
-.loc ../contracts/libraries/GasValues.tsol, 151
-OVER
-CALLREF {
-	CALL $GasValues_no_obj_getDeployLpTokenGas_ad791e1f_macro$
-}
-.loc ../contracts/libraries/GasValues.tsol, 152
-CALLREF {
-	CALL $GasValues_no_obj_getTokenDataGas_304799e7_macro$
-}
-.loc ../contracts/libraries/GasValues.tsol, 153
-CALLREF {
-	CALL $GasValues_no_obj_getDeployTokenVaultGas_474c1893_macro$
-}
-.loc ../contracts/libraries/GasValues.tsol, 155
-PUSHINT 6000000000
-PUSH S3
-FIRST
-ADD
-UFITS 128
-PUSH2 S5, S2
-FIRST
-MUL
-UFITS 128
-ADD
-UFITS 128
-PUSH S5
-INC
-UFITS 8
-PUSH S2
-FIRST
-MUL
-UFITS 128
-ADD
-UFITS 128
-PUSH S5
-INC
-UFITS 8
-PUSH S5
-FIRST
-MUL
-UFITS 128
-ADD
-UFITS 128
-PUSHINT 150000
-ROLL 4
-SECOND
-ADD
-UFITS 128
-PUSHINT 2
-PUSH S6
-MUL
-UFITS 8
-ROLL 4
-SECOND
-MUL
-UFITS 128
-ADD
-UFITS 128
-PUSH S4
-INC
-UFITS 8
-ROLL 3
-SECOND
-MUL
-UFITS 128
-ADD
-UFITS 128
-ROLL 3
-INC
-UFITS 8
-ROLL 3
-SECOND
-MUL
-UFITS 128
-ADD
-UFITS 128
-PAIR
-.loc ../contracts/libraries/GasValues.tsol, 0
-
-.globl	GasValues_no_obj_getDeployWalletMsgGas_6ce71755
-.type	GasValues_no_obj_getDeployWalletMsgGas_6ce71755, @function
-CALL $GasValues_no_obj_getDeployWalletMsgGas_6ce71755_macro$
-
-.macro GasValues_no_obj_getDeployWalletMsgGas_6ce71755_macro
-.loc ../contracts/libraries/GasValues.tsol, 11
-CALLREF {
-	CALL $GasValues_no_obj_getDeployWalletGas_38991eb4_macro$
-}
-.loc ../contracts/libraries/GasValues.tsol, 12
-DUP
-FIRST
-PUSHINT 600000000
-ADD
-UFITS 128
-SWAP
-SECOND
-PUSHINT 100000
-ADD
-UFITS 128
-PAIR
-.loc ../contracts/libraries/GasValues.tsol, 0
-
-.globl	GasValues_no_obj_getDeployWalletGas_38991eb4
-.type	GasValues_no_obj_getDeployWalletGas_38991eb4, @function
-CALL $GasValues_no_obj_getDeployWalletGas_38991eb4_macro$
-
-.macro GasValues_no_obj_getDeployWalletGas_38991eb4_macro
-.loc ../contracts/libraries/GasValues.tsol, 19
-PUSHINT 600000000
-PUSHINT 20000
-PAIR
-.loc ../contracts/libraries/GasValues.tsol, 0
-
-.globl	GasValues_no_obj_getUpgradePoolGas_283c418c
-.type	GasValues_no_obj_getUpgradePoolGas_283c418c, @function
-CALL $GasValues_no_obj_getUpgradePoolGas_283c418c_macro$
-
-.macro GasValues_no_obj_getUpgradePoolGas_283c418c_macro
-.loc ../contracts/libraries/GasValues.tsol, 172
-CALLREF {
-	CALL $GasValues_no_obj_getTokenDataGas_304799e7_macro$
-}
-.loc ../contracts/libraries/GasValues.tsol, 173
-CALLREF {
-	CALL $GasValues_no_obj_getSetWeverVaultGas_3e1a6a82_macro$
-}
-.loc ../contracts/libraries/GasValues.tsol, 174
-PUSHINT 600000000
-OVER
-FIRST
-ADD
-UFITS 128
-PUSHINT 2
-PUSH S3
-FIRST
-MUL
-UFITS 128
-ADD
-UFITS 128
-SWAP
-SECOND
-PUSHINT 400000
-ADD
-UFITS 128
-PUSHINT 2
-ROLL 3
-SECOND
-MUL
-UFITS 128
-ADD
-UFITS 128
-PAIR
-.loc ../contracts/libraries/GasValues.tsol, 0
-
-.globl	GasValues_no_obj_getDeployAccountGas_7571c691
-.type	GasValues_no_obj_getDeployAccountGas_7571c691, @function
-CALL $GasValues_no_obj_getDeployAccountGas_7571c691_macro$
-
-.macro GasValues_no_obj_getDeployAccountGas_7571c691_macro
-.loc ../contracts/libraries/GasValues.tsol, 187
-PUSHINT 6000000000
-PUSHINT 150000
-PAIR
-.loc ../contracts/libraries/GasValues.tsol, 0
-
-.globl	GasValues_no_obj_getUpgradeAccountGas_c98ab35d
-.type	GasValues_no_obj_getUpgradeAccountGas_c98ab35d, @function
-CALL $GasValues_no_obj_getUpgradeAccountGas_c98ab35d_macro$
-
-.macro GasValues_no_obj_getUpgradeAccountGas_c98ab35d_macro
-.loc ../contracts/libraries/GasValues.tsol, 195
-PUSHINT 600000000
-DUP
-ADD
-UFITS 128
-PUSHINT 150000
-PAIR
-.loc ../contracts/libraries/GasValues.tsol, 0
-
-.globl	GasValues_no_obj_getUpgradeRootGas_11c565f8
-.type	GasValues_no_obj_getUpgradeRootGas_11c565f8, @function
-CALL $GasValues_no_obj_getUpgradeRootGas_11c565f8_macro$
-
-.macro GasValues_no_obj_getUpgradeRootGas_11c565f8_macro
-.loc ../contracts/libraries/GasValues.tsol, 203
-PUSHINT 600000000
-PUSHINT 400000
-PAIR
-.loc ../contracts/libraries/GasValues.tsol, 0
-
-.globl	GasValues_no_obj_getSetWeverVaultGas_3e1a6a82
-.type	GasValues_no_obj_getSetWeverVaultGas_3e1a6a82, @function
-CALL $GasValues_no_obj_getSetWeverVaultGas_3e1a6a82_macro$
-
-.macro GasValues_no_obj_getSetWeverVaultGas_3e1a6a82_macro
-.loc ../contracts/libraries/GasValues.tsol, 210
-PUSHINT 600000000
-PUSHINT 100000
-PAIR
-.loc ../contracts/libraries/GasValues.tsol, 0
-
-.globl	GasValues_no_obj_getTokenDataGas_304799e7
-.type	GasValues_no_obj_getTokenDataGas_304799e7, @function
-CALL $GasValues_no_obj_getTokenDataGas_304799e7_macro$
-
-.macro GasValues_no_obj_getTokenDataGas_304799e7_macro
-.loc ../contracts/libraries/GasValues.tsol, 60
-PUSHINT 600000000
-PUSHINT 50000
-PAIR
-.loc ../contracts/libraries/GasValues.tsol, 0
-
 .globl	GasValues_with_obj_getDeployLpTokenGas_ad791e1f
 .type	GasValues_with_obj_getDeployLpTokenGas_ad791e1f, @function
 CALL $GasValues_with_obj_getDeployLpTokenGas_ad791e1f_macro$
@@ -8457,6 +8148,17 @@ UFITS 128
 PAIR
 .loc ../contracts/libraries/GasValues.tsol, 0
 
+.globl	GasValues_no_obj_getTokenDataGas_304799e7
+.type	GasValues_no_obj_getTokenDataGas_304799e7, @function
+CALL $GasValues_no_obj_getTokenDataGas_304799e7_macro$
+
+.macro GasValues_no_obj_getTokenDataGas_304799e7_macro
+.loc ../contracts/libraries/GasValues.tsol, 60
+PUSHINT 100000000
+PUSHINT 50000
+PAIR
+.loc ../contracts/libraries/GasValues.tsol, 0
+
 .globl	GasValues_no_obj_getTransferOwnershipGas_77a4dfa4
 .type	GasValues_no_obj_getTransferOwnershipGas_77a4dfa4, @function
 CALL $GasValues_no_obj_getTransferOwnershipGas_77a4dfa4_macro$
@@ -8494,7 +8196,7 @@ CALL $GasValues_no_obj_getDeployTokenRootGas_a8927835_macro$
 
 .macro GasValues_no_obj_getDeployTokenRootGas_a8927835_macro
 .loc ../contracts/libraries/GasValues.tsol, 26
-PUSHINT 6000000000
+PUSHINT 1000000000
 PUSHINT 100000
 PAIR
 .loc ../contracts/libraries/GasValues.tsol, 0
@@ -8505,7 +8207,7 @@ CALL $GasValues_no_obj_getSetFeeParamsGas_55d379d6_macro$
 
 .macro GasValues_no_obj_getSetFeeParamsGas_55d379d6_macro
 .loc ../contracts/libraries/GasValues.tsol, 110
-PUSHINT 600000000
+PUSHINT 100000000
 PUSHINT 100000
 PAIR
 .loc ../contracts/libraries/GasValues.tsol, 0
@@ -8516,7 +8218,7 @@ CALL $GasValues_no_obj_getSetAmplificationCoefficientGas_1b35dd3b_macro$
 
 .macro GasValues_no_obj_getSetAmplificationCoefficientGas_1b35dd3b_macro
 .loc ../contracts/libraries/GasValues.tsol, 118
-PUSHINT 600000000
+PUSHINT 100000000
 PUSHINT 100000
 PAIR
 .loc ../contracts/libraries/GasValues.tsol, 0
@@ -8527,7 +8229,7 @@ CALL $GasValues_no_obj_getSetPoolActiveGas_f20e00a6_macro$
 
 .macro GasValues_no_obj_getSetPoolActiveGas_f20e00a6_macro
 .loc ../contracts/libraries/GasValues.tsol, 126
-PUSHINT 600000000
+PUSHINT 100000000
 DUP
 ADD
 UFITS 128
@@ -8545,7 +8247,7 @@ CALLREF {
 	CALL $GasValues_no_obj_getDeployWalletMsgGas_6ce71755_macro$
 }
 .loc ../contracts/libraries/GasValues.tsol, 135
-PUSHINT 6000000000
+PUSHINT 1000000000
 PUSHINT 2
 PUSH S2
 FIRST
@@ -8564,14 +8266,312 @@ UFITS 128
 PAIR
 .loc ../contracts/libraries/GasValues.tsol, 0
 
+.globl	GasValues_no_obj_getDeployWalletMsgGas_6ce71755
+.type	GasValues_no_obj_getDeployWalletMsgGas_6ce71755, @function
+CALL $GasValues_no_obj_getDeployWalletMsgGas_6ce71755_macro$
+
+.macro GasValues_no_obj_getDeployWalletMsgGas_6ce71755_macro
+.loc ../contracts/libraries/GasValues.tsol, 11
+CALLREF {
+	CALL $GasValues_no_obj_getDeployWalletGas_38991eb4_macro$
+}
+.loc ../contracts/libraries/GasValues.tsol, 12
+DUP
+FIRST
+PUSHINT 100000000
+ADD
+UFITS 128
+SWAP
+SECOND
+PUSHINT 100000
+ADD
+UFITS 128
+PAIR
+.loc ../contracts/libraries/GasValues.tsol, 0
+
+.globl	GasValues_no_obj_getDeployWalletGas_38991eb4
+.type	GasValues_no_obj_getDeployWalletGas_38991eb4, @function
+CALL $GasValues_no_obj_getDeployWalletGas_38991eb4_macro$
+
+.macro GasValues_no_obj_getDeployWalletGas_38991eb4_macro
+.loc ../contracts/libraries/GasValues.tsol, 19
+PUSHINT 100000000
+PUSHINT 20000
+PAIR
+.loc ../contracts/libraries/GasValues.tsol, 0
+
 .globl	GasValues_no_obj_getUpgradeTokenVaultGas_1f1ab5d4
 .type	GasValues_no_obj_getUpgradeTokenVaultGas_1f1ab5d4, @function
 CALL $GasValues_no_obj_getUpgradeTokenVaultGas_1f1ab5d4_macro$
 
 .macro GasValues_no_obj_getUpgradeTokenVaultGas_1f1ab5d4_macro
 .loc ../contracts/libraries/GasValues.tsol, 143
-PUSHINT 600000000
+PUSHINT 100000000
 PUSHINT 150000
+PAIR
+.loc ../contracts/libraries/GasValues.tsol, 0
+
+.globl	GasValues_with_obj_getDeployPoolGas_d012d87c
+.type	GasValues_with_obj_getDeployPoolGas_d012d87c, @function
+CALL $GasValues_with_obj_getDeployPoolGas_d012d87c_macro$
+
+.macro GasValues_with_obj_getDeployPoolGas_d012d87c_macro
+.loc ../contracts/libraries/GasValues.tsol, 150
+CALLREF {
+	CALL $GasValues_no_obj_getDeployWalletMsgGas_6ce71755_macro$
+}
+.loc ../contracts/libraries/GasValues.tsol, 151
+OVER
+CALLREF {
+	CALL $GasValues_no_obj_getDeployLpTokenGas_ad791e1f_macro$
+}
+.loc ../contracts/libraries/GasValues.tsol, 152
+CALLREF {
+	CALL $GasValues_no_obj_getTokenDataGas_304799e7_macro$
+}
+.loc ../contracts/libraries/GasValues.tsol, 153
+CALLREF {
+	CALL $GasValues_no_obj_getDeployTokenVaultGas_474c1893_macro$
+}
+.loc ../contracts/libraries/GasValues.tsol, 155
+PUSHINT 1000000000
+PUSH S3
+FIRST
+ADD
+UFITS 128
+PUSH2 S5, S2
+FIRST
+MUL
+UFITS 128
+ADD
+UFITS 128
+PUSH S5
+INC
+UFITS 8
+PUSH S2
+FIRST
+MUL
+UFITS 128
+ADD
+UFITS 128
+PUSH S5
+INC
+UFITS 8
+PUSH S5
+FIRST
+MUL
+UFITS 128
+ADD
+UFITS 128
+PUSHINT 150000
+ROLL 4
+SECOND
+ADD
+UFITS 128
+PUSHINT 2
+PUSH S6
+MUL
+UFITS 8
+ROLL 4
+SECOND
+MUL
+UFITS 128
+ADD
+UFITS 128
+PUSH S4
+INC
+UFITS 8
+ROLL 3
+SECOND
+MUL
+UFITS 128
+ADD
+UFITS 128
+PUSH S3
+INC
+UFITS 8
+ROLL 3
+SECOND
+MUL
+UFITS 128
+ADD
+UFITS 128
+PAIR
+.loc ../contracts/libraries/GasValues.tsol, 0
+
+.globl	GasValues_no_obj_getDeployPoolGas_d012d87c
+.type	GasValues_no_obj_getDeployPoolGas_d012d87c, @function
+CALL $GasValues_no_obj_getDeployPoolGas_d012d87c_macro$
+
+.macro GasValues_no_obj_getDeployPoolGas_d012d87c_macro
+.loc ../contracts/libraries/GasValues.tsol, 150
+CALLREF {
+	CALL $GasValues_no_obj_getDeployWalletMsgGas_6ce71755_macro$
+}
+.loc ../contracts/libraries/GasValues.tsol, 151
+OVER
+CALLREF {
+	CALL $GasValues_no_obj_getDeployLpTokenGas_ad791e1f_macro$
+}
+.loc ../contracts/libraries/GasValues.tsol, 152
+CALLREF {
+	CALL $GasValues_no_obj_getTokenDataGas_304799e7_macro$
+}
+.loc ../contracts/libraries/GasValues.tsol, 153
+CALLREF {
+	CALL $GasValues_no_obj_getDeployTokenVaultGas_474c1893_macro$
+}
+.loc ../contracts/libraries/GasValues.tsol, 155
+PUSHINT 1000000000
+PUSH S3
+FIRST
+ADD
+UFITS 128
+PUSH2 S5, S2
+FIRST
+MUL
+UFITS 128
+ADD
+UFITS 128
+PUSH S5
+INC
+UFITS 8
+PUSH S2
+FIRST
+MUL
+UFITS 128
+ADD
+UFITS 128
+PUSH S5
+INC
+UFITS 8
+PUSH S5
+FIRST
+MUL
+UFITS 128
+ADD
+UFITS 128
+PUSHINT 150000
+ROLL 4
+SECOND
+ADD
+UFITS 128
+PUSHINT 2
+PUSH S6
+MUL
+UFITS 8
+ROLL 4
+SECOND
+MUL
+UFITS 128
+ADD
+UFITS 128
+PUSH S4
+INC
+UFITS 8
+ROLL 3
+SECOND
+MUL
+UFITS 128
+ADD
+UFITS 128
+ROLL 3
+INC
+UFITS 8
+ROLL 3
+SECOND
+MUL
+UFITS 128
+ADD
+UFITS 128
+PAIR
+.loc ../contracts/libraries/GasValues.tsol, 0
+
+.globl	GasValues_no_obj_getUpgradePoolGas_283c418c
+.type	GasValues_no_obj_getUpgradePoolGas_283c418c, @function
+CALL $GasValues_no_obj_getUpgradePoolGas_283c418c_macro$
+
+.macro GasValues_no_obj_getUpgradePoolGas_283c418c_macro
+.loc ../contracts/libraries/GasValues.tsol, 172
+CALLREF {
+	CALL $GasValues_no_obj_getTokenDataGas_304799e7_macro$
+}
+.loc ../contracts/libraries/GasValues.tsol, 173
+CALLREF {
+	CALL $GasValues_no_obj_getSetWeverVaultGas_3e1a6a82_macro$
+}
+.loc ../contracts/libraries/GasValues.tsol, 174
+PUSHINT 100000000
+OVER
+FIRST
+ADD
+UFITS 128
+PUSHINT 2
+PUSH S3
+FIRST
+MUL
+UFITS 128
+ADD
+UFITS 128
+SWAP
+SECOND
+PUSHINT 400000
+ADD
+UFITS 128
+PUSHINT 2
+ROLL 3
+SECOND
+MUL
+UFITS 128
+ADD
+UFITS 128
+PAIR
+.loc ../contracts/libraries/GasValues.tsol, 0
+
+.globl	GasValues_no_obj_getDeployAccountGas_7571c691
+.type	GasValues_no_obj_getDeployAccountGas_7571c691, @function
+CALL $GasValues_no_obj_getDeployAccountGas_7571c691_macro$
+
+.macro GasValues_no_obj_getDeployAccountGas_7571c691_macro
+.loc ../contracts/libraries/GasValues.tsol, 187
+PUSHINT 1000000000
+PUSHINT 150000
+PAIR
+.loc ../contracts/libraries/GasValues.tsol, 0
+
+.globl	GasValues_no_obj_getUpgradeAccountGas_c98ab35d
+.type	GasValues_no_obj_getUpgradeAccountGas_c98ab35d, @function
+CALL $GasValues_no_obj_getUpgradeAccountGas_c98ab35d_macro$
+
+.macro GasValues_no_obj_getUpgradeAccountGas_c98ab35d_macro
+.loc ../contracts/libraries/GasValues.tsol, 195
+PUSHINT 100000000
+DUP
+ADD
+UFITS 128
+PUSHINT 150000
+PAIR
+.loc ../contracts/libraries/GasValues.tsol, 0
+
+.globl	GasValues_no_obj_getUpgradeRootGas_11c565f8
+.type	GasValues_no_obj_getUpgradeRootGas_11c565f8, @function
+CALL $GasValues_no_obj_getUpgradeRootGas_11c565f8_macro$
+
+.macro GasValues_no_obj_getUpgradeRootGas_11c565f8_macro
+.loc ../contracts/libraries/GasValues.tsol, 203
+PUSHINT 100000000
+PUSHINT 400000
+PAIR
+.loc ../contracts/libraries/GasValues.tsol, 0
+
+.globl	GasValues_no_obj_getSetWeverVaultGas_3e1a6a82
+.type	GasValues_no_obj_getSetWeverVaultGas_3e1a6a82, @function
+CALL $GasValues_no_obj_getSetWeverVaultGas_3e1a6a82_macro$
+
+.macro GasValues_no_obj_getSetWeverVaultGas_3e1a6a82_macro
+.loc ../contracts/libraries/GasValues.tsol, 210
+PUSHINT 100000000
+PUSHINT 100000
 PAIR
 .loc ../contracts/libraries/GasValues.tsol, 0
 
