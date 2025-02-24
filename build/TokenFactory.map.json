@@ -1,1299 +1,1257 @@
 {
   "map": {
-    "0c55ed8a56c4e784132e6ecf7cd70a13b66fa52f4246bdd89ea2b557855f7686": {
+    "0111a406f4de688e68412aed79e79120d9a7eb2b7101857f6f5e709adbf476de": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 696
-      },
-      "8": {
-        "filename": "TokenFactory.code",
-        "line": 697
-      },
-      "24": {
-        "filename": "TokenFactory.code",
-        "line": 698
-      },
-      "48": {
-        "filename": "TokenFactory.code",
-        "line": 699
-      },
-      "64": {
-        "filename": "TokenFactory.code",
-        "line": 700
-      },
-      "72": {
-        "filename": "TokenFactory.code",
-        "line": 701
-      },
-      "88": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "104": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "120": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "128": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "144": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "160": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "168": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "176": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "184": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "192": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "200": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "208": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "224": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 114
-      },
-      "232": {
-        "filename": "TokenFactory.code",
-        "line": 720
-      },
-      "248": {
-        "filename": "TokenFactory.code",
-        "line": 723
-      },
-      "256": {
-        "filename": "TokenFactory.code",
-        "line": 724
-      },
-      "272": {
-        "filename": "TokenFactory.code",
-        "line": 725
-      },
-      "280": {
-        "filename": "TokenFactory.code",
-        "line": 726
-      },
-      "288": {
-        "filename": "TokenFactory.code",
-        "line": 727
-      },
-      "304": {
-        "filename": "TokenFactory.code",
-        "line": 728
-      },
-      "320": {
-        "filename": "TokenFactory.code",
-        "line": 729
-      },
-      "328": {
-        "filename": "TokenFactory.code",
-        "line": 730
-      },
-      "336": {
-        "filename": "TokenFactory.code",
-        "line": 731
-      },
-      "344": {
-        "filename": "TokenFactory.code",
-        "line": 732
-      },
-      "368": {
-        "filename": "TokenFactory.code",
-        "line": 733
-      },
-      "376": {
-        "filename": "TokenFactory.code",
-        "line": 734
-      },
-      "384": {
-        "filename": "TokenFactory.code",
-        "line": 735
-      },
-      "408": {
-        "filename": "TokenFactory.code",
-        "line": 736
-      },
-      "416": {
-        "filename": "TokenFactory.code",
-        "line": 737
-      },
-      "424": {
-        "filename": "TokenFactory.code",
-        "line": 738
-      },
-      "472": {
-        "filename": "TokenFactory.code",
-        "line": 739
-      },
-      "480": {
-        "filename": "TokenFactory.code",
-        "line": 740
-      },
-      "488": {
-        "filename": "TokenFactory.code",
-        "line": 741
-      },
-      "496": {
-        "filename": "TokenFactory.code",
-        "line": 742
-      },
-      "504": {
-        "filename": "TokenFactory.code",
-        "line": 744
-      },
-      "520": {
-        "filename": "TokenFactory.code",
-        "line": 745
-      },
-      "536": {
-        "filename": "TokenFactory.code",
-        "line": 746
-      },
-      "544": {
-        "filename": "TokenFactory.code",
-        "line": 747
-      },
-      "560": {
-        "filename": "TokenFactory.code",
-        "line": 748
-      },
-      "568": {
-        "filename": "TokenFactory.code",
-        "line": 749
-      },
-      "584": {
-        "filename": "TokenFactory.code",
-        "line": 750
-      },
-      "600": {
-        "filename": "TokenFactory.code",
-        "line": 751
-      },
-      "616": {
-        "filename": "TokenFactory.code",
-        "line": 752
-      },
-      "632": {
-        "filename": "TokenFactory.code",
-        "line": 753
-      },
-      "640": {
-        "filename": "TokenFactory.code",
-        "line": 754
-      },
-      "664": {
-        "filename": "TokenFactory.code",
-        "line": 755
-      },
-      "680": {
-        "filename": "TokenFactory.code",
-        "line": 756
-      },
-      "704": {
-        "filename": "TokenFactory.code",
-        "line": 757
-      },
-      "712": {
-        "filename": "TokenFactory.code",
-        "line": 758
-      },
-      "720": {
-        "filename": "TokenFactory.code",
-        "line": 759
-      },
-      "736": {
-        "filename": "TokenFactory.code",
-        "line": 760
-      },
-      "752": {
-        "filename": "TokenFactory.code",
-        "line": 761
-      },
-      "760": {
-        "filename": "TokenFactory.code",
-        "line": 762
-      },
-      "784": {
-        "filename": "TokenFactory.code",
-        "line": 763
-      },
-      "792": {
-        "filename": "TokenFactory.code",
-        "line": 764
-      },
-      "800": {
-        "filename": "TokenFactory.code",
-        "line": 765
-      },
-      "816": {
-        "filename": "TokenFactory.code",
-        "line": 766
-      },
-      "832": {
-        "filename": "TokenFactory.code",
-        "line": 767
-      },
-      "856": {
-        "filename": "TokenFactory.code",
-        "line": 768
-      },
-      "864": {
-        "filename": "TokenFactory.code",
-        "line": 769
-      },
-      "872": {
-        "filename": "TokenFactory.code",
-        "line": 770
-      },
-      "880": {
-        "filename": "TokenFactory.code",
-        "line": 771
-      },
-      "896": {
-        "filename": "TokenFactory.code",
-        "line": 772
-      },
-      "912": {
-        "filename": "TokenFactory.code",
-        "line": 774
-      },
-      "920": {
-        "filename": "TokenFactory.code",
-        "line": 775
-      },
-      "936": {
-        "filename": "TokenFactory.code",
-        "line": 776
-      },
-      "944": {
-        "filename": "TokenFactory.code",
-        "line": 777
-      },
-      "960": {
-        "filename": "TokenFactory.code",
-        "line": 780
-      }
-    },
-    "1227acd2c9012e52dbfe5c0260c2f6297a306d63e64d3ca8ad5302c7a251b758": {
-      "0": {
-        "filename": "TokenFactory.code",
-        "line": 1294
+        "line": 1373
       },
       "16": {
         "filename": "TokenFactory.code",
-        "line": 1295
+        "line": 1374
       },
       "24": {
         "filename": "TokenFactory.code",
-        "line": 1296
+        "line": 1375
       },
       "40": {
         "filename": "TokenFactory.code",
-        "line": 1297
+        "line": 1376
       },
       "56": {
         "filename": "TokenFactory.code",
-        "line": 1298
+        "line": 1377
       },
       "72": {
         "filename": "TokenFactory.code",
-        "line": 1299
+        "line": 1378
       },
       "80": {
         "filename": "TokenFactory.code",
-        "line": 1300
+        "line": 1381
       },
-      "88": {
+      "96": {
         "filename": "TokenFactory.code",
-        "line": 1301
+        "line": 1382
       },
       "104": {
         "filename": "TokenFactory.code",
-        "line": 1302
+        "line": 1383
       },
       "120": {
         "filename": "TokenFactory.code",
-        "line": 1303
+        "line": 1386
       },
-      "128": {
+      "136": {
         "filename": "TokenFactory.code",
-        "line": 1304
+        "line": 1387
       },
       "144": {
         "filename": "TokenFactory.code",
-        "line": 1305
+        "line": 1388
+      },
+      "152": {
+        "filename": "TokenFactory.code",
+        "line": 1389
       },
       "168": {
         "filename": "TokenFactory.code",
-        "line": 1306
+        "line": 1390
       },
       "184": {
         "filename": "TokenFactory.code",
-        "line": 1307
+        "line": 1391
       },
       "192": {
         "filename": "TokenFactory.code",
-        "line": 1308
+        "line": 1392
       },
       "208": {
         "filename": "TokenFactory.code",
-        "line": 1309
+        "line": 1393
+      },
+      "216": {
+        "filename": "TokenFactory.code",
+        "line": 1394
+      },
+      "232": {
+        "filename": "TokenFactory.code",
+        "line": 1395
       },
       "248": {
         "filename": "TokenFactory.code",
-        "line": 1310
+        "line": 1396
       },
       "264": {
         "filename": "TokenFactory.code",
-        "line": 1311
+        "line": 1398
       },
       "272": {
         "filename": "TokenFactory.code",
-        "line": 1312
+        "line": 1399
       },
       "288": {
         "filename": "TokenFactory.code",
-        "line": 1313
+        "line": 1400
       },
       "296": {
-        "filename": "TokenFactory.code",
-        "line": 1314
+        "filename": "stdlib.sol",
+        "line": 61
       },
       "312": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "320": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "328": {
+        "filename": "stdlib.sol",
+        "line": 61
+      },
+      "344": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "352": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "368": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "392": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "400": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "440": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "448": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "456": {
+        "filename": "stdlib.sol",
+        "line": 62
+      },
+      "472": {
+        "filename": "stdlib.sol",
+        "line": 63
+      },
+      "488": {
         "filename": "TokenFactory.code",
-        "line": 1315
+        "line": 1402
+      },
+      "504": {
+        "filename": "TokenFactory.code",
+        "line": 1403
+      },
+      "512": {
+        "filename": "TokenFactory.code",
+        "line": 1404
+      },
+      "528": {
+        "filename": "TokenFactory.code",
+        "line": 1407
+      }
+    },
+    "0c55ed8a56c4e784132e6ecf7cd70a13b66fa52f4246bdd89ea2b557855f7686": {
+      "0": {
+        "filename": "TokenFactory.code",
+        "line": 710
+      },
+      "8": {
+        "filename": "TokenFactory.code",
+        "line": 711
+      },
+      "24": {
+        "filename": "TokenFactory.code",
+        "line": 712
+      },
+      "48": {
+        "filename": "TokenFactory.code",
+        "line": 713
+      },
+      "64": {
+        "filename": "TokenFactory.code",
+        "line": 714
+      },
+      "72": {
+        "filename": "TokenFactory.code",
+        "line": 715
+      },
+      "88": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "104": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "120": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "128": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "144": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "160": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "168": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "176": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "184": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "192": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "200": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "208": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "224": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 115
+      },
+      "232": {
+        "filename": "TokenFactory.code",
+        "line": 734
+      },
+      "248": {
+        "filename": "TokenFactory.code",
+        "line": 737
+      },
+      "256": {
+        "filename": "TokenFactory.code",
+        "line": 738
+      },
+      "272": {
+        "filename": "TokenFactory.code",
+        "line": 739
+      },
+      "280": {
+        "filename": "TokenFactory.code",
+        "line": 740
+      },
+      "288": {
+        "filename": "TokenFactory.code",
+        "line": 741
+      },
+      "304": {
+        "filename": "TokenFactory.code",
+        "line": 742
+      },
+      "320": {
+        "filename": "TokenFactory.code",
+        "line": 743
       },
       "328": {
         "filename": "TokenFactory.code",
-        "line": 1316
+        "line": 744
       },
       "336": {
         "filename": "TokenFactory.code",
-        "line": 1317
+        "line": 745
       },
       "344": {
         "filename": "TokenFactory.code",
-        "line": 1318
+        "line": 746
       },
-      "360": {
+      "368": {
         "filename": "TokenFactory.code",
-        "line": 1319
+        "line": 747
       },
       "376": {
         "filename": "TokenFactory.code",
-        "line": 1323
+        "line": 748
       },
       "384": {
         "filename": "TokenFactory.code",
-        "line": 1324
+        "line": 749
       },
       "408": {
         "filename": "TokenFactory.code",
-        "line": 1325
+        "line": 750
+      },
+      "416": {
+        "filename": "TokenFactory.code",
+        "line": 751
       },
       "424": {
         "filename": "TokenFactory.code",
-        "line": 1326
-      },
-      "432": {
-        "filename": "TokenFactory.code",
-        "line": 1327
-      },
-      "448": {
-        "filename": "TokenFactory.code",
-        "line": 1331
-      },
-      "456": {
-        "filename": "TokenFactory.code",
-        "line": 1332
+        "line": 752
       },
       "472": {
         "filename": "TokenFactory.code",
-        "line": 1335
+        "line": 753
+      },
+      "480": {
+        "filename": "TokenFactory.code",
+        "line": 754
+      },
+      "488": {
+        "filename": "TokenFactory.code",
+        "line": 755
+      },
+      "496": {
+        "filename": "TokenFactory.code",
+        "line": 756
+      },
+      "504": {
+        "filename": "TokenFactory.code",
+        "line": 758
+      },
+      "520": {
+        "filename": "TokenFactory.code",
+        "line": 759
+      },
+      "536": {
+        "filename": "TokenFactory.code",
+        "line": 760
+      },
+      "544": {
+        "filename": "TokenFactory.code",
+        "line": 761
+      },
+      "560": {
+        "filename": "TokenFactory.code",
+        "line": 762
+      },
+      "568": {
+        "filename": "TokenFactory.code",
+        "line": 763
+      },
+      "584": {
+        "filename": "TokenFactory.code",
+        "line": 764
+      },
+      "600": {
+        "filename": "TokenFactory.code",
+        "line": 765
+      },
+      "616": {
+        "filename": "TokenFactory.code",
+        "line": 766
+      },
+      "632": {
+        "filename": "TokenFactory.code",
+        "line": 767
+      },
+      "640": {
+        "filename": "TokenFactory.code",
+        "line": 768
+      },
+      "664": {
+        "filename": "TokenFactory.code",
+        "line": 769
+      },
+      "680": {
+        "filename": "TokenFactory.code",
+        "line": 770
+      },
+      "704": {
+        "filename": "TokenFactory.code",
+        "line": 771
+      },
+      "712": {
+        "filename": "TokenFactory.code",
+        "line": 772
+      },
+      "720": {
+        "filename": "TokenFactory.code",
+        "line": 773
+      },
+      "736": {
+        "filename": "TokenFactory.code",
+        "line": 774
+      },
+      "752": {
+        "filename": "TokenFactory.code",
+        "line": 775
+      },
+      "760": {
+        "filename": "TokenFactory.code",
+        "line": 776
+      },
+      "784": {
+        "filename": "TokenFactory.code",
+        "line": 777
+      },
+      "792": {
+        "filename": "TokenFactory.code",
+        "line": 778
+      },
+      "800": {
+        "filename": "TokenFactory.code",
+        "line": 779
+      },
+      "816": {
+        "filename": "TokenFactory.code",
+        "line": 780
+      },
+      "832": {
+        "filename": "TokenFactory.code",
+        "line": 781
+      },
+      "856": {
+        "filename": "TokenFactory.code",
+        "line": 782
+      },
+      "864": {
+        "filename": "TokenFactory.code",
+        "line": 783
+      },
+      "872": {
+        "filename": "TokenFactory.code",
+        "line": 784
+      },
+      "880": {
+        "filename": "TokenFactory.code",
+        "line": 785
+      },
+      "896": {
+        "filename": "TokenFactory.code",
+        "line": 786
+      },
+      "912": {
+        "filename": "TokenFactory.code",
+        "line": 788
+      },
+      "920": {
+        "filename": "TokenFactory.code",
+        "line": 789
+      },
+      "936": {
+        "filename": "TokenFactory.code",
+        "line": 790
+      },
+      "944": {
+        "filename": "TokenFactory.code",
+        "line": 791
+      },
+      "960": {
+        "filename": "TokenFactory.code",
+        "line": 794
       }
     },
     "167cbcddb50e29cce7c28a14df73bae947a561cc10d9c38c298a1e02278eb4e6": {
       "0": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "8": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "24": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "32": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "40": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "56": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "64": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "72": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "96": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "128": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "136": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "152": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "168": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "184": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       },
       "192": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+        "line": 92
       }
     },
-    "224120149ef85f6aa98306b5b533e3cb4c3c5f6a6c65a105659334041b607679": {
+    "2167e0da6777f5090c9bff4dfb0afecf66054d0f3b7c04ec16d97a29469a62a9": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 1409
+        "line": 1454
       },
       "8": {
         "filename": "TokenFactory.code",
-        "line": 1410
+        "line": 1455
       },
       "56": {
         "filename": "TokenFactory.code",
-        "line": 1411
+        "line": 1456
       },
       "64": {
         "filename": "TokenFactory.code",
-        "line": 1412
+        "line": 1457
       },
       "80": {
         "filename": "TokenFactory.code",
-        "line": 1415
+        "line": 1460
       },
       "88": {
         "filename": "TokenFactory.code",
-        "line": 1416
+        "line": 1461
       },
       "136": {
         "filename": "TokenFactory.code",
-        "line": 1417
+        "line": 1462
       },
       "144": {
         "filename": "TokenFactory.code",
-        "line": 1418
+        "line": 1463
       },
       "160": {
         "filename": "TokenFactory.code",
-        "line": 1421
+        "line": 1466
       },
       "168": {
         "filename": "TokenFactory.code",
-        "line": 1422
+        "line": 1467
       },
       "216": {
         "filename": "TokenFactory.code",
-        "line": 1423
+        "line": 1468
       },
       "224": {
         "filename": "TokenFactory.code",
-        "line": 1424
+        "line": 1469
       },
       "240": {
         "filename": "TokenFactory.code",
-        "line": 1427
+        "line": 1472
       },
       "248": {
         "filename": "TokenFactory.code",
-        "line": 1428
+        "line": 1473
       },
       "296": {
         "filename": "TokenFactory.code",
-        "line": 1429
+        "line": 1474
       },
       "304": {
         "filename": "TokenFactory.code",
-        "line": 1430
+        "line": 1475
       }
     },
     "22643eb68eabfbed7b1543d66619c7942759f892646c14e95a6dd9fbc81ee2bf": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 974
+        "line": 988
       },
       "8": {
         "filename": "TokenFactory.code",
-        "line": 975
+        "line": 989
       },
       "24": {
         "filename": "TokenFactory.code",
-        "line": 976
+        "line": 990
       },
       "48": {
         "filename": "TokenFactory.code",
-        "line": 977
+        "line": 991
       },
       "64": {
         "filename": "TokenFactory.code",
-        "line": 978
+        "line": 992
       },
       "72": {
         "filename": "TokenFactory.code",
-        "line": 979
+        "line": 993
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 134
+        "line": 135
       },
       "96": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 134
+        "line": 135
       },
       "104": {
         "filename": "TokenFactory.code",
-        "line": 986
+        "line": 1000
       },
       "120": {
         "filename": "TokenFactory.code",
-        "line": 989
+        "line": 1003
       },
       "128": {
         "filename": "TokenFactory.code",
-        "line": 990
+        "line": 1004
       },
       "144": {
         "filename": "TokenFactory.code",
-        "line": 993
+        "line": 1007
       }
     },
     "29b0cdb8b3a9a0478011357ec846a62dda45f4636a777186b7c0953dbed94426": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 1028
+        "line": 1042
       },
       "8": {
         "filename": "TokenFactory.code",
-        "line": 1029
+        "line": 1043
       },
       "24": {
         "filename": "TokenFactory.code",
-        "line": 1030
+        "line": 1044
       },
       "48": {
         "filename": "TokenFactory.code",
-        "line": 1031
+        "line": 1045
       },
       "64": {
         "filename": "TokenFactory.code",
-        "line": 1032
+        "line": 1046
       },
       "72": {
         "filename": "TokenFactory.code",
-        "line": 1033
+        "line": 1047
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 139
+        "line": 140
       },
       "96": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 139
+        "line": 140
       },
       "104": {
         "filename": "TokenFactory.code",
-        "line": 1040
+        "line": 1054
       },
       "120": {
         "filename": "TokenFactory.code",
-        "line": 1043
+        "line": 1057
       },
       "128": {
         "filename": "TokenFactory.code",
-        "line": 1044
+        "line": 1058
       },
       "144": {
         "filename": "TokenFactory.code",
-        "line": 1047
+        "line": 1061
       }
     },
     "2df756519eef1258f97a65c73788737399da2a506f03124d2fabc31510644e1b": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 1082
+        "line": 1096
       },
       "8": {
         "filename": "TokenFactory.code",
-        "line": 1083
+        "line": 1097
       },
       "24": {
         "filename": "TokenFactory.code",
-        "line": 1084
+        "line": 1098
       },
       "48": {
         "filename": "TokenFactory.code",
-        "line": 1085
+        "line": 1099
       },
       "64": {
         "filename": "TokenFactory.code",
-        "line": 1086
+        "line": 1100
       },
       "72": {
         "filename": "TokenFactory.code",
-        "line": 1087
+        "line": 1101
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 144
+        "line": 145
       },
       "96": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 144
+        "line": 145
       },
       "104": {
         "filename": "TokenFactory.code",
-        "line": 1094
+        "line": 1108
       },
       "120": {
         "filename": "TokenFactory.code",
-        "line": 1097
+        "line": 1111
       },
       "128": {
         "filename": "TokenFactory.code",
-        "line": 1098
+        "line": 1112
       },
       "144": {
         "filename": "TokenFactory.code",
-        "line": 1101
+        "line": 1115
       }
     },
     "390c98bb111e1d0b72ca17c409920f76401a460c62962276986c15339c5597f4": {
       "0": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "16": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "32": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "48": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "72": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "136": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "144": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "168": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 130
+        "line": 131
       },
       "184": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 131
+        "line": 132
       },
       "200": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 131
+        "line": 132
       },
       "208": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 131
+        "line": 132
       },
       "232": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 131
+        "line": 132
       },
       "240": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 131
+        "line": 132
       },
       "256": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 131
+        "line": 132
       },
       "272": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 131
+        "line": 132
       },
       "280": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 131
+        "line": 132
       },
       "296": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 131
+        "line": 132
       },
       "312": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 131
+        "line": 132
       },
       "328": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 131
+        "line": 132
+      }
+    },
+    "3b7069edd9d24f5562c67cb08cb05d3a08bfd13ddd75f55469286a43d42aa3df": {
+      "0": {
+        "filename": "TokenFactory.code",
+        "line": 1425
+      },
+      "8": {
+        "filename": "TokenFactory.code",
+        "line": 1426
+      },
+      "56": {
+        "filename": "TokenFactory.code",
+        "line": 1427
+      },
+      "64": {
+        "filename": "TokenFactory.code",
+        "line": 1428
+      },
+      "80": {
+        "filename": "TokenFactory.code",
+        "line": 1431
+      },
+      "88": {
+        "filename": "TokenFactory.code",
+        "line": 1432
+      },
+      "136": {
+        "filename": "TokenFactory.code",
+        "line": 1433
+      },
+      "144": {
+        "filename": "TokenFactory.code",
+        "line": 1434
+      },
+      "160": {
+        "filename": "TokenFactory.code",
+        "line": 1437
+      },
+      "168": {
+        "filename": "TokenFactory.code",
+        "line": 1438
+      },
+      "216": {
+        "filename": "TokenFactory.code",
+        "line": 1439
+      },
+      "224": {
+        "filename": "TokenFactory.code",
+        "line": 1440
+      },
+      "240": {
+        "filename": "TokenFactory.code",
+        "line": 1443
+      },
+      "248": {
+        "filename": "TokenFactory.code",
+        "line": 1444
+      },
+      "296": {
+        "filename": "TokenFactory.code",
+        "line": 1445
+      },
+      "304": {
+        "filename": "TokenFactory.code",
+        "line": 1446
       }
     },
     "3c31ad2024d9aea7f5b306f583f299028ec4b4baf5eb887dda542df3bc3ca85e": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 1214
+        "line": 1248
       },
       "8": {
         "filename": "TokenFactory.code",
-        "line": 1215
+        "line": 1249
       },
       "24": {
         "filename": "TokenFactory.code",
-        "line": 1216
+        "line": 1250
       },
       "32": {
         "filename": "TokenFactory.code",
-        "line": 1217
+        "line": 1251
       },
       "48": {
         "filename": "TokenFactory.code",
-        "line": 1218
+        "line": 1252
       },
       "56": {
         "filename": "TokenFactory.code",
-        "line": 1219
+        "line": 1253
       },
       "64": {
         "filename": "TokenFactory.code",
-        "line": 1220
+        "line": 1254
       },
       "80": {
         "filename": "TokenFactory.code",
-        "line": 1221
+        "line": 1255
       },
       "96": {
         "filename": "TokenFactory.code",
-        "line": 1222
+        "line": 1256
       },
       "112": {
         "filename": "TokenFactory.code",
-        "line": 1223
+        "line": 1257
       },
       "120": {
         "filename": "TokenFactory.code",
-        "line": 1224
+        "line": 1258
       },
       "144": {
         "filename": "TokenFactory.code",
-        "line": 1226
+        "line": 1260
       },
       "152": {
         "filename": "TokenFactory.code",
-        "line": 1227
+        "line": 1261
       },
       "160": {
         "filename": "TokenFactory.code",
-        "line": 1230
+        "line": 1264
       },
       "168": {
         "filename": "TokenFactory.code",
-        "line": 1231
+        "line": 1265
       },
       "176": {
         "filename": "TokenFactory.code",
-        "line": 1233
+        "line": 1267
       },
       "192": {
         "filename": "TokenFactory.code",
-        "line": 1234
+        "line": 1268
       },
       "208": {
         "filename": "TokenFactory.code",
-        "line": 1235
+        "line": 1269
       },
       "224": {
         "filename": "TokenFactory.code",
-        "line": 1236
+        "line": 1270
       },
       "240": {
         "filename": "TokenFactory.code",
-        "line": 1237
+        "line": 1271
       },
       "256": {
         "filename": "TokenFactory.code",
-        "line": 1238
+        "line": 1272
       },
       "272": {
         "filename": "TokenFactory.code",
-        "line": 1239
+        "line": 1273
       },
       "288": {
         "filename": "TokenFactory.code",
-        "line": 1240
+        "line": 1274
       },
       "304": {
         "filename": "TokenFactory.code",
-        "line": 1241
+        "line": 1275
       },
       "320": {
         "filename": "TokenFactory.code",
-        "line": 1242
+        "line": 1276
       },
       "336": {
         "filename": "TokenFactory.code",
-        "line": 1243
+        "line": 1277
       },
       "360": {
         "filename": "TokenFactory.code",
-        "line": 1244
+        "line": 1278
       },
       "376": {
         "filename": "TokenFactory.code",
-        "line": 1245
+        "line": 1279
       },
       "384": {
         "filename": "TokenFactory.code",
-        "line": 1246
+        "line": 1280
       }
     },
     "3daaceb2f375f58d81f4ebbba6ef6b23cdfade471f218c4831ba268553ad8526": {
       "0": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 41
+        "line": 42
       },
       "16": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 41
+        "line": 42
       },
       "24": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 41
+        "line": 42
       },
       "40": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 41
+        "line": 42
       },
       "48": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 41
+        "line": 42
       },
       "64": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 41
+        "line": 42
       },
       "80": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 41
+        "line": 42
       },
       "96": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 41
+        "line": 42
       },
       "112": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 41
+        "line": 42
       }
     },
-    "449c13bebbfa2e462be853456fdc365477d971b76f2a79d7b97e400f0840c270": {
-      "38": {
-        "filename": "TokenFactory.code",
-        "line": 1174
-      },
-      "46": {
-        "filename": "TokenFactory.code",
-        "line": 1176
-      },
-      "62": {
-        "filename": "TokenFactory.code",
-        "line": 1179
-      },
-      "78": {
-        "filename": "TokenFactory.code",
-        "line": 1180
-      }
-    },
-    "4aefd98a7ff111a61ecc307a503b88c1044178ca6d1884d69f43682a892dac6f": {
+    "4a3a97452ec77c3550f6da8917103d65f6f0759bd6c04d0ffa90057b3ba1a467": {
       "0": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 73
+        "filename": "TokenFactory.code",
+        "line": 488
+      },
+      "8": {
+        "filename": "TokenFactory.code",
+        "line": 489
+      },
+      "24": {
+        "filename": "TokenFactory.code",
+        "line": 490
       },
       "48": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 73
+        "filename": "TokenFactory.code",
+        "line": 491
       },
-      "56": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 73
+      "64": {
+        "filename": "TokenFactory.code",
+        "line": 492
       },
       "72": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "80": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "filename": "TokenFactory.code",
+        "line": 493
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
+      },
+      "96": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 61
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "112": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
+      },
+      "128": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 61
       },
       "136": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
       "152": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
+      },
+      "160": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 61
       },
       "168": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
       "176": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
-      "192": {
+      "184": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
       "200": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
       "208": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
-      "224": {
+      "216": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
+      },
+      "232": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 61
       },
       "240": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
       "256": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "264": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
       "272": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
       "288": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
       "304": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
       "320": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "328": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
       "336": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
+      },
+      "344": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 61
       },
       "352": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
       },
-      "368": {
+      "360": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "line": 61
+      },
+      "376": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 61
       },
       "384": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "392": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "filename": "TokenFactory.code",
+        "line": 526
       },
       "400": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+        "filename": "TokenFactory.code",
+        "line": 529
       },
-      "416": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+      "408": {
+        "filename": "TokenFactory.code",
+        "line": 530
       },
-      "432": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+      "424": {
+        "filename": "TokenFactory.code",
+        "line": 533
+      }
+    },
+    "4d1a8db130aa41da57a69c7a8167fa3706286d007c19654208572be7fef6e6d3": {
+      "0": {
+        "filename": "<entry-selector>",
+        "line": 1
       },
-      "448": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+      "8": {
+        "filename": "<entry-selector>",
+        "line": 2
       },
-      "456": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+      "24": {
+        "filename": "<entry-selector>",
+        "line": 3
       },
-      "464": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+      "32": {
+        "filename": "<entry-selector>",
+        "line": 4
       },
-      "480": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+      "48": {
+        "filename": "<entry-selector>",
+        "line": 5
       },
-      "496": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+      "56": {
+        "filename": "<entry-selector>",
+        "line": 6
       },
-      "512": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+      "72": {
+        "filename": "<entry-selector>",
+        "line": 7
       },
-      "520": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+      "88": {
+        "filename": "<entry-selector>",
+        "line": 8
       },
-      "536": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+      "96": {
+        "filename": "<entry-selector>",
+        "line": 9
       },
-      "544": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
+      "112": {
+        "filename": "<entry-selector>",
+        "line": 10
       },
-      "552": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "568": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "584": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "600": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "608": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "616": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "632": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "648": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "664": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "672": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "680": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "696": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "712": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "720": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "736": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "744": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "760": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "768": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "792": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "808": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "824": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "840": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 75
-      },
-      "848": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "864": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "872": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "888": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "896": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "928": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "944": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "952": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "960": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "976": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "984": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "992": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
+      "128": {
+        "filename": "<entry-selector>",
+        "line": 11
       }
     },
     "4dc069436246c3502f48ccda13e61196ecd9dbc888c0c9b442602ca02f196cb7": {
@@ -1323,27 +1281,27 @@
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 40
+        "line": 41
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 40
+        "line": 41
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 40
+        "line": 41
       },
       "128": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 40
+        "line": 41
       },
       "144": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 40
+        "line": 41
       },
       "160": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 40
+        "line": 41
       },
       "168": {
         "filename": "TokenFactory.code",
@@ -1565,295 +1523,541 @@
     "4ed4e322030d943443c2ec3b0e0c576a92a4450fab5ecd2a70e4e4cbad5702f1": {
       "0": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "16": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "32": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "48": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "72": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "136": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "144": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "168": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 145
+        "line": 146
       },
       "184": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 145
+        "line": 146
       },
       "200": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 145
+        "line": 146
       },
       "208": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 145
+        "line": 146
       },
       "224": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 145
+        "line": 146
       },
       "232": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 145
+        "line": 146
       },
       "240": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 145
+        "line": 146
       },
       "256": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 145
+        "line": 146
       },
       "264": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 145
+        "line": 146
       },
       "280": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 149
+        "line": 150
       },
       "296": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 149
+        "line": 150
       },
       "304": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 149
+        "line": 150
       },
       "312": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 150
+        "line": 151
       },
       "328": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 150
+        "line": 151
       },
       "336": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 150
+        "line": 151
       },
       "344": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 151
+        "line": 152
       },
       "360": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 151
+        "line": 152
       },
       "368": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 151
+        "line": 152
       },
       "376": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 152
+        "line": 153
       },
       "392": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 152
+        "line": 153
       },
       "408": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 153
+        "line": 154
       },
       "424": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 153
+        "line": 154
       },
       "440": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 155
+        "line": 156
       },
       "448": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 155
+        "line": 156
       },
       "464": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "472": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "480": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "488": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "528": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "544": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "552": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "568": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "576": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "584": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "600": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "608": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "624": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 156
+        "line": 157
       },
       "640": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 158
+        "line": 159
       },
       "648": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 158
+        "line": 159
       }
     },
     "5d82b18262b56f8943aaa6c7c4672e83372ab13d065313ac5cef7eeacb3bafbd": {
       "0": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "16": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "32": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "48": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "72": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "136": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "144": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "168": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 140
+        "line": 141
       },
       "184": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 141
+        "line": 142
       },
       "200": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 141
+        "line": 142
       },
       "208": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 141
+        "line": 142
       },
       "232": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 141
+        "line": 142
       },
       "240": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 141
+        "line": 142
       },
       "256": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 141
+        "line": 142
       },
       "272": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 141
+        "line": 142
       },
       "280": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 141
+        "line": 142
       },
       "296": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 141
+        "line": 142
       },
       "312": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 141
+        "line": 142
       },
       "328": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 141
+        "line": 142
+      }
+    },
+    "5f37f6f17149ef05a30218c33a94659e3109d9e1f4d35e28dfa4cae487e6e33c": {
+      "0": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "16": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "32": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "48": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "56": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "72": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "80": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "88": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "112": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "120": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "128": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "144": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "152": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "176": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "184": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "200": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "208": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "224": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "240": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "248": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "296": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "304": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "320": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "336": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "352": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "368": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "384": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "392": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "400": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "408": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "416": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "424": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "432": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "440": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "456": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 106
+      },
+      "464": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 106
+      },
+      "624": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 106
+      },
+      "632": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 106
+      },
+      "640": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 106
+      },
+      "648": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 106
+      },
+      "656": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 106
+      },
+      "664": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 106
+      },
+      "680": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "688": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "704": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "712": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "720": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "744": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "760": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "784": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "792": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "800": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "824": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "832": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "840": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "888": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "904": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "912": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "920": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "928": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
+      },
+      "944": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 108
       }
     },
     "61ab4641fa30d9310391025086eec65d200d79268e1b7cd402565e01ba64be3c": {
       "0": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 124
+        "filename": "TokenFactory.code",
+        "line": 1379
       }
     },
     "63e6e2004fabbd74870f9eeb175f6ea2c679e6fb333eda1dd1b28314eaa26e97": {
@@ -1883,27 +2087,27 @@
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 52
+        "line": 53
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 52
+        "line": 53
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 52
+        "line": 53
       },
       "128": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 52
+        "line": 53
       },
       "144": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 52
+        "line": 53
       },
       "160": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 52
+        "line": 53
       },
       "168": {
         "filename": "TokenFactory.code",
@@ -2094,521 +2298,991 @@
         "line": 388
       }
     },
-    "64a8917620ac5285ea743fedbc7be37495a06b3a3997bc9da8965c94133fb29a": {
+    "66dc632afbfddd14f4d55225317a43d3422939d116dfaaf6d5c09cd26d14f751": {
       "0": {
-        "filename": "<entry-selector>",
-        "line": 1
-      },
-      "8": {
-        "filename": "<entry-selector>",
-        "line": 2
-      },
-      "24": {
-        "filename": "<entry-selector>",
-        "line": 3
-      },
-      "32": {
-        "filename": "<entry-selector>",
-        "line": 4
+        "filename": "../contracts/libraries/GasValues.tsol",
+        "line": 26
       },
       "48": {
-        "filename": "<entry-selector>",
-        "line": 5
+        "filename": "../contracts/libraries/GasValues.tsol",
+        "line": 26
+      },
+      "80": {
+        "filename": "../contracts/libraries/GasValues.tsol",
+        "line": 26
+      }
+    },
+    "6903990f07337883c485f226ed890dff4e539f38ea080d0918285663617ecee6": {
+      "0": {
+        "filename": "stdlib.sol",
+        "line": 75
+      },
+      "8": {
+        "filename": "stdlib.sol",
+        "line": 75
+      },
+      "24": {
+        "filename": "stdlib.sol",
+        "line": 75
+      },
+      "32": {
+        "filename": "stdlib.sol",
+        "line": 75
+      },
+      "48": {
+        "filename": "stdlib.sol",
+        "line": 75
       },
       "56": {
-        "filename": "<entry-selector>",
-        "line": 6
+        "filename": "stdlib.sol",
+        "line": 75
       },
-      "72": {
-        "filename": "<entry-selector>",
-        "line": 7
-      },
-      "88": {
-        "filename": "<entry-selector>",
-        "line": 8
+      "80": {
+        "filename": "stdlib.sol",
+        "line": 76
       },
       "96": {
-        "filename": "<entry-selector>",
-        "line": 9
+        "filename": "stdlib.sol",
+        "line": 76
       },
       "112": {
-        "filename": "<entry-selector>",
-        "line": 10
+        "filename": "stdlib.sol",
+        "line": 76
       },
       "128": {
-        "filename": "<entry-selector>",
-        "line": 11
+        "filename": "stdlib.sol",
+        "line": 76
+      },
+      "144": {
+        "filename": "stdlib.sol",
+        "line": 76
+      },
+      "152": {
+        "filename": "stdlib.sol",
+        "line": 76
+      },
+      "168": {
+        "filename": "stdlib.sol",
+        "line": 76
+      },
+      "176": {
+        "filename": "stdlib.sol",
+        "line": 77
+      },
+      "200": {
+        "filename": "stdlib.sol",
+        "line": 78
+      },
+      "208": {
+        "filename": "stdlib.sol",
+        "line": 79
+      },
+      "224": {
+        "filename": "stdlib.sol",
+        "line": 79
+      },
+      "240": {
+        "filename": "stdlib.sol",
+        "line": 79
+      },
+      "256": {
+        "filename": "stdlib.sol",
+        "line": 79
+      },
+      "272": {
+        "filename": "stdlib.sol",
+        "line": 79
+      },
+      "296": {
+        "filename": "stdlib.sol",
+        "line": 79
       }
     },
     "6965ef89707d8a329ffa93a6d21919cb7d24d81046654c4ac9927c573ae3d76e": {
       "0": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 121
+        "line": 122
       },
       "16": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 121
+        "line": 122
       },
       "32": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 121
+        "line": 122
       },
       "48": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 121
+        "line": 122
       },
       "72": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 121
+        "line": 122
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 121
+        "line": 122
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 121
+        "line": 122
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 121
+        "line": 122
       },
       "136": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 121
+        "line": 122
       },
       "144": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 121
+        "line": 122
       },
       "168": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 123
+        "line": 124
       },
       "184": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 123
+        "line": 124
       },
       "200": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 124
+        "line": 125
       },
       "208": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 124
+        "line": 125
       },
       "224": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 126
+        "line": 127
       },
       "240": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 126
+        "line": 127
       },
       "248": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 126
+        "line": 127
       },
       "264": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 126
+        "line": 127
       },
       "272": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 126
+        "line": 127
       },
       "288": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 126
+        "line": 127
       },
       "304": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 126
+        "line": 127
       },
       "320": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 126
+        "line": 127
       },
       "336": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 126
+        "line": 127
       }
     },
     "6bb808a228c856534d66d2c07c79235b61f613e155a5888c00f3b0c7f55df8af": {
       "0": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 45
+        "line": 46
       },
       "16": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 45
+        "line": 46
       },
       "24": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 45
+        "line": 46
       },
       "40": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 45
+        "line": 46
       },
       "48": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 45
+        "line": 46
       },
       "64": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 45
+        "line": 46
       },
       "80": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 45
+        "line": 46
       },
       "96": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 45
+        "line": 46
       },
       "112": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 45
+        "line": 46
+      }
+    },
+    "6c5a2ea00099ad7daa60174667368f317b7af021c8149cd4d3aee3a8ce6e1ffb": {
+      "0": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 74
+      },
+      "48": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 74
+      },
+      "56": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 74
+      },
+      "72": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "80": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "88": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "104": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "112": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "120": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "136": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "152": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "168": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "176": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "192": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "200": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "208": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "224": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "240": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "256": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "264": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "272": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "288": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "304": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "320": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "328": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "336": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "352": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "368": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "384": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "392": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "400": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "416": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "432": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "448": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "456": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "464": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "480": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "496": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "512": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "520": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "536": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "544": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "552": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "568": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "584": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "600": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "608": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "616": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "632": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "648": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "664": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "672": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "680": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "696": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "712": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "720": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "736": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "744": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "760": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "768": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "792": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "808": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "824": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "840": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 76
+      },
+      "848": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "864": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "872": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "888": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "896": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "904": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "920": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "928": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "960": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "976": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "984": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
+      },
+      "992": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 92
       }
     },
     "6fb254412eb14a5f6a21854972f0dd5006f0b0035c1fc26623c0e45438841f13": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 809
+        "line": 823
       },
       "8": {
         "filename": "TokenFactory.code",
-        "line": 810
+        "line": 824
       },
       "24": {
         "filename": "TokenFactory.code",
-        "line": 811
+        "line": 825
       },
       "48": {
         "filename": "TokenFactory.code",
-        "line": 812
+        "line": 826
       },
       "64": {
         "filename": "TokenFactory.code",
-        "line": 813
+        "line": 827
       },
       "72": {
         "filename": "TokenFactory.code",
-        "line": 814
+        "line": 828
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 120
+        "line": 121
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 120
+        "line": 121
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 120
+        "line": 121
       },
       "128": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 120
+        "line": 121
       },
       "144": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 120
+        "line": 121
       },
       "160": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 120
+        "line": 121
       },
       "168": {
-        "filename": "TokenFactory.code",
-        "line": 825
-      },
-      "184": {
-        "filename": "TokenFactory.code",
-        "line": 828
-      },
-      "192": {
-        "filename": "TokenFactory.code",
-        "line": 829
-      },
-      "208": {
-        "filename": "TokenFactory.code",
-        "line": 830
-      },
-      "216": {
-        "filename": "TokenFactory.code",
-        "line": 831
-      },
-      "224": {
-        "filename": "TokenFactory.code",
-        "line": 832
-      },
-      "240": {
-        "filename": "TokenFactory.code",
-        "line": 833
-      },
-      "256": {
-        "filename": "TokenFactory.code",
-        "line": 834
-      },
-      "264": {
-        "filename": "TokenFactory.code",
-        "line": 835
-      },
-      "272": {
-        "filename": "TokenFactory.code",
-        "line": 836
-      },
-      "280": {
-        "filename": "TokenFactory.code",
-        "line": 837
-      },
-      "304": {
-        "filename": "TokenFactory.code",
-        "line": 838
-      },
-      "312": {
         "filename": "TokenFactory.code",
         "line": 839
       },
-      "320": {
-        "filename": "TokenFactory.code",
-        "line": 840
-      },
-      "344": {
-        "filename": "TokenFactory.code",
-        "line": 841
-      },
-      "352": {
+      "184": {
         "filename": "TokenFactory.code",
         "line": 842
       },
-      "360": {
+      "192": {
         "filename": "TokenFactory.code",
         "line": 843
       },
-      "408": {
+      "208": {
         "filename": "TokenFactory.code",
         "line": 844
       },
-      "416": {
+      "216": {
         "filename": "TokenFactory.code",
         "line": 845
       },
-      "424": {
+      "224": {
         "filename": "TokenFactory.code",
         "line": 846
       },
-      "432": {
+      "240": {
         "filename": "TokenFactory.code",
         "line": 847
       },
-      "440": {
+      "256": {
+        "filename": "TokenFactory.code",
+        "line": 848
+      },
+      "264": {
         "filename": "TokenFactory.code",
         "line": 849
       },
-      "456": {
+      "272": {
         "filename": "TokenFactory.code",
         "line": 850
       },
-      "472": {
+      "280": {
         "filename": "TokenFactory.code",
         "line": 851
       },
-      "480": {
+      "304": {
         "filename": "TokenFactory.code",
         "line": 852
       },
-      "496": {
+      "312": {
         "filename": "TokenFactory.code",
         "line": 853
       },
-      "504": {
+      "320": {
         "filename": "TokenFactory.code",
         "line": 854
       },
-      "520": {
+      "344": {
         "filename": "TokenFactory.code",
         "line": 855
       },
-      "536": {
+      "352": {
         "filename": "TokenFactory.code",
         "line": 856
       },
-      "552": {
+      "360": {
         "filename": "TokenFactory.code",
         "line": 857
       },
-      "568": {
+      "408": {
         "filename": "TokenFactory.code",
         "line": 858
       },
-      "576": {
+      "416": {
         "filename": "TokenFactory.code",
         "line": 859
       },
-      "600": {
+      "424": {
         "filename": "TokenFactory.code",
         "line": 860
       },
-      "616": {
+      "432": {
         "filename": "TokenFactory.code",
         "line": 861
       },
-      "640": {
-        "filename": "TokenFactory.code",
-        "line": 862
-      },
-      "648": {
+      "440": {
         "filename": "TokenFactory.code",
         "line": 863
       },
-      "656": {
+      "456": {
         "filename": "TokenFactory.code",
         "line": 864
       },
-      "672": {
+      "472": {
         "filename": "TokenFactory.code",
         "line": 865
       },
-      "688": {
+      "480": {
         "filename": "TokenFactory.code",
         "line": 866
       },
-      "696": {
+      "496": {
         "filename": "TokenFactory.code",
         "line": 867
       },
-      "720": {
+      "504": {
         "filename": "TokenFactory.code",
         "line": 868
       },
-      "728": {
+      "520": {
         "filename": "TokenFactory.code",
         "line": 869
       },
-      "736": {
+      "536": {
         "filename": "TokenFactory.code",
         "line": 870
       },
-      "752": {
+      "552": {
         "filename": "TokenFactory.code",
         "line": 871
       },
-      "768": {
+      "568": {
         "filename": "TokenFactory.code",
         "line": 872
       },
-      "792": {
+      "576": {
         "filename": "TokenFactory.code",
         "line": 873
       },
-      "800": {
+      "600": {
         "filename": "TokenFactory.code",
         "line": 874
       },
-      "808": {
+      "616": {
         "filename": "TokenFactory.code",
         "line": 875
       },
-      "816": {
+      "640": {
         "filename": "TokenFactory.code",
         "line": 876
       },
-      "832": {
+      "648": {
         "filename": "TokenFactory.code",
         "line": 877
       },
-      "848": {
+      "656": {
+        "filename": "TokenFactory.code",
+        "line": 878
+      },
+      "672": {
         "filename": "TokenFactory.code",
         "line": 879
       },
-      "856": {
+      "688": {
         "filename": "TokenFactory.code",
         "line": 880
       },
-      "872": {
+      "696": {
         "filename": "TokenFactory.code",
         "line": 881
       },
-      "880": {
+      "720": {
         "filename": "TokenFactory.code",
         "line": 882
       },
-      "896": {
+      "728": {
+        "filename": "TokenFactory.code",
+        "line": 883
+      },
+      "736": {
+        "filename": "TokenFactory.code",
+        "line": 884
+      },
+      "752": {
         "filename": "TokenFactory.code",
         "line": 885
+      },
+      "768": {
+        "filename": "TokenFactory.code",
+        "line": 886
+      },
+      "792": {
+        "filename": "TokenFactory.code",
+        "line": 887
+      },
+      "800": {
+        "filename": "TokenFactory.code",
+        "line": 888
+      },
+      "808": {
+        "filename": "TokenFactory.code",
+        "line": 889
+      },
+      "816": {
+        "filename": "TokenFactory.code",
+        "line": 890
+      },
+      "832": {
+        "filename": "TokenFactory.code",
+        "line": 891
+      },
+      "848": {
+        "filename": "TokenFactory.code",
+        "line": 893
+      },
+      "856": {
+        "filename": "TokenFactory.code",
+        "line": 894
+      },
+      "872": {
+        "filename": "TokenFactory.code",
+        "line": 895
+      },
+      "880": {
+        "filename": "TokenFactory.code",
+        "line": 896
+      },
+      "896": {
+        "filename": "TokenFactory.code",
+        "line": 899
       }
     },
-    "7012aad6320a4d307d4668b511be84e0f0d138086bd8dcdd68acc401ca00c845": {
+    "71da1808fe6a57b8092a25251aedff10d41c959133f61e37fe13fefb1724c1b5": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 1376
+        "line": 1328
       },
-      "8": {
+      "16": {
         "filename": "TokenFactory.code",
-        "line": 1377
+        "line": 1329
+      },
+      "24": {
+        "filename": "TokenFactory.code",
+        "line": 1330
+      },
+      "40": {
+        "filename": "TokenFactory.code",
+        "line": 1331
       },
       "56": {
         "filename": "TokenFactory.code",
-        "line": 1378
+        "line": 1332
       },
-      "64": {
+      "72": {
         "filename": "TokenFactory.code",
-        "line": 1379
+        "line": 1333
       },
       "80": {
         "filename": "TokenFactory.code",
-        "line": 1405
+        "line": 1334
       },
       "88": {
         "filename": "TokenFactory.code",
-        "line": 1406
+        "line": 1335
       },
-      "136": {
+      "104": {
         "filename": "TokenFactory.code",
-        "line": 1407
+        "line": 1336
+      },
+      "120": {
+        "filename": "TokenFactory.code",
+        "line": 1337
+      },
+      "128": {
+        "filename": "TokenFactory.code",
+        "line": 1338
       },
       "144": {
         "filename": "TokenFactory.code",
-        "line": 1408
-      },
-      "160": {
-        "filename": "TokenFactory.code",
-        "line": 1434
+        "line": 1339
       },
       "168": {
         "filename": "TokenFactory.code",
-        "line": 1435
+        "line": 1340
       },
-      "216": {
+      "184": {
         "filename": "TokenFactory.code",
-        "line": 1436
+        "line": 1341
       },
-      "224": {
+      "192": {
         "filename": "TokenFactory.code",
-        "line": 1437
+        "line": 1342
       },
-      "240": {
+      "208": {
         "filename": "TokenFactory.code",
-        "line": 1463
+        "line": 1343
       },
       "248": {
         "filename": "TokenFactory.code",
-        "line": 1464
+        "line": 1344
+      },
+      "264": {
+        "filename": "TokenFactory.code",
+        "line": 1345
+      },
+      "272": {
+        "filename": "TokenFactory.code",
+        "line": 1346
+      },
+      "288": {
+        "filename": "TokenFactory.code",
+        "line": 1347
       },
       "296": {
         "filename": "TokenFactory.code",
-        "line": 1465
+        "line": 1348
       },
-      "304": {
+      "312": {
         "filename": "TokenFactory.code",
-        "line": 1466
+        "line": 1349
+      },
+      "328": {
+        "filename": "TokenFactory.code",
+        "line": 1350
+      },
+      "336": {
+        "filename": "TokenFactory.code",
+        "line": 1351
+      },
+      "344": {
+        "filename": "TokenFactory.code",
+        "line": 1352
+      },
+      "360": {
+        "filename": "TokenFactory.code",
+        "line": 1353
+      },
+      "376": {
+        "filename": "TokenFactory.code",
+        "line": 1357
+      },
+      "384": {
+        "filename": "TokenFactory.code",
+        "line": 1358
+      },
+      "408": {
+        "filename": "TokenFactory.code",
+        "line": 1359
+      },
+      "424": {
+        "filename": "TokenFactory.code",
+        "line": 1360
+      },
+      "432": {
+        "filename": "TokenFactory.code",
+        "line": 1361
+      },
+      "448": {
+        "filename": "TokenFactory.code",
+        "line": 1365
+      },
+      "456": {
+        "filename": "TokenFactory.code",
+        "line": 1366
+      },
+      "472": {
+        "filename": "TokenFactory.code",
+        "line": 1369
       }
     },
-    "7320df2a56b39a087695ff8d090434294592cb47a68f7ca9031e16898be163e6": {
+    "7932b370df438b9a70dc8a3b45237e90c8a19871a65bab1c13c7bcc08c1d6b0b": {
+      "0": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 58
+      },
+      "16": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 58
+      },
+      "24": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 58
+      },
+      "40": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 58
+      },
+      "48": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 58
+      },
+      "64": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 58
+      },
+      "80": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 58
+      },
+      "96": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 58
+      },
+      "112": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 58
+      }
+    },
+    "85177721aa23ec84c74a31595374e5e2fdca28c36f27391ff910b3d1ac913e44": {
       "0": {
         "filename": "TokenFactory.code",
         "line": 4
@@ -2667,87 +3341,87 @@
       },
       "152": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 26
+        "line": 27
       },
       "160": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 26
+        "line": 27
       },
       "176": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 26
+        "line": 27
       },
       "192": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 26
+        "line": 27
       },
       "216": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 26
+        "line": 27
       },
       "240": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 28
+        "line": 29
       },
       "256": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 29
+        "line": 30
       },
       "272": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 31
+        "line": 32
       },
       "320": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 31
+        "line": 32
       },
       "328": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 31
+        "line": 32
       },
       "344": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 32
+        "line": 33
       },
       "360": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 32
+        "line": 33
       },
       "368": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 32
+        "line": 33
       },
       "392": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 32
+        "line": 33
       },
       "400": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 32
+        "line": 33
       },
       "416": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 32
+        "line": 33
       },
       "432": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 32
+        "line": 33
       },
       "440": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 32
+        "line": 33
       },
       "456": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 32
+        "line": 33
       },
       "472": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 32
+        "line": 33
       },
       "488": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 32
+        "line": 33
       },
       "504": {
         "filename": "TokenFactory.code",
@@ -2758,134 +3432,96 @@
         "line": 51
       }
     },
-    "7932b370df438b9a70dc8a3b45237e90c8a19871a65bab1c13c7bcc08c1d6b0b": {
-      "0": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 57
-      },
-      "16": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 57
-      },
-      "24": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 57
-      },
-      "40": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 57
-      },
-      "48": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 57
-      },
-      "64": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 57
-      },
-      "80": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 57
-      },
-      "96": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 57
-      },
-      "112": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 57
-      }
-    },
     "8b8d7709a603924b263b4f830191e591d7e43cb6cc884cb3ebbc386390cf0616": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 1438
+        "line": 1483
       },
       "8": {
         "filename": "TokenFactory.code",
-        "line": 1439
+        "line": 1484
       },
       "56": {
         "filename": "TokenFactory.code",
-        "line": 1440
+        "line": 1485
       },
       "64": {
         "filename": "TokenFactory.code",
-        "line": 1441
+        "line": 1486
       },
       "80": {
         "filename": "TokenFactory.code",
-        "line": 1444
+        "line": 1489
       },
       "88": {
         "filename": "TokenFactory.code",
-        "line": 1445
+        "line": 1490
       },
       "136": {
         "filename": "TokenFactory.code",
-        "line": 1446
+        "line": 1491
       },
       "144": {
         "filename": "TokenFactory.code",
-        "line": 1447
+        "line": 1492
       },
       "160": {
         "filename": "TokenFactory.code",
-        "line": 1450
+        "line": 1495
       },
       "168": {
         "filename": "TokenFactory.code",
-        "line": 1451
+        "line": 1496
       },
       "216": {
         "filename": "TokenFactory.code",
-        "line": 1452
+        "line": 1497
       },
       "224": {
         "filename": "TokenFactory.code",
-        "line": 1453
+        "line": 1498
       },
       "240": {
         "filename": "TokenFactory.code",
-        "line": 1456
+        "line": 1501
       },
       "248": {
         "filename": "TokenFactory.code",
-        "line": 1457
+        "line": 1502
       },
       "296": {
         "filename": "TokenFactory.code",
-        "line": 1458
+        "line": 1503
       },
       "304": {
         "filename": "TokenFactory.code",
-        "line": 1459
+        "line": 1504
       }
     },
     "8ebfe06aa344b094387ba6b5a8be2a2128808d5200cf18972fa378fe652d25d0": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 1209
+        "line": 1243
       },
       "16": {
         "filename": "TokenFactory.code",
-        "line": 1210
+        "line": 1244
       },
       "24": {
         "filename": "TokenFactory.code",
-        "line": 1211
+        "line": 1245
       },
       "40": {
         "filename": "TokenFactory.code",
-        "line": 1212
+        "line": 1246
       },
       "56": {
         "filename": "TokenFactory.code",
-        "line": 1213
+        "line": 1247
       },
       "72": {
         "filename": "TokenFactory.code",
-        "line": 1248
+        "line": 1282
       }
     },
     "96a296d224f285c67bee93c30f8a309157f0daa35dc5b87e410b78630a09cfc7": {},
@@ -2916,27 +3552,27 @@
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 44
+        "line": 45
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 44
+        "line": 45
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 44
+        "line": 45
       },
       "128": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 44
+        "line": 45
       },
       "144": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 44
+        "line": 45
       },
       "160": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 44
+        "line": 45
       },
       "168": {
         "filename": "TokenFactory.code",
@@ -3155,136 +3791,220 @@
         "line": 220
       }
     },
+    "a5e1f72c9c65380862633592b0e1f6dd2774e052f64f920a2e240b876be900b8": {
+      "4": {
+        "filename": "TokenFactory.code",
+        "line": 1188
+      },
+      "12": {
+        "filename": "TokenFactory.code",
+        "line": 1190
+      },
+      "28": {
+        "filename": "TokenFactory.code",
+        "line": 1193
+      },
+      "44": {
+        "filename": "TokenFactory.code",
+        "line": 1194
+      }
+    },
     "b02b8be7523f1960a4c1f379ccd7ff57db6101c892dcda3cde8101168d24855c": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 920
+        "line": 934
       },
       "8": {
         "filename": "TokenFactory.code",
-        "line": 921
+        "line": 935
       },
       "24": {
         "filename": "TokenFactory.code",
-        "line": 922
+        "line": 936
       },
       "48": {
         "filename": "TokenFactory.code",
-        "line": 923
+        "line": 937
       },
       "64": {
         "filename": "TokenFactory.code",
-        "line": 924
+        "line": 938
       },
       "72": {
         "filename": "TokenFactory.code",
-        "line": 925
+        "line": 939
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 129
+        "line": 130
       },
       "96": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 129
+        "line": 130
       },
       "104": {
         "filename": "TokenFactory.code",
-        "line": 932
+        "line": 946
       },
       "120": {
         "filename": "TokenFactory.code",
-        "line": 935
+        "line": 949
       },
       "128": {
         "filename": "TokenFactory.code",
-        "line": 936
+        "line": 950
       },
       "144": {
         "filename": "TokenFactory.code",
-        "line": 939
+        "line": 953
+      }
+    },
+    "b5a19e7aaf6a828bc73e0d13a0d3c258548e7065ea3b8d78440502535980cba9": {
+      "0": {
+        "filename": "TokenFactory.code",
+        "line": 1421
+      },
+      "8": {
+        "filename": "TokenFactory.code",
+        "line": 1422
+      },
+      "56": {
+        "filename": "TokenFactory.code",
+        "line": 1423
+      },
+      "64": {
+        "filename": "TokenFactory.code",
+        "line": 1424
+      },
+      "80": {
+        "filename": "TokenFactory.code",
+        "line": 1450
+      },
+      "88": {
+        "filename": "TokenFactory.code",
+        "line": 1451
+      },
+      "136": {
+        "filename": "TokenFactory.code",
+        "line": 1452
+      },
+      "144": {
+        "filename": "TokenFactory.code",
+        "line": 1453
+      },
+      "160": {
+        "filename": "TokenFactory.code",
+        "line": 1479
+      },
+      "168": {
+        "filename": "TokenFactory.code",
+        "line": 1480
+      },
+      "216": {
+        "filename": "TokenFactory.code",
+        "line": 1481
+      },
+      "224": {
+        "filename": "TokenFactory.code",
+        "line": 1482
+      },
+      "240": {
+        "filename": "TokenFactory.code",
+        "line": 1508
+      },
+      "248": {
+        "filename": "TokenFactory.code",
+        "line": 1509
+      },
+      "296": {
+        "filename": "TokenFactory.code",
+        "line": 1510
+      },
+      "304": {
+        "filename": "TokenFactory.code",
+        "line": 1511
       }
     },
     "b7022275cfa8ff485bb77c67a3b177e0d49a2c41a5e1eaa41dd04d5c5a6c0565": {
       "0": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "16": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "32": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "48": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "72": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "136": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "144": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "168": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 115
+        "line": 116
       },
       "184": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 117
+        "line": 118
       },
       "200": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 117
+        "line": 118
       },
       "208": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 117
+        "line": 118
       },
       "224": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 117
+        "line": 118
       },
       "232": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 117
+        "line": 118
       },
       "248": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 117
+        "line": 118
       },
       "264": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 117
+        "line": 118
       },
       "280": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 117
+        "line": 118
       },
       "296": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 117
+        "line": 118
       }
     },
     "c0da9059bd85f16ff4b2ef21480c62c27d0accbeaad05d2147d77d19c5ab42b0": {
@@ -3314,27 +4034,27 @@
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 48
+        "line": 49
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 48
+        "line": 49
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 48
+        "line": 49
       },
       "128": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 48
+        "line": 49
       },
       "144": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 48
+        "line": 49
       },
       "160": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 48
+        "line": 49
       },
       "168": {
         "filename": "TokenFactory.code",
@@ -3528,441 +4248,175 @@
     "c1c164be363e466892cb0e381c389b106a17d3b90156e767540ee845634e29b6": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 1253
+        "line": 1287
       },
       "16": {
         "filename": "TokenFactory.code",
-        "line": 1254
+        "line": 1288
       },
       "32": {
         "filename": "TokenFactory.code",
-        "line": 1255
+        "line": 1289
       },
       "48": {
         "filename": "TokenFactory.code",
-        "line": 1256
+        "line": 1290
       },
       "64": {
         "filename": "TokenFactory.code",
-        "line": 1257
+        "line": 1291
       },
       "80": {
         "filename": "TokenFactory.code",
-        "line": 1258
+        "line": 1292
       },
       "96": {
         "filename": "TokenFactory.code",
-        "line": 1259
+        "line": 1293
       },
       "112": {
         "filename": "TokenFactory.code",
-        "line": 1260
+        "line": 1294
       },
       "128": {
         "filename": "TokenFactory.code",
-        "line": 1261
+        "line": 1295
       },
       "136": {
         "filename": "TokenFactory.code",
-        "line": 1262
+        "line": 1296
       },
       "152": {
         "filename": "TokenFactory.code",
-        "line": 1263
+        "line": 1297
       },
       "168": {
         "filename": "TokenFactory.code",
-        "line": 1264
+        "line": 1298
       },
       "184": {
         "filename": "TokenFactory.code",
-        "line": 1265
+        "line": 1299
       },
       "200": {
         "filename": "TokenFactory.code",
-        "line": 1266
+        "line": 1300
       },
       "208": {
         "filename": "TokenFactory.code",
-        "line": 1267
+        "line": 1301
       },
       "224": {
         "filename": "TokenFactory.code",
-        "line": 1268
+        "line": 1302
       },
       "232": {
         "filename": "TokenFactory.code",
-        "line": 1269
+        "line": 1303
       },
       "240": {
         "filename": "TokenFactory.code",
-        "line": 1270
+        "line": 1304
       },
       "248": {
         "filename": "TokenFactory.code",
-        "line": 1271
+        "line": 1305
       },
       "256": {
         "filename": "TokenFactory.code",
-        "line": 1272
+        "line": 1306
       },
       "264": {
         "filename": "TokenFactory.code",
-        "line": 1273
+        "line": 1307
       },
       "272": {
         "filename": "TokenFactory.code",
-        "line": 1274
+        "line": 1308
       },
       "280": {
         "filename": "TokenFactory.code",
-        "line": 1275
+        "line": 1309
       }
     },
-    "c5a30395c8554cad5f9b059bf86da990388b8adb78a48c58119051538912ae22": {
+    "c8d42ffe754ca767746700d253cd1dcba38315a3d556d554abc86bae9a022d3e": {
       "0": {
-        "filename": "TokenFactory.code",
-        "line": 1339
-      },
-      "16": {
-        "filename": "TokenFactory.code",
-        "line": 1340
-      },
-      "24": {
-        "filename": "TokenFactory.code",
-        "line": 1341
-      },
-      "40": {
-        "filename": "TokenFactory.code",
-        "line": 1342
-      },
-      "56": {
-        "filename": "TokenFactory.code",
-        "line": 1343
-      },
-      "72": {
-        "filename": "TokenFactory.code",
-        "line": 1344
-      },
-      "80": {
-        "filename": "TokenFactory.code",
-        "line": 1347
-      },
-      "96": {
-        "filename": "TokenFactory.code",
-        "line": 1348
-      },
-      "104": {
-        "filename": "TokenFactory.code",
-        "line": 1349
-      },
-      "120": {
-        "filename": "TokenFactory.code",
-        "line": 1352
-      },
-      "136": {
-        "filename": "TokenFactory.code",
-        "line": 1353
-      },
-      "144": {
-        "filename": "TokenFactory.code",
-        "line": 1354
-      },
-      "152": {
-        "filename": "TokenFactory.code",
-        "line": 1355
-      },
-      "168": {
-        "filename": "TokenFactory.code",
-        "line": 1356
-      },
-      "184": {
-        "filename": "TokenFactory.code",
-        "line": 1357
-      },
-      "192": {
-        "filename": "TokenFactory.code",
-        "line": 1358
-      },
-      "208": {
-        "filename": "TokenFactory.code",
-        "line": 1359
-      },
-      "216": {
-        "filename": "TokenFactory.code",
-        "line": 1360
-      },
-      "232": {
-        "filename": "TokenFactory.code",
-        "line": 1361
-      },
-      "248": {
-        "filename": "TokenFactory.code",
-        "line": 1362
-      },
-      "264": {
-        "filename": "TokenFactory.code",
-        "line": 1364
-      },
-      "272": {
-        "filename": "TokenFactory.code",
-        "line": 1365
-      },
-      "288": {
-        "filename": "TokenFactory.code",
-        "line": 1366
-      },
-      "296": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "312": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "320": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "328": {
-        "filename": "stdlib.sol",
-        "line": 61
-      },
-      "344": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "352": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "368": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "392": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "400": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "440": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "448": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "456": {
-        "filename": "stdlib.sol",
-        "line": 62
-      },
-      "472": {
-        "filename": "stdlib.sol",
-        "line": 63
-      },
-      "488": {
-        "filename": "TokenFactory.code",
-        "line": 1368
-      },
-      "504": {
-        "filename": "TokenFactory.code",
-        "line": 1369
-      },
-      "512": {
-        "filename": "TokenFactory.code",
-        "line": 1370
-      },
-      "528": {
-        "filename": "TokenFactory.code",
-        "line": 1373
-      }
-    },
-    "c8d8a089bc720a75d115ebffb40cf981d9d159574e6d6071ab6b589b2950724d": {
-      "0": {
-        "filename": "TokenFactory.code",
-        "line": 488
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 165
       },
       "8": {
-        "filename": "TokenFactory.code",
-        "line": 489
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 165
       },
       "24": {
-        "filename": "TokenFactory.code",
-        "line": 490
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 165
+      },
+      "32": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 165
       },
       "48": {
-        "filename": "TokenFactory.code",
-        "line": 491
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 165
       },
       "64": {
-        "filename": "TokenFactory.code",
-        "line": 492
-      },
-      "72": {
-        "filename": "TokenFactory.code",
-        "line": 493
-      },
-      "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
+        "line": 165
+      },
+      "80": {
+        "filename": "../contracts/TokenFactory.tsol",
+        "line": 165
       },
       "96": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
+        "line": 165
       },
-      "104": {
+      "112": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
+        "line": 165
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "128": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "136": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "152": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "160": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "168": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "176": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "184": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "200": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "208": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "216": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "232": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "240": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "256": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "272": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "288": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "304": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "320": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "336": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "344": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "352": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "360": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "376": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 60
-      },
-      "384": {
-        "filename": "TokenFactory.code",
-        "line": 526
-      },
-      "400": {
-        "filename": "TokenFactory.code",
-        "line": 529
-      },
-      "408": {
-        "filename": "TokenFactory.code",
-        "line": 530
-      },
-      "424": {
-        "filename": "TokenFactory.code",
-        "line": 533
+        "line": 165
       }
     },
     "ccbf3d5c73deaeab2f3a78ed596d0f1bdac8819a40374146a822803e13fa8914": {
       "0": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 53
+        "line": 54
       },
       "16": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 53
+        "line": 54
       },
       "24": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 53
+        "line": 54
       },
       "40": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 53
+        "line": 54
       },
       "48": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 53
+        "line": 54
       },
       "64": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 53
+        "line": 54
       },
       "80": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 53
+        "line": 54
       },
       "96": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 53
+        "line": 54
       },
       "112": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 53
+        "line": 54
       }
     },
     "d16500f9be3fb51286f9341d13c95e53238fd06cff1dbcd4b963946987ff32b7": {
@@ -3992,27 +4446,27 @@
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 56
+        "line": 57
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 56
+        "line": 57
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 56
+        "line": 57
       },
       "128": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 56
+        "line": 57
       },
       "144": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 56
+        "line": 57
       },
       "160": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 56
+        "line": 57
       },
       "168": {
         "filename": "TokenFactory.code",
@@ -4203,6 +4657,20 @@
         "line": 472
       }
     },
+    "d67d017829fd701394a2b9e4ec5e2680613c792025dd4034d006a6bdad00651e": {
+      "0": {
+        "filename": "stdlib.sol",
+        "line": 71
+      },
+      "16": {
+        "filename": "stdlib.sol",
+        "line": 71
+      },
+      "32": {
+        "filename": "stdlib.sol",
+        "line": 71
+      }
+    },
     "db9cd429f633175bdf06f4f934ab94b378b2b549cfde3bab9178bb71c02ba248": {
       "0": {
         "filename": "<internal-selector>",
@@ -4213,572 +4681,310 @@
         "line": 2
       }
     },
+    "e5bcdd2119476d1431fe608d0e167cc2a472cc103c84b8c2f7d0157c12a715a8": {
+      "0": {
+        "filename": "stdlib.sol",
+        "line": 76
+      },
+      "8": {
+        "filename": "stdlib.sol",
+        "line": 76
+      }
+    },
     "e6936e8f0e7b8fe98c2ca66eee9d4e9dafcfc747defef9cb795288fabb1b7ef3": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 1278
+        "line": 1312
       },
       "16": {
         "filename": "TokenFactory.code",
-        "line": 1279
+        "line": 1313
       },
       "24": {
         "filename": "TokenFactory.code",
-        "line": 1280
+        "line": 1314
       },
       "40": {
         "filename": "TokenFactory.code",
-        "line": 1281
+        "line": 1315
       },
       "56": {
         "filename": "TokenFactory.code",
-        "line": 1282
+        "line": 1316
       },
       "64": {
         "filename": "TokenFactory.code",
-        "line": 1283
+        "line": 1317
       },
       "80": {
         "filename": "TokenFactory.code",
-        "line": 1284
+        "line": 1318
       },
       "88": {
         "filename": "TokenFactory.code",
-        "line": 1285
+        "line": 1319
       },
       "96": {
         "filename": "TokenFactory.code",
-        "line": 1286
+        "line": 1320
       },
       "112": {
         "filename": "TokenFactory.code",
-        "line": 1287
+        "line": 1321
       },
       "128": {
         "filename": "TokenFactory.code",
-        "line": 1288
+        "line": 1322
       },
       "136": {
         "filename": "TokenFactory.code",
-        "line": 1289
+        "line": 1323
       },
       "144": {
         "filename": "TokenFactory.code",
-        "line": 1290
+        "line": 1324
       }
     },
     "e8a4cba9a2a029706ac409a42d7b8c21033070de1bcf76babac94a2d788d7da2": {
       "0": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 158
+        "line": 159
       }
     },
     "f18f0f4bbf13b8748111e91b20871811aa4e7adbc538135f99b8510117814b28": {
       "0": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "16": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "32": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "48": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "72": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "88": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "104": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "120": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "136": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "144": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 36
+        "line": 37
       },
       "168": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 135
+        "line": 136
       },
       "184": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 136
+        "line": 137
       },
       "200": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 136
+        "line": 137
       },
       "208": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 136
+        "line": 137
       },
       "232": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 136
+        "line": 137
       },
       "240": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 136
+        "line": 137
       },
       "256": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 136
+        "line": 137
       },
       "272": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 136
+        "line": 137
       },
       "280": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 136
+        "line": 137
       },
       "296": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 136
+        "line": 137
       },
       "312": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 136
+        "line": 137
       },
       "328": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 136
+        "line": 137
       }
     },
     "f228bf2b7d6133ac157587aab5c3337aa196070e7b50b1f41fc5a5c9f5ba16dd": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 1183
+        "line": 1217
       },
       "16": {
         "filename": "TokenFactory.code",
-        "line": 1184
+        "line": 1218
       },
       "24": {
         "filename": "TokenFactory.code",
-        "line": 1185
+        "line": 1219
       },
       "40": {
         "filename": "TokenFactory.code",
-        "line": 1186
+        "line": 1220
       },
       "56": {
         "filename": "TokenFactory.code",
-        "line": 1187
+        "line": 1221
       },
       "72": {
         "filename": "TokenFactory.code",
-        "line": 1188
+        "line": 1222
       },
       "80": {
         "filename": "TokenFactory.code",
-        "line": 1189
+        "line": 1223
       },
       "96": {
         "filename": "TokenFactory.code",
-        "line": 1190
+        "line": 1224
       },
       "112": {
         "filename": "TokenFactory.code",
-        "line": 1191
+        "line": 1225
       },
       "120": {
         "filename": "TokenFactory.code",
-        "line": 1192
+        "line": 1226
       },
       "128": {
         "filename": "TokenFactory.code",
-        "line": 1193
+        "line": 1227
       },
       "136": {
         "filename": "TokenFactory.code",
-        "line": 1194
+        "line": 1228
       },
       "152": {
         "filename": "TokenFactory.code",
-        "line": 1195
+        "line": 1229
       },
       "160": {
         "filename": "TokenFactory.code",
-        "line": 1196
+        "line": 1230
       },
       "168": {
         "filename": "TokenFactory.code",
-        "line": 1197
+        "line": 1231
       },
       "176": {
         "filename": "TokenFactory.code",
-        "line": 1198
+        "line": 1232
       },
       "184": {
         "filename": "TokenFactory.code",
-        "line": 1199
+        "line": 1233
       },
       "200": {
         "filename": "TokenFactory.code",
-        "line": 1200
+        "line": 1234
       },
       "216": {
         "filename": "TokenFactory.code",
-        "line": 1201
+        "line": 1235
       },
       "232": {
         "filename": "TokenFactory.code",
-        "line": 1202
+        "line": 1236
       },
       "248": {
         "filename": "TokenFactory.code",
-        "line": 1203
+        "line": 1237
       },
       "264": {
         "filename": "TokenFactory.code",
-        "line": 1204
+        "line": 1238
       },
       "280": {
         "filename": "TokenFactory.code",
-        "line": 1205
+        "line": 1239
       },
       "296": {
         "filename": "TokenFactory.code",
-        "line": 1206
+        "line": 1240
       }
     },
     "f24e1e7aa04d89aad2945816b6e9b921f2b3892da9ba53e2383c148351b96d0c": {
       "0": {
         "filename": "TokenFactory.code",
-        "line": 1320
+        "line": 1354
       },
       "16": {
         "filename": "TokenFactory.code",
-        "line": 1321
-      }
-    },
-    "f543bbf58f73e5314098d27fd74a4035ada6ec221375d4b121247957c9b4f2fe": {
-      "0": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "8": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "168": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "192": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "200": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "216": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "224": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "240": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "256": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "264": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "312": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "320": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "336": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "352": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "368": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "384": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "400": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "408": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "416": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "424": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "432": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "440": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "448": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "456": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 91
-      },
-      "472": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 105
-      },
-      "480": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 105
-      },
-      "640": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 105
-      },
-      "648": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 105
-      },
-      "656": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 105
-      },
-      "664": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 105
-      },
-      "672": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 105
-      },
-      "680": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 105
-      },
-      "696": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "704": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "720": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "728": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "736": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "760": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "776": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "800": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "808": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "816": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "840": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "848": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "856": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "904": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "920": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "928": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "936": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "944": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      },
-      "960": {
-        "filename": "../contracts/TokenFactory.tsol",
-        "line": 107
-      }
-    },
-    "fa8049831f00decb3b8e63a70490fb7e4cd3ca5a2cf03d886678275700604b57": {
-      "0": {
-        "filename": "TokenFactory.code",
-        "line": 1380
-      },
-      "8": {
-        "filename": "TokenFactory.code",
-        "line": 1381
-      },
-      "56": {
-        "filename": "TokenFactory.code",
-        "line": 1382
-      },
-      "64": {
-        "filename": "TokenFactory.code",
-        "line": 1383
-      },
-      "80": {
-        "filename": "TokenFactory.code",
-        "line": 1386
-      },
-      "88": {
-        "filename": "TokenFactory.code",
-        "line": 1387
-      },
-      "136": {
-        "filename": "TokenFactory.code",
-        "line": 1388
-      },
-      "144": {
-        "filename": "TokenFactory.code",
-        "line": 1389
-      },
-      "160": {
-        "filename": "TokenFactory.code",
-        "line": 1392
-      },
-      "168": {
-        "filename": "TokenFactory.code",
-        "line": 1393
-      },
-      "216": {
-        "filename": "TokenFactory.code",
-        "line": 1394
-      },
-      "224": {
-        "filename": "TokenFactory.code",
-        "line": 1395
-      },
-      "240": {
-        "filename": "TokenFactory.code",
-        "line": 1398
-      },
-      "248": {
-        "filename": "TokenFactory.code",
-        "line": 1399
-      },
-      "296": {
-        "filename": "TokenFactory.code",
-        "line": 1400
-      },
-      "304": {
-        "filename": "TokenFactory.code",
-        "line": 1401
+        "line": 1355
       }
     },
     "fdd5e0572e56faafecbc66a0cb7acf647be900cb52ec43a183961c5495c5a216": {
       "0": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 49
+        "line": 50
       },
       "16": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 49
+        "line": 50
       },
       "24": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 49
+        "line": 50
       },
       "40": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 49
+        "line": 50
       },
       "48": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 49
+        "line": 50
       },
       "64": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 49
+        "line": 50
       },
       "80": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 49
+        "line": 50
       },
       "96": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 49
+        "line": 50
       },
       "112": {
         "filename": "../contracts/TokenFactory.tsol",
-        "line": 49
+        "line": 50
       }
     }
   }
