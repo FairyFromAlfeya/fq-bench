@@ -152,15 +152,6 @@
 			]
 		},
 		{
-			"name": "getWeverVaultTokenRoot",
-			"inputs": [
-				{"name":"answerId","type":"uint32"}
-			],
-			"outputs": [
-				{"name":"value0","type":"address"}
-			]
-		},
-		{
 			"name": "getExpectedAccountAddress",
 			"inputs": [
 				{"name":"answerId","type":"uint32"},
@@ -260,15 +251,6 @@
 			"name": "setTokenFactory",
 			"inputs": [
 				{"name":"_newTokenFactory","type":"address"},
-				{"name":"_remainingGasTo","type":"address"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "setWeverVaultTokenRoot",
-			"inputs": [
-				{"name":"_newWeverVaultTokenRoot","type":"address"},
 				{"name":"_remainingGasTo","type":"address"}
 			],
 			"outputs": [
@@ -583,24 +565,6 @@
 			]
 		},
 		{
-			"name": "setWeverInDexTokenVault",
-			"inputs": [
-				{"name":"_dexTokenVault","type":"address"},
-				{"name":"_remainingGasTo","type":"address"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "setWeverInDexPool",
-			"inputs": [
-				{"name":"_dexPool","type":"address"},
-				{"name":"_remainingGasTo","type":"address"}
-			],
-			"outputs": [
-			]
-		},
-		{
 			"name": "platform_code",
 			"inputs": [
 			],
@@ -659,15 +623,6 @@
 		},
 		{
 			"name": "TokenFactoryUpdated",
-			"inputs": [
-				{"name":"current","type":"address"},
-				{"name":"previous","type":"address"}
-			],
-			"outputs": [
-			]
-		},
-		{
-			"name": "WeverVaultTokenRootUpdated",
 			"inputs": [
 				{"name":"current","type":"address"},
 				{"name":"previous","type":"address"}
@@ -777,7 +732,6 @@
 		{"name":"_owner","type":"address"},
 		{"name":"_vault","type":"address"},
 		{"name":"_pendingOwner","type":"address"},
-		{"name":"_manager","type":"address"},
-		{"name":"_weverVaultTokenRoot","type":"address"}
+		{"name":"_manager","type":"address"}
 	]
 }
